@@ -1,0 +1,4 @@
+export fees = {
+    bittrex:
+        tradingFees:
+}
