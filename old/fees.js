@@ -1,4 +1,0 @@
-export fees = {
-    bittrex:
-        tradingFees:
-}
