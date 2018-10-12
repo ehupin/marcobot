@@ -52,7 +52,7 @@ const bittrex = {
     },
     async makeTrade(marketName, amount, type){
         
-        marketName = marketName.replace('/','-').toUpperCase()
+        marketName = this.cleanMarketName(marketName)
         const priceResult = await axios.get(`https://bittrex.com/api/v1.1/public/getmarketsummary?market=${marketName}`)
         const limitPrice = type === 'buy' ? priceResult.data.result[0].Ask : priceResult.data.result[0].Bid 
         
@@ -87,7 +87,7 @@ const bittrex = {
         return result.result.Address
     },
     async getOrderBook(marketName, type){
-        marketName = marketName.replace('/','-').toUpperCase()
+        marketName = this.cleanMarketName(marketName)
         type = type == 'bid' ? 'buy' : type
         type = type == 'ask' ? 'sell' : type
         const result = await this._signedRequest('get', 
@@ -96,7 +96,8 @@ const bittrex = {
                                                     market: marketName,
                                                     type
                                             })
-        let orders = []                                            
+        let orders = []                       
+        console.log(marketName)
         for (const order of result.result){
             orders.push({
                 price: order.Rate,
@@ -121,6 +122,10 @@ const bittrex = {
                                                 )
         
         return result
+    },
+    cleanMarketName(marketName){
+        const [baseCurrency, quoteCurrency] = marketName.split('/') 
+        return `${quoteCurrency}-${baseCurrency}`.toUpperCase()
     },
     async _signedRequest(method, path, args={}){
         
@@ -181,7 +186,7 @@ async function test(){
     // sur usdt/btc buy donne des usdt pour avoir des btc, le montant reste en btc (il faut calculer combien om=n obtient pour le prix)
     // console.log(result)
 }
-test()
+// test()
  
  
  

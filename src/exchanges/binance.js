@@ -191,7 +191,7 @@ async function test(){
     // a = await binance.getMarkets()
     // console.log(a)    
 }
-test()
+// test()
 
 
  

@@ -99,7 +99,7 @@ export async function getArbitrageOpportunities(db, exchangeName, currency){
             
         sort ratio desc
         return distinct {
-                        srxExchange: srcExchange.name,
+                        srcExchange: srcExchange.name,
                         srcMarket: srcMarket.label,
                         srcPriceType,
                         srcPrice,
@@ -107,7 +107,7 @@ export async function getArbitrageOpportunities(db, exchangeName, currency){
                         tmpCurrency: tmpCurrency.name,
                         withdrawalFees,
                         dstExchange: dstExchange.name,
-                        dstMarket: dstMarket.name,
+                        dstMarket: dstMarket.label,
                         dstPriceType,
                         dstPrice,
                         dstTradingFees,

@@ -55,19 +55,6 @@ const bitstamp = {
         
         return markets  
     },
-    async _getMarketsUpdates(){
-        const result = await axios.get('https://api.binance.com/api/v1/ticker/24hr');
-        let markets = {}
-        for (const market of result.data){
-            markets[market.symbol] = {
-                bidPrice: Number(market.bidPrice),
-                askPrice: Number(market.askPrice),
-                baseVolume: Number(market.volume),
-                quoteVolume: Number(market.quoteVolume),
-            }
-        }
-        return markets
-    },
     async getWalletAmount(currencyName){
         const result = await this._signedRequest('post', '/api/v2/balance/')
         return Number(result[`${currencyName}_available`])
@@ -230,5 +217,5 @@ async function test(){
     }
     
 }
-test()
+// test()
  

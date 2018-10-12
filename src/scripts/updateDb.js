@@ -1,4 +1,4 @@
-import {getExchanges} from './exchanges.js'
+import {getExchanges} from '../exchanges.js'
 import {connectDb, setMarketData, setCurrencyFees} from '../database.js'
 
 export async function updateDb(){

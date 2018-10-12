@@ -1,6 +1,6 @@
 import fs from 'fs'
 import {connectDb, clearDatabase, createDbNode, deleteDbNode} from '../database.js'
-import {getExchanges} from './exchanges.js'
+import {getExchanges} from '../exchanges.js'
 const deepmerge = require('deepmerge');
 
 
