@@ -59,7 +59,7 @@ const bitstamp = {
         const result = await this._signedRequest('post', '/api/v2/balance/')
         return Number(result[`${currencyName}_available`])
     },
-    async makeTrade(marketName, amount, type){
+    async placeOrder(marketName, amount, type){
         const marketUrlSymbol = marketName.replace('/','')
         await this._signedRequest('post', 
                                     `/api/v2/${type}/market/${marketUrlSymbol}/`, 

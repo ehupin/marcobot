@@ -77,17 +77,24 @@ async function play(config){
     let tradeLog = {config, bestArbitrage}
     const logFilePath = `/root/dev/marcobot/logs/arbitrages/${Date.now()}.arbitrage`
     try{
-        const tradeType = bestArbitrage.srcPriceType === 'bid' ? 'buy' : 'sell'
+        // set exchange and marketName
+        const srcExchange = await getExchange(bestArbitrage.srcExchange)
         const marketName = bestArbitrage.srcMarket.split('-')[1].replace(' ','')
-        tradeLog = Object.assign(tradeLog,{tradeType, marketName})
-         
-        return
+        
+        // set trade variables
+        const tradeType = bestArbitrage.srcPriceType === 'bid' ? 'buy' : 'sell'
         const tradeEstimatedOutputAmount = bestArbitrage.estimations.srcTradeOutput
-        const srcTradeResult = await getExchange(bestArbitrage.srcExchange)
-                                    .makeTrade(marketName,
-                                                config.walletAmount,
-                                                tradeEstimatedOutputAmount,
-                                                tradeType)
+        const tradedAmount = bestArbitrage.srcPriceType === 'bid' 
+                            ? tradeEstimatedOutputAmount 
+                            : config.walletAmount
+        
+        tradeLog = Object.assign(tradeLog,{marketName,tradeType,tradedAmount})
+        
+        // run source trade
+        const srcTradeResult = await srcExchange.placeOrder(marketName,
+                                                    tradedAmount,
+                                                    tradeType)
+                                                
         tradeLog.srcTradeResult = srcTradeResult
         config.stop=true
     }catch(e){

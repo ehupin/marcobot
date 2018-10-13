@@ -16,6 +16,42 @@ let marketPrices = {}
 const binance = {
     name: 'binance',
     tradingFees: 0.001,
+    
+    async _getMarketsUpdates(){
+        const result = await axios.get('https://api.binance.com/api/v1/ticker/24hr');
+        let markets = {}
+        for (const market of result.data){
+            markets[market.symbol] = {
+                bidPrice: Number(market.bidPrice),
+                askPrice: Number(market.askPrice),
+                baseVolume: Number(market.volume),
+                quoteVolume: Number(market.quoteVolume),
+            }
+        }
+        return markets
+    },
+    async _signedRequest(method, path, args={}){
+      const dataQueryString = qs.stringify(args);
+      const signature = crypto.createHmac('sha256', keys.API_SECRET).update(dataQueryString).digest('hex');
+      const requestConfig = {
+        method,
+        url: 'https://api.binance.com' + path + '?' + dataQueryString + '&signature=' + signature,
+        headers: {
+            'X-MBX-APIKEY': keys.API_KEY,
+        },
+      };
+    //   console.log(requestConfig)
+    //   return
+      
+      try{
+        const response = await axios(requestConfig);
+        return response.data
+      } catch(e){
+          console.log(e.response.data)
+          throw(e)
+      }
+    },
+    
     async getCurrencies(){
         
         const data = {
@@ -61,46 +97,18 @@ const binance = {
         }
         return labeledMarkets
     },
-    async _getMarketsUpdates(){
-        const result = await axios.get('https://api.binance.com/api/v1/ticker/24hr');
-        let markets = {}
-        for (const market of result.data){
-            markets[market.symbol] = {
-                bidPrice: Number(market.bidPrice),
-                askPrice: Number(market.askPrice),
-                baseVolume: Number(market.volume),
-                quoteVolume: Number(market.quoteVolume),
-            }
+    async getOrderBook(marketName, type){
+        marketName = marketName.replace('/','').toUpperCase()
+        const result = await axios.get(`https://api.binance.com/api/v1/depth?symbol=${marketName}`)
+        const rawOrders = result.data[type + 's']
+        let orders = []
+        for (const order of rawOrders){
+            orders.push({
+                price: Number(order[0]),
+                amount: Number(order[1])
+            })
         }
-        return markets
-    },
-    async makeTrade(marketName, amount, estimatedOutputAmount, type){
-        
-        const tradingFees = (await this.getMarkets())[marketName]
-        
-        const decimal = tradingFees.minTradeStep.split
-        
-        
-        
-        const decaMult = Math.pow(1,1)
-        const amountInTmp = Math.trunc(
-                                    estimatedOutputAmount * decaMult
-                                    ) / decaMult
-        
-        const data = {
-            symbol: marketName.replace('/','').toUpperCase(),
-            side: type.toUpperCase(),
-            type: 'MARKET',
-            quantity: amount,
-            newOrderRespType: 'FULL',
-            timestamp: Date.now(),
-            recvWindow: 10000,
-        }
-        
-        
-        return await this._signedRequest('post', 
-                                    `/api/v3/order`, 
-                                    data)
+        return orders
     },
     async getWalletAmount(currencyName){
         const result = await this._signedRequest('get', 
@@ -122,30 +130,7 @@ const binance = {
                                                 )
         return {address: result.address, tag: result.addressTag, url: result.url}
     },
-    async makeWithdrawal(currencyName, amount, address, addressTag){
-        let data = {
-           asset: currencyName,
-           address,
-           amount,
-           recvWindow: 10000,
-           timestamp: Date.now()
-        }
-        
-        return await this._signedRequest('post', '/wapi/v3/withdraw.html', data)
-    },
-    async getOrderBook(marketName, type){
-        marketName = marketName.replace('/','').toUpperCase()
-        const result = await axios.get(`https://api.binance.com/api/v1/depth?symbol=${marketName}`)
-        const rawOrders = result.data[type + 's']
-        let orders = []
-        for (const order of rawOrders){
-            orders.push({
-                price: Number(order[0]),
-                amount: Number(order[1])
-            })
-        }
-        return orders
-    },
+    
     async applyWithdrawFees(currencyName, srcTradeOutput){
         const db = connectDb()
         const currencyFees = await getWithdrawFees(db, this.name, currencyName)
@@ -164,27 +149,125 @@ const binance = {
     async applyTradingFees(srcTradeOutput){
         return srcTradeOutput * ( 1 - this.tradingFees )
     },
-    async _signedRequest(method, path, args={}){
-      const dataQueryString = qs.stringify(args);
-      const signature = crypto.createHmac('sha256', keys.API_SECRET).update(dataQueryString).digest('hex');
-      const requestConfig = {
-        method,
-        url: 'https://api.binance.com' + path + '?' + dataQueryString + '&signature=' + signature,
-        headers: {
-            'X-MBX-APIKEY': keys.API_KEY,
-        },
-      };
-    //   console.log(requestConfig)
-    //   return
-      
-      try{
-        const response = await axios(requestConfig);
-        return response.data
-      } catch(e){
-          console.log(e)
-          throw(e)
-      }
-    }
+    
+    async orderIsCompleted(marketName,orderId){
+        marketName = marketName.replace('/','').toUpperCase()
+        const result = await this._signedRequest('get','/api/v3/order',
+                                                {
+                                                    symbol: marketName,
+                                                    orderId,
+                                                    timestamp: Date.now()
+                                                })
+        return result.status === 'FILLED'
+    },
+    async withdrawIsCompleted(withdrawId){
+        const result = await this._signedRequest('get','/wapi/v3/withdrawHistory.html',
+                                                {
+                                                    timestamp: Date.now()
+                                                })
+                                                
+        let found = false                                                
+        for (const withdraw of result.withdrawList){
+            if (withdraw.id === withdrawId){
+                found = true
+                if (withdraw.status === 6){
+                    return true
+                }
+            }
+        }
+        
+        if (!found){
+            throw `Withdraw ${withdrawId} not found!`
+        }
+        
+        return false
+    },
+    async depositIsCompleted(amount, currencyName){
+        const result = await this._signedRequest('get','/wapi/v3/depositHistory.html',
+                                                {
+                                                    timestamp: Date.now()
+                                                })
+                                                
+        currencyName = currencyName.toUpperCase()
+        let found = false                                               
+        for (const withdraw of result.depositList){
+            if (withdraw.amount == amount && withdraw.asset == currencyName){
+                found = true
+                if (withdraw.status === 1){
+                    return true
+                }
+            }
+        }
+        
+        if (!found){
+            throw `Deposit of ${amount} ${currencyName} not found!`
+        }
+        
+        return false
+    },
+    
+    async placeOrder(marketName, amount, type){
+        
+        const tradingFees = (await this.getMarkets())[marketName]
+        let step = Number(tradingFees.minTradeStep)
+        
+        // setup base request data
+        const data = {
+            symbol: marketName.replace('/','').toUpperCase(),
+            side: type.toUpperCase(),
+            type: 'MARKET',
+            newOrderRespType: 'FULL',
+            recvWindow: 10000,
+        }
+        
+        let orderAmount, result
+        for (orderAmount = amount; orderAmount > amount*0.95; orderAmount -= step*10){
+            
+            try{
+                // adjust order amount to match trading rules
+                // e.g. step=0.001 | amount 123.45678 => 123.456
+                const adjustedOrderAmount = Math.trunc(orderAmount * (1/step))*step
+                
+                console.log('Trading', {amount, orderAmount, adjustedOrderAmount})
+                
+                // update request data
+                data.quantity = adjustedOrderAmount
+                data.timestamp = Date.now()
+                
+                result = await this._signedRequest('post', 
+                                                    `/api/v3/order`, 
+                                                    data)
+            }catch(e){
+                if (e.response.data.code == -2010){
+                    continue
+                }
+                throw(e)
+            }
+            console.log('$$$$$$$$$$$$$$')   
+            console.log(result.data)
+            
+            const returnedOrder = {
+                id: result.orderId,
+                time: result.transactionTime
+            }
+            return result
+        }
+        
+    },
+    async makeWithdrawal(currencyName, amount, address, addressTag){
+        let data = {
+           asset: currencyName,
+           address,
+           amount,
+           recvWindow: 10000,
+           timestamp: Date.now()
+        }
+        
+        return await this._signedRequest('post', '/wapi/v3/withdraw.html', data)
+    },
+    
+    
+    
 }
 
 export {binance}
@@ -202,8 +285,17 @@ async function test(){
     // let amount = await binance.makeTrade('gto/btc', 1, 'buy')
     // console.log(amount)
     
-    // amount = await binance.getOrderBook('wings/btc','bid')
-    // console.log(amount)
+    // const result = await binance._signedRequest('get','/wapi/v3/withdrawHistory.html',
+    //                                             {
+    //                                                 timestamp: Date.now()
+    //                                             })
+    // console.log(result)
+    
+    // return
+    
+    // let amount = await binance.depositIsCompleted(0.0494, 'btc')
+    let amount = await binance.withdrawIsCompleted(0.0494, 'btc')
+    console.log(amount)
     // BTC
     // Bitcoin
     // 0.04869875
@@ -225,7 +317,7 @@ async function test(){
     // a = await binance.getMarkets()
     // console.log(a)    
 }
-// test()
+test()
 
 
  
