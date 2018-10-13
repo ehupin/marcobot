@@ -44,7 +44,10 @@ const binance = {
         for (let remotePair of apiResult.data.symbols){
             markets[remotePair.symbol] = {
                 baseCurrency: remotePair.baseAsset.toLowerCase(),
-                quoteCurrency: remotePair.quoteAsset.toLowerCase()
+                quoteCurrency: remotePair.quoteAsset.toLowerCase(),
+                minTradeAmount: remotePair.filters[1].minQty,
+                maxTradeAmount: remotePair.filters[1].maxQty,
+                minTradeStep: remotePair.filters[1].stepSize,
             }
         }
         const marketsUpdates = await this._getMarketsUpdates()
@@ -71,7 +74,18 @@ const binance = {
         }
         return markets
     },
-    async makeTrade(marketName, amount, type){
+    async makeTrade(marketName, amount, estimatedOutputAmount, type){
+        
+        const tradingFees = (await this.getMarkets())[marketName]
+        
+        const decimal = tradingFees.minTradeStep.split
+        
+        
+        
+        const decaMult = Math.pow(1,1)
+        const amountInTmp = Math.trunc(
+                                    estimatedOutputAmount * decaMult
+                                    ) / decaMult
         
         const data = {
             symbol: marketName.replace('/','').toUpperCase(),
@@ -80,7 +94,7 @@ const binance = {
             quantity: amount,
             newOrderRespType: 'FULL',
             timestamp: Date.now(),
-            recvWindow: 10000
+            recvWindow: 10000,
         }
         
         
@@ -139,7 +153,7 @@ const binance = {
             throw 'cannot get fees from database'
         }
         if (srcTradeOutput <currencyFees[0].withdrawMin){
-            throw "withdraw disabled"
+            throw `withdraw too low ${srcTradeOutput} < ${currencyFees[0].withdrawMin}`
         }
         if (!currencyFees[0].withdrawEnabled){
             throw "withdraw disabled"
@@ -168,6 +182,7 @@ const binance = {
         return response.data
       } catch(e){
           console.log(e)
+          throw(e)
       }
     }
 }
@@ -184,10 +199,11 @@ async function test(){
     //                                             0.01,
     //                                             '37HupeVwMQjSCVA9BdEkkX56hzyBwqBBD5')
     
-    let amount = await binance.getOrderBook('sc/btc','bid')
-    console.log(amount)
-    amount = await binance.getOrderBook('wings/btc','bid')
-    console.log(amount)
+    // let amount = await binance.makeTrade('gto/btc', 1, 'buy')
+    // console.log(amount)
+    
+    // amount = await binance.getOrderBook('wings/btc','bid')
+    // console.log(amount)
     // BTC
     // Bitcoin
     // 0.04869875

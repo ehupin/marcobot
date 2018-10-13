@@ -1,0 +1,77 @@
+{
+    "config": {
+        "exchange": "binance",
+        "coin": "btc",
+        "db": {
+            "_connection": {
+                "_activeTasks": 0,
+                "_arangoVersion": 30000,
+                "_databaseName": "cryptoBot_refactor",
+                "_queue": {},
+                "_hosts": [
+                    null
+                ],
+                "_urls": [
+                    "http://0.0.0.0:8529"
+                ],
+                "_agentOptions": {
+                    "maxSockets": 3,
+                    "keepAlive": true,
+                    "keepAliveMsecs": 1000
+                },
+                "_maxTasks": 6,
+                "_headers": {
+                    "authorization": "Basic cm9vdDphcmFuZ29kYg=="
+                },
+                "_loadBalancingStrategy": "NONE",
+                "_useFailOver": true,
+                "_shouldRetry": true,
+                "_maxRetries": 0,
+                "_activeHost": 0
+            }
+        },
+        "working": true,
+        "stop": true,
+        "walletAmount": 0.08805706
+    },
+    "bestArbitrage": {
+        "srcExchange": "binance",
+        "srcMarket": "binance - gto/btc",
+        "srcPriceType": "bid",
+        "srcPrice": 0.00001015,
+        "srcTradingFees": 0.001,
+        "tmpCurrency": "gto",
+        "withdrawalFees": null,
+        "dstExchange": "bittrex",
+        "dstMarket": "bittrex - gto/btc",
+        "dstPriceType": "ask",
+        "dstPrice": 0.00001027,
+        "dstTradingFees": 0.0025,
+        "ratio": 1.0082838103448277,
+        "estimations": {
+            "srcTradeOutput": 8675.767670286277,
+            "srcWithdrawOutput": 8656.767670286277,
+            "dstTradeOutput": 0.09192498222011852,
+            "ratio": 1.0439251801061553
+        }
+    },
+    "tradeType": "buy",
+    "marketName": "gto/btc",
+    "error": {
+        "message": "Request failed with status code 400",
+        "name": "Error",
+        "stack": "Error: Request failed with status code 400
+    at createError (/root/dev/marcobot/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/root/dev/marcobot/node_modules/axios/lib/core/settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (/root/dev/marcobot/node_modules/axios/lib/adapters/http.js:201:11)
+    at IncomingMessage.emit (events.js:187:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:442:20)
+    at endReadableNT (_stream_readable.js:1085:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)",
+        "url": "https://api.binance.com/api/v3/order?symbol=GTOBTC&side=BUY&type=MARKET&quantity=8675.76767028&newOrderRespType=FULL&timestamp=1539403923901&recvWindow=10000&signature=9c4cf757884d7d84d9effec94d315fbaa93826a25ad3866330e0c4bee7be8d75",
+        "data": {
+            "code": -1013,
+            "msg": "Filter failure: LOT_SIZE"
+        }
+    }
+}

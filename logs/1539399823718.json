@@ -1,0 +1,19 @@
+{
+    "tradeType": "buy",
+    "marketName": "enj/btc",
+    "errorMessage": "Request failed with status code 400",
+    "errorName": "Error",
+    "errorStack": "Error: Request failed with status code 400
+    at createError (/root/dev/marcobot/node_modules/axios/lib/core/createError.js:16:15)
+    at settle (/root/dev/marcobot/node_modules/axios/lib/core/settle.js:18:12)
+    at IncomingMessage.handleStreamEnd (/root/dev/marcobot/node_modules/axios/lib/adapters/http.js:201:11)
+    at IncomingMessage.emit (events.js:187:15)
+    at IncomingMessage.EventEmitter.emit (domain.js:442:20)
+    at endReadableNT (_stream_readable.js:1085:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)",
+    "errorUrl": "https://api.binance.com/api/v3/order?symbol=ENJBTC&side=BUY&type=MARKET&quantity=0.0001&newOrderRespType=FULL&timestamp=1539399823718&recvWindow=10000&signature=8e9ed8ed020f4cab3484a37ec9244fc4059b3aadab080c1f9e28d0c4159241b3",
+    "errorData": {
+        "code": -1013,
+        "msg": "Filter failure: LOT_SIZE"
+    }
+}
