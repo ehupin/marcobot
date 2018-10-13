@@ -12,7 +12,7 @@ var _ = require('underscore');
 
 // import {Market} from '../markets.js'
 
-
+import {connectDb, getWithdrawFees} from '../database.js'
 import {keys} from '../../keys/bitstamp.js'
 
 
@@ -116,6 +116,21 @@ const bitstamp = {
         return orders
         
         
+    },
+    async applyWithdrawFees(currencyName, srcTradeOutput){
+        if (srcTradeOutput <currencyFees.withdrawMin){
+            throw "withdraw disabled"
+        }
+        const db = connectDb()
+        const currencyFees = await getWithdrawFees(db, this.name, currencyName)
+        if (!currencyFees.withdrawEnabled){
+            throw "withdraw disabled"
+        }
+        const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee
+        return withdrawOutput
+    },
+    async applyTradingFees(srcTradeOutput){
+        return srcTradeOutput* ( 1 - this.tradingFees )
     },
     async _signedRequest(method, path, args={}) {
         

@@ -65,6 +65,16 @@ export async function setCurrencyFees(db, exchangeName, currencyName, data){
         `);
 }
 
+export async function getWithdrawFees(db, exchangeName, currencyName){
+    const cursor = await db.query(aql`
+            FOR exchangeCurrencyEdge IN exchangeHasCurrency 
+            FILTER document(exchangeCurrencyEdge._from).name == ${exchangeName} && document(exchangeCurrencyEdge._to).name == ${currencyName} 
+            RETURN exchangeCurrencyEdge
+            
+        `);
+    return cursor.all()
+}
+
 export async function getArbitrageOpportunities(db, exchangeName, currency){
     const cursor = await db.query(aql`
         let walletCurrency = ${currency}

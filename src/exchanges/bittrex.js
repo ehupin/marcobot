@@ -7,6 +7,7 @@ var request = require('request-promise');
 var cheerio = require('cheerio');
 
 // import {Market} from '../markets.js'
+import {connectDb, getWithdrawFees} from '../database.js'
 
 
 
@@ -96,8 +97,7 @@ const bittrex = {
                                                     market: marketName,
                                                     type
                                             })
-        let orders = []                       
-        console.log(marketName)
+        let orders = []        
         for (const order of result.result){
             orders.push({
                 price: order.Rate,
@@ -126,6 +126,21 @@ const bittrex = {
     cleanMarketName(marketName){
         const [baseCurrency, quoteCurrency] = marketName.split('/') 
         return `${quoteCurrency}-${baseCurrency}`.toUpperCase()
+    },
+    async applyWithdrawFees(currencyName, srcTradeOutput){
+        if (srcTradeOutput <currencyFees.withdrawMin){
+            throw "withdraw disabled"
+        }
+        const db = connectDb()
+        const currencyFees = await getWithdrawFees(db, this.name, currencyName)
+        if (!currencyFees.withdrawEnabled){
+            throw "withdraw disabled"
+        }
+        const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee
+        return withdrawOutput
+    },
+    async applyTradingFees(srcTradeOutput){
+        return srcTradeOutput* ( 1 - this.tradingFees )
     },
     async _signedRequest(method, path, args={}){
         

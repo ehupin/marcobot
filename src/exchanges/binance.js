@@ -7,6 +7,7 @@ var request = require('request-promise');
 var cheerio = require('cheerio');
 const deepmerge = require('deepmerge');
 import {signedRequest} from '../signedRequest.js'
+import {connectDb, getWithdrawFees} from '../database.js'
 
 import {keys} from '../../keys/binance.js'
 
@@ -82,7 +83,6 @@ const binance = {
             recvWindow: 10000
         }
         
-        console.log(data)
         
         return await this._signedRequest('post', 
                                     `/api/v3/order`, 
@@ -132,6 +132,24 @@ const binance = {
         }
         return orders
     },
+    async applyWithdrawFees(currencyName, srcTradeOutput){
+        const db = connectDb()
+        const currencyFees = await getWithdrawFees(db, this.name, currencyName)
+        if (!currencyFees){
+            throw 'cannot get fees from database'
+        }
+        if (srcTradeOutput <currencyFees[0].withdrawMin){
+            throw "withdraw disabled"
+        }
+        if (!currencyFees[0].withdrawEnabled){
+            throw "withdraw disabled"
+        }
+        const withdrawOutput = srcTradeOutput - currencyFees[0].withdrawFee
+        return withdrawOutput
+    },
+    async applyTradingFees(srcTradeOutput){
+        return srcTradeOutput * ( 1 - this.tradingFees )
+    },
     async _signedRequest(method, path, args={}){
       const dataQueryString = qs.stringify(args);
       const signature = crypto.createHmac('sha256', keys.API_SECRET).update(dataQueryString).digest('hex');
@@ -166,9 +184,9 @@ async function test(){
     //                                             0.01,
     //                                             '37HupeVwMQjSCVA9BdEkkX56hzyBwqBBD5')
     
-    let amount = await binance.getOrderBook('eth/btc','ask')
+    let amount = await binance.getOrderBook('sc/btc','bid')
     console.log(amount)
-    amount = await binance.getOrderBook('eth/btc','bid')
+    amount = await binance.getOrderBook('wings/btc','bid')
     console.log(amount)
     // BTC
     // Bitcoin
