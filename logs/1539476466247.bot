@@ -1,0 +1,10 @@
+{
+    "error": {
+        "message": "Cannot find module 'deepmerge'",
+        "name": "Error",
+        "stack": "file:///D:/dev/marcobot/src/exchanges/binance.js:1
+Error: Cannot find module 'deepmerge'
+    at Object.<anonymous> (file:///D:/dev/marcobot/src/exchanges/binance.js:8:19)
+    at Generator.next (<anonymous>)"
+    }
+}

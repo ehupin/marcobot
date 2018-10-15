@@ -1,0 +1,9 @@
+{
+    "error": {
+        "message": "serverTime is not defined",
+        "name": "ReferenceError",
+        "stack": "ReferenceError: serverTime is not defined
+    at Object._signedRequest (D:\\dev\\marcobot\\src\\exchanges\\binance.js:36:30)
+    at process._tickCallback (internal/process/next_tick.js:68:7)"
+    }
+}

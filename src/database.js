@@ -1,81 +1,81 @@
 // import {getNodetypes} from '../common/utils.js'
-import { Database, aql } from "arangojs";
+import { Database, aql } from 'arangojs'
 // import {listPairs} from './pairs.js'
-// import {exchanges_fees} from './exchanges.js'
+import { getExchanges } from './exchanges'
 
-
-export function connectDb(){
-    const db = new Database('http://0.0.0.0:8529');
-    db.useBasicAuth("root", "arangodb");
-    createDatabase(db, "cryptoBot_refactor")
-    db.useDatabase('cryptoBot_refactor'); 
+export function connectDb() {
+    const db = new Database('http://213.32.64.200:8529')
+    db.useBasicAuth('root', 'arangodb')
+    _createDatabase(db, 'cryptoBot_refactor')
+    db.useDatabase('cryptoBot_refactor')
     return db
 }
 
-async function createDatabase(db, dbName){
+async function _createDatabase(db, dbName) {
     // create zoa database
     const databases = await db.listDatabases()
-    if (!databases.includes(dbName)){
+    if (!databases.includes(dbName)) {
         db.createDatabase(dbName)
     }
 }
 
 export async function clearDatabase(db) {
-    for (let collection of await db.listCollections()) {
+    for (const collection of await db.listCollections()) {
         if (!collection.isSystem) {
-            await db.collection(collection.name).drop();
+            await db.collection(collection.name).drop()
         }
     }
 }
 
-export async function createDbNode (db, nodetypeName, nodeData) {
+export async function createDbNode(db, nodetypeName, nodeData) {
     const cursor = await db.query(aql`
         INSERT 
         ${nodeData}
         INTO ${db.collection(nodetypeName)}
         RETURN NEW
-    `);
-    let node = await cursor.next()
+    `)
+    const node = await cursor.next()
     // node._nodetypeName = nodetypeName
     return node
 }
 
-export async function deleteDbNode (db, nodeId) {
+export async function deleteDbNode(db, nodeId) {
     const collection = nodeId.split('/')[0]
     const cursor = await db.query(aql`
         REMOVE DOCUMENT(${nodeId}) in ${db.edgeCollection(collection)}
-    `);
+    `)
 }
 
-
-export async function setMarketData(db, marketLabel, data){
+export async function setMarketData(db, marketLabel, data) {
     const cursor = await db.query(aql`
     FOR market IN markets FILTER market.label == ${marketLabel}
     UPDATE market WITH ${data} IN  ${db.edgeCollection('markets')}
     return market
-    `);
+    `)
 }
 
-export async function setCurrencyFees(db, exchangeName, currencyName, data){
+export async function setCurrencyFees(db, exchangeName, currencyName, data) {
     const cursor = await db.query(aql`
             FOR exchangeCurrencyEdge IN exchangeHasCurrency 
             FILTER document(exchangeCurrencyEdge._from).name == ${exchangeName} && document(exchangeCurrencyEdge._to).name == ${currencyName} 
-            UPDATE exchangeCurrencyEdge WITH ${data} IN  ${db.edgeCollection('exchangeHasCurrency')}
+            UPDATE exchangeCurrencyEdge WITH ${data} IN  ${db.edgeCollection(
+    'exchangeHasCurrency',
+)}
             
-        `);
+        `)
 }
 
-export async function getWithdrawFees(db, exchangeName, currencyName){
+export async function getWithdrawFees(db, exchangeName, currencyName) {
     const cursor = await db.query(aql`
             FOR exchangeCurrencyEdge IN exchangeHasCurrency 
             FILTER document(exchangeCurrencyEdge._from).name == ${exchangeName} && document(exchangeCurrencyEdge._to).name == ${currencyName} 
             RETURN exchangeCurrencyEdge
             
-        `);
+        `)
     return cursor.all()
 }
 
-export async function getArbitrageOpportunities(db, exchangeName, currency){
+export async function getArbitrageOpportunities(db, exchangeName, currency) {
     const cursor = await db.query(aql`
         let walletCurrency = ${currency}
         let walletExchange = ${exchangeName}
@@ -122,6 +122,49 @@ export async function getArbitrageOpportunities(db, exchangeName, currency){
                         dstPrice,
                         dstTradingFees,
                         ratio}
-    `);
+    `)
     return cursor.all()
 }
+
+export async function updateDb(db) {
+    for (const exchange of getExchanges()) {
+        await updateMarkets(db, exchange)
+        await updateCurrencies(db, exchange)
+    }
+}
+
+async function updateMarkets(db, exchange) {
+    const exchangeMarkets = await exchange.getMarkets()
+    for (const marketName of Object.keys(exchangeMarkets)) {
+        const marketLabel = `${exchange.name} - ${marketName}`
+        await setMarketData(db, marketLabel, exchangeMarkets[marketName])
+    }
+}
+
+async function updateCurrencies(db, exchange) {
+    const exchangeCurrencies = await exchange.getCurrencies()
+    for (const currencyName of Object.keys(exchangeCurrencies)) {
+        await setCurrencyFees(
+            db,
+            exchange.name,
+            currencyName,
+            exchangeCurrencies[currencyName],
+        )
+    }
+}
+
+async function test() {
+    const db = await connectDb()
+    const a = await getArbitrageOpportunities(db, 'bittrex', 'btc')
+    a
+    return a
+}
+
+async function tt() {
+    const b = test()
+    const a = 5
+    a
+    b
+}
+
+tt()

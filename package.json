@@ -1,0 +1,46 @@
+{
+    "name": "marcobot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/bot.js",
+    "scripts": {
+        "test": "jest --watch --verbose",
+        "fix-code": "prettier-eslint --write 'src/**/*.{js,json}' "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ehupin/marcobot.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ehupin/marcobot/issues"
+    },
+    "homepage": "https://github.com/ehupin/marcobot#readme",
+    "dependencies": {
+        "arangojs": "^6.6.0",
+        "axios": "^0.18.0",
+        "cheerio": "^1.0.0-rc.2",
+        "deepmerge": "^2.2.1",
+        "esm": "^3.0.84",
+        "jest": "^23.6.0",
+        "request-promise": "^4.2.2",
+        "underscore": "^1.9.1",
+        "winston": "^3.1.0"
+    },
+    "esm": {
+        "cache": true
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-jest": "^23.6.0",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^5.7.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "prettier-eslint": "^8.8.2",
+        "prettier-eslint-cli": "^4.7.1",
+        "prettier-stylelint": "^0.4.2",
+        "regenerator-runtime": "^0.12.1"
+    }
+}

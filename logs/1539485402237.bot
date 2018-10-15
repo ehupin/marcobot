@@ -1,0 +1,46 @@
+{
+    "error": {
+        "message": "currentTimestamp is not defined",
+        "name": "ReferenceError",
+        "stack": "ReferenceError: currentTimestamp is not defined
+    at Object._signedRequest (D:\\dev\\marcobot\\src\\exchanges\\binance.js:37:26)
+    at Object.getWalletAmount (D:\\dev\\marcobot\\src\\exchanges\\binance.js:118:35)
+    at runBot (D:\\dev\\marcobot\\src\\bot.js:18:65)
+    at Object.<anonymous> (D:\\dev\\marcobot\\src\\bot.js:194:1)
+    at Generator.next (<anonymous>)
+    at Wl (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:207717)
+    at D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:208589
+    at Jl (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:208895)
+    at Object.x (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:244115)
+    at Object.o._compile (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:210665)
+    at Object.u (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:244481)
+    at Object.l (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:243616)
+    at Object.<anonymous> (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:241320)
+    at Object.apply (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:174737)
+    at D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:216881
+    at D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:216916
+    at D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:217108
+    at su (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:210683)
+    at Su (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:216251)
+    at Eu (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:217188)
+    at Function.<anonymous> (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:251255)
+    at Function.<anonymous> (D:\\dev\\marcobot\
+ode_modules\\esm\\esm.js:1:251083)"
+    }
+}

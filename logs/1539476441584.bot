@@ -1,0 +1,10 @@
+{
+    "error": {
+        "message": "Cannot find module 'cheerio'",
+        "name": "Error",
+        "stack": "file:///D:/dev/marcobot/src/exchanges/binance.js:1
+Error: Cannot find module 'cheerio'
+    at Object.<anonymous> (file:///D:/dev/marcobot/src/exchanges/binance.js:7:15)
+    at Generator.next (<anonymous>)"
+    }
+}
