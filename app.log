@@ -278,3 +278,15 @@
 2018-10-16T01:22:21.748Z error: Binance api call has failed: Network Error
 2018-10-16T01:31:44.053Z debug: Binance api call https://api.binance.com/wapi/v3/withdrawHistory.html?timestamp=1539653504052&recvWindow=20000&signature=9dc27813fdbe0c4460f8ee32caee796ef2fbadbca71c49ebcdd3a79351a732aa
 2018-10-16T01:31:44.455Z error: Binance api call has failed: Network Error
+2018-10-16T14:43:29.200Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539701009190&recvWindow=20000&signature=1c5f964b645f1939ca2d7b156542f1f15250daa0defbd4d34e16dea1a1f794fc
+2018-10-16T14:43:29.710Z error: Binance api call has failed: Network Error
+2018-10-16T14:44:38.383Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539701078379&recvWindow=20000&signature=75a912dcb146ad29eb2f32e9ad4f6d6fb580093064d1269c1b78eab5ca64bc65
+2018-10-16T14:44:38.805Z error: Binance api call has failed: Network Error
+2018-10-16T15:21:10.631Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539703270630&recvWindow=20000&signature=8b91cf287bd3940a8a20c595ede6e4fc64dfe18df8237e78926521b332a662f4
+2018-10-16T15:21:10.922Z error: Binance api call has failed: Network Error
+2018-10-16T15:24:32.734Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539703472733&recvWindow=20000&signature=bec6f5239604475da941e0adf5b6141bab6bfbb8c82a447141b4df8ba745d074
+2018-10-16T15:24:33.030Z error: Binance api call has failed: Network Error
+2018-10-16T15:24:50.091Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539703490090&recvWindow=20000&signature=2886135bfcf89cfcbaea7db94ea71de0b0c4d031f072e3509f15e14c98c79269
+2018-10-16T15:24:50.401Z error: Binance api call has failed: Network Error
+2018-10-16T15:25:01.427Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539703501426&recvWindow=20000&signature=70fc113d411284f5f97a0cf37cb2be27021b579baee8e9329856e86867f289e8
+2018-10-16T15:25:01.716Z error: Binance api call has failed: Network Error

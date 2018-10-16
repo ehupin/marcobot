@@ -1,285 +1,349 @@
-import { inspect } from 'util'
+import axios from 'axios';
+import { connectDb, getWithdrawFees } from '../database.js';
+import { keys } from '../../keys/binance.js';
+import { logger } from '../loggers';
 
-import axios from 'axios'
+const fs = require('fs');
+const crypto = require('crypto');
+const qs = require('qs');
 
-// import {Market} from '../markets.js'
-import { connectDb, getWithdrawFees } from '../database.js'
+const cheerio = require('cheerio');
+const deepmerge = require('deepmerge');
 
-import { keys } from '../../keys/bittrex.js'
-
-const fs = require('fs')
-const crypto = require('crypto')
-const qs = require('qs')
-const request = require('request-promise')
-const cheerio = require('cheerio')
-
-const marketPrices = {}
-const bittrex = {
+const exchange = {
     name: 'bittrex',
-    tradingFees: 0.0025,
+    tradingFees: 0.0025
+};
 
-    _cleanMarketName(marketName) {
-        const [baseCurrency, quoteCurrency] = marketName.split('/')
-        return `${quoteCurrency}-${baseCurrency}`.toUpperCase()
-    },
-    async _signedRequest(method, path, args = {}) {
-        const nonce = Date.now()
-        args = Object.assign(args, {
-            nonce,
-            apikey: keys.API_KEY,
-        })
+exchange._cleanMarketName = function(marketName) {
+    const [baseCurrency, quoteCurrency] = marketName.split('/');
+    return `${quoteCurrency}-${baseCurrency}`.toUpperCase();
+};
+exchange._request = async function(method, path, signed = false, args = {}) {
+    //! 'signed' parameter is ignore for the moment
+    const nonce = Date.now();
+    args = Object.assign(args, {
+        nonce,
+        apikey: keys.API_KEY
+    });
 
-        const dataQueryString = qs.stringify(args)
-        const url = `https://bittrex.com${path}?${dataQueryString}`
-        const signature = crypto
-            .createHmac('sha512', keys.API_SECRET)
-            .update(url)
-            .digest('hex')
+    const dataQueryString = qs.stringify(args);
+    const url = `https://bittrex.com${path}?${dataQueryString}`;
+    const signature = crypto
+        .createHmac('sha512', keys.API_SECRET)
+        .update(url)
+        .digest('hex');
 
-        const requestConfig = {
-            method,
-            url,
-            headers: {
-                apisign: signature,
-            },
+    const requestConfig = {
+        method,
+        url,
+        headers: {
+            apisign: signature
+        }
+    };
+
+    try {
+        const response = await axios(requestConfig);
+        // console.log('>>', response.data.result);
+        if (!response.data.success) {
+            throw Error(`request has failed: ${response.data.message}`);
         }
 
-        try {
-            const response = await axios(requestConfig)
-
-            if (!response.data.success) {
-                throw `request has failed: ${response.data.message}`
-            }
-
-            return response.data
-        } catch (e) {
-            console.log(e)
-            throw e
+        return response.data;
+    } catch (e) {
+        let message = `Bittrex api call has failed: ${e.message}`;
+        if (e.response) {
+            message += `\n\tAxios related error: ${JSON.stringify(
+                e.response.data
+            )}`;
         }
-    },
+        logger.log('error', message);
+        throw e;
+    }
+};
+exchange.getCurrencies = async function() {
+    // proceed request
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/public/getcurrencies'
+    );
 
-    async getCurrencies() {
-        const result = await axios.get('https://bittrex.com/api/v1.1/public/getcurrencies')
-        const rawCurrencies = result.data.result
-        const currencies = {}
-        for (const currency of rawCurrencies) {
-            currencies[currency.Currency.toLowerCase()] = {
-                withdrawEnabled: currency.IsActive,
-                withdrawMin: currency.TxFee * 3,
-                withdrawFee: currency.TxFee,
-                depositEnabled: currency.IsActive,
-            }
+    const rawCurrencies = result.result;
+    const currencies = {};
+    for (const currency of rawCurrencies) {
+        currencies[currency.Currency.toLowerCase()] = {
+            withdrawEnabled: currency.IsActive,
+            withdrawMin: currency.TxFee * 3,
+            withdrawFee: currency.TxFee,
+            depositEnabled: currency.IsActive
+        };
+    }
+    return currencies;
+};
+exchange.getMarkets = async function() {
+    // proceed request
+    const result = await exchange._request(
+        'get',
+        '/api/v2.0/pub/markets/GetMarketSummaries'
+    );
+    //TODO: check if query result is not empty object
+
+    const markets = {};
+    for (const rawMarket of result.result) {
+        const market = {
+            baseCurrency: rawMarket.Market.MarketCurrency.toLowerCase(),
+            quoteCurrency: rawMarket.Market.BaseCurrency.toLowerCase(),
+            bidPrice: rawMarket.Summary.Bid,
+            askPrice: rawMarket.Summary.Ask,
+            baseVolume: rawMarket.Summary.Volume,
+            quoteVolume: rawMarket.Summary.BaseVolume,
+            maxTradeAmount: Number.MAX_VALUE,
+            minTradeStep: 0
+        };
+
+        // build label and add it to markets object
+        const label = `${market.baseCurrency}/${market.quoteCurrency}`;
+        markets[label] = market;
+    }
+
+    Object.keys(markets).map(marketName => {
+        let market = markets[marketName];
+        let minTradeAmount;
+        const btcMinTradeAmount = 0.0005;
+        if (market.baseCurrency == 'btc') {
+            minTradeAmount = btcMinTradeAmount;
+        } else if (market.quoteCurrency == 'btc') {
+            minTradeAmount = market.bidPrice * btcMinTradeAmount;
+        } else {
+            const btcRelatedMarket = markets[`${market.baseCurrency}/btc`];
+            minTradeAmount = btcRelatedMarket
+                ? btcRelatedMarket.bidPrice * btcMinTradeAmount
+                : 0;
         }
-        return currencies
-    },
-    async getMarkets() {
-        const apiResult = await axios.get(
-            'https://bittrex.com/api/v2.0/pub/markets/GetMarketSummaries',
-        )
+        market.minTradeAmount = minTradeAmount;
+    });
+    return markets;
+};
 
-        const markets = {}
-        for (const rawMarket of apiResult.data.result) {
-            const market = {
-                baseCurrency: rawMarket.Market.MarketCurrency.toLowerCase(),
-                quoteCurrency: rawMarket.Market.BaseCurrency.toLowerCase(),
-                bidPrice: rawMarket.Summary.Bid,
-                askPrice: rawMarket.Summary.Ask,
-                baseVolume: rawMarket.Summary.Volume,
-                quoteVolume: rawMarket.Summary.BaseVolume,
-            }
-            const label = `${market.baseCurrency}/${market.quoteCurrency}`
-            markets[label] = market
-        }
-        return markets
-    },
-    async getWalletAmount(currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getbalance', {
-            currency: currencyName,
-        })
+exchange.getOrderBook = async function(marketName, type) {
+    marketName = this._cleanMarketName(marketName);
+    type = type == 'bid' ? 'buy' : type;
+    type = type == 'ask' ? 'sell' : type;
 
-        return result.result.Available
-    },
-    async getDepositAddress(currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getdepositaddress', {
-            currency: currencyName,
-        })
-
-        return result.result.Address
-    },
-    async getOrderBook(marketName, type) {
-        marketName = this._cleanMarketName(marketName)
-        type = type == 'bid' ? 'buy' : type
-        type = type == 'ask' ? 'sell' : type
-        const result = await this._signedRequest('get', '/api/v1.1/public/getorderbook', {
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/public/getorderbook',
+        true,
+        {
             market: marketName,
-            type,
-        })
-        const orders = []
-        for (const order of result.result) {
-            orders.push({
-                price: order.Rate,
-                amount: order.Quantity,
-            })
+            type
         }
-        return orders
-    },
+    );
 
-    async applyWithdrawFees(currencyName, srcTradeOutput) {
-        if (srcTradeOutput < currencyFees.withdrawMin) {
-            throw 'withdraw disabled'
+    const orders = [];
+    for (const order of result.result) {
+        orders.push({
+            price: order.Rate,
+            amount: order.Quantity
+        });
+    }
+    return orders;
+};
+
+exchange.getWalletAmount = async function(currencyName) {
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/account/getbalance',
+        true,
+        {
+            currency: currencyName
         }
-        const db = connectDb()
-        const currencyFees = await getWithdrawFees(db, this.name, currencyName)
-        if (!currencyFees.withdrawEnabled) {
-            throw 'withdraw disabled'
+    );
+
+    return result.result.Available;
+};
+exchange.getDepositAddress = async function(currencyName) {
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/account/getdepositaddress',
+        true,
+        {
+            currency: currencyName
         }
-        const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee
-        return withdrawOutput
-    },
-    async applyTradingFees(srcTradeOutput) {
-        return srcTradeOutput * (1 - this.tradingFees)
-    },
+    );
 
-    // async orderIsCompleted(marketName,orderId){
-    //     marketName = marketName.replace('/','').toUpperCase()
-    //     const result = await this._signedRequest('get','/api/v3/order',
-    //                                             {
-    //                                                 symbol: marketName,
-    //                                                 orderId,
-    //                                                 timestamp: Date.now()
-    //                                             })
-    //     return result.status === 'FILLED'
-    // },
-    async withdrawIsCompleted(withdrawId) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getwithdrawalhistory')
+    return result.result.Address;
+};
+exchange.applyWithdrawFees = async function(currencyName, amount) {
+    if (srcTradeOutput < currencyFees.withdrawMin) {
+        throw 'withdraw disabled';
+    }
+    const db = connectDb();
+    const currencyFees = await getWithdrawFees(db, this.name, currencyName);
+    if (!currencyFees.withdrawEnabled) {
+        throw 'withdraw disabled';
+    }
+    const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee;
+    return withdrawOutput;
+};
+exchange.applyTradingFees = async function(amount) {
+    return amount * (1 - this.tradingFees);
+};
+exchange.orderIsCompleted = async function(marketName, orderId) {
+    throw Error('Not implemented');
+};
+exchange.withdrawIsCompleted = async function(withdrawId) {
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/account/getwithdrawalhistory'
+    );
 
-        let found = false
-        for (const withdraw of result.result) {
-            if (withdraw.PaymentUuid === withdrawId) {
-                found = true
-                if (withdraw.Authorized && !withdraw.PendingPayment) {
-                    return true
-                }
+    let found = false;
+    for (const withdraw of result.result) {
+        if (withdraw.PaymentUuid === withdrawId) {
+            found = true;
+            if (withdraw.Authorized && !withdraw.PendingPayment) {
+                return true;
             }
         }
+    }
 
-        if (!found) {
-            throw `Withdraw ${withdrawId} not found!`
-        }
+    if (!found) {
+        throw `Withdraw ${withdrawId} not found!`;
+    }
 
-        return false
-    },
-    async depositIsCompleted(amount, currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getdeposithistory', {
-            // currency: currencyName.toUpperCase()
-        })
+    return false;
+};
+exchange.depositIsCompleted = async function(amount, currencyName) {
+    throw Error('Not implemented');
+};
+exchange.placeOrder = async function(marketName, amount, type) {
+    throw Error('Not implemented');
+};
+exchange.makeWithdrawal = async function(
+    currencyName,
+    amount,
+    address,
+    addressTag
+) {
+    const data = {
+        currency: currencyName,
+        quantity: amount,
+        address,
+        paymentid: addressTag
+    };
 
-        console.log(result)
-        return
-        let found = false
-        for (const withdraw of result.result) {
-            if (withdraw.Amount == amount) {
-                found = true
-                if (withdraw.status === 1) {
-                    return true
-                }
-            }
-        }
+    const result = await exchange._request(
+        'get',
+        '/api/v1.1/account/withdraw',
+        data
+    );
 
-        if (!found) {
-            throw `Deposit of ${amount} ${currencyName} not found!`
-        }
-
-        return false
-    },
-
-    // async placeOrder(marketName, amount, type){
-
-    //     marketName = this._cleanMarketName(marketName)
-    //     const priceResult = await axios.get(`https://bittrex.com/api/v1.1/public/getmarketsummary?market=${marketName}`)
-    //     const limitPrice = type === 'buy' ? priceResult.data.result[0].Ask : priceResult.data.result[0].Bid
-
-    //     const data = {
-    //         market: marketName,
-    //         quantity: amount,
-    //         rate: limitPrice //TODO: adjust price ?
-    //     }
-
-    //     const result = await this._signedRequest('get',
-    //                                             `/api/v1.1/market/${type}limit`,
-    //                                             data
-    //                                             )
-
-    //     return result
-    // },
-    async makeWithdrawal(currencyName, amount, address, addressTag) {
-        const data = {
-            currency: currencyName,
-            quantity: amount,
-            address,
-            paymentid: addressTag,
-        }
-
-        const result = await this._signedRequest('get', '/api/v1.1/account/withdraw', data)
-
-        return { id: result.uuid }
-    },
-}
-
-export { bittrex }
-
-/*
-TODO: check quantity of place order (0.005 satoshis)
-TODO: test withdrawIsCompleted
-TODO: pass arbitrage to place order
-TODO: check output de placeOrder
-TODO: add deposit is completed
-TODO: add orderIsCompleted
-*/
+    return { id: result.uuid };
+};
+export default exchange;
 
 async function test() {
-    let r = null
-    r = await bittrex.depositIsCompleted(0.9898, 'go')
+    // const amount = await binance.getWalletAmount('xrp')
+    // console.log(amount)
 
-    // const amount = await bittrex.getWalletAmount('usdt')
-    // // let a = await bittrex.placeOrder('go/btc', 0.1, 'sell')
-    // let withdrawOutput = await bittrex.makeWithdrawal('usdt', amount, '1Eu6L62XiS3he5au576mzNnXFqNWbVRdMK')
-    // let i = setInterval(async()=>{
-    //     let result = await bittrex.withdrawIsCompleted(withdrawOutput.id)
+    // const amount = await binance.makeWithdrawal('btc',
+    //                                             0.01,
+    //                                             '37HupeVwMQjSCVA9BdEkkX56hzyBwqBBD5')
 
-    //     console.log(result)
-    //     if (result){
-    //         clearInterval(i)
-    //     }
-    // }, 2000)
+    // let amount = await binance.makeTrade('gto/btc', 1, 'buy')
+    // console.log(amount)
 
-    // a = await bittrex.getOrderBook('usdt/btc', 'bid')
-    // console.log(a)
-    // let a = await bittrex.makeWithdrawal('btc', amount, '1Cx7NX9w5WomnPMTQJVjUYMVD9QUYp37De')
-    // console.log(a)
-    // const result = await bittrex.makeTrade('usdt/btc', 0.0009, 'buy')
-
-    // const uuid = '0cb4c4e4-bdc7-4e13-8c13-430e587d2cc1'
-    // const result = await bittrex._signedRequest('get',
-    //                                         `/api/v1.1/account/getorder`,
-    //                                         {uuid}
-    //                                         )
-
-    // https://bittrex.com/api/v1.1/account/getorder&uuid=0cb4c4e4-bdc7-4e13-8c13-430e587d2cc1
-    // sur bittrex usd/btc, sell veut dire donner du btc pour avoir de l'usd
-    // sur usdt/btc buy donne des usdt pour avoir des btc, le montant reste en btc (il faut calculer combien om=n obtient pour le prix)
+    // const result = await binance._signedRequest('get','/wapi/v3/withdrawHistory.html',
+    //                                             {
+    //                                                 timestamp: Date.now()
+    //                                             })
     // console.log(result)
+
+    // return
+
+    // let amount = await binance.depositIsCompleted(0.0494, 'btc')
+    // const amount = await binance.withdrawIsCompleted(0.0494, 'btc');
+    // console.log(amount);
+    // BTC
+    // Bitcoin
+    // 0.04869875
+
+    // const currencies = await binance.getCurrencies()
+    // let addresses = {}
+    // for (const currencyName of Object.keys(currencies)){
+    //     let a = await binance.getDepositAdress(currencyName)
+    //     // console.log(a)
+    //     addresses[currencyName] = a
+    // }
+
+    // fs.writeFile('binance_addresses.json', JSON.stringify(addresses,null,4))
+
+    const a = await exchange.getMarkets();
+    console.log(a);
 }
-// test()
+test();
 
 /*
-
 TRADE 01
 ========
+{ symbol: 'XRPBTC',
+  side: 'BUY',
+  type: 'MARKET',
+  quantity: 10,
+  newOrderRespType: 'FULL',
+  timestamp: 1539284533376,
+  recvWindow: 10000 }
+{ symbol: 'XRPBTC',
+  orderId: 83715413,
+  clientOrderId: 'Z6fk6KQ54cYHyE10OOdDho',
+  transactTime: 1539284536134,
+  price: '0.00000000',
+  origQty: '10.00000000',
+  executedQty: '10.00000000',
+  cummulativeQuoteQty: '0.00065110',
+  status: 'FILLED',
+  timeInForce: 'GTC',
+  type: 'MARKET',
+  side: 'BUY',
+  fills:
+   [ { price: '0.00006511',
+       qty: '10.00000000',
+       commission: '0.01000000',
+       commissionAsset: 'XRP',
+       tradeId: 29455034 } ] }
 
-{ success: true,
-  message: '',
-  result: { uuid: 'fe75c6d2-1d23-4df0-80b9-9de4622b346a' } }
+575.99000000
 
 
+TRADE 02
+========
+
+{ symbol: 'XRPBTC',
+  side: 'BUY',
+  type: 'MARKET',
+  quantity: 10,
+  newOrderRespType: 'FULL',
+  timestamp: 1539284846344,
+  recvWindow: 10000 }
+{ symbol: 'XRPBTC',
+  orderId: 83716005,
+  clientOrderId: 'hxJONVpJyAvV4yXna83h17',
+  transactTime: 1539284849295,
+  price: '0.00000000',
+  origQty: '10.00000000',
+  executedQty: '10.00000000',
+  cummulativeQuoteQty: '0.00065050',
+  status: 'FILLED',
+  timeInForce: 'GTC',
+  type: 'MARKET',
+  side: 'BUY',
+  fills:
+   [ { price: '0.00006505',
+       qty: '10.00000000',
+       commission: '0.01000000',
+       commissionAsset: 'XRP',
+       tradeId: 29455162 } ] }
+
+575.99 -> 585.98
 */

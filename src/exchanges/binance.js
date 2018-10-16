@@ -1,12 +1,6 @@
-import { inspect } from 'util';
-
 import axios from 'axios';
-
-import { signedRequest } from '../signedRequest.js';
 import { connectDb, getWithdrawFees } from '../database.js';
-
 import { keys } from '../../keys/binance.js';
-
 import { logger } from '../loggers';
 
 const fs = require('fs');
@@ -33,33 +27,6 @@ exchange._getMarketsPrices = async function() {
         };
     }
     return markets;
-};
-exchange._signedRequest = async function(method, path, args = {}) {
-    const currentTimestamp = new Date().getTime();
-    const dataQueryString = qs.stringify(
-        Object.assign(args, { timestamp: currentTimestamp })
-    );
-    const signature = crypto
-        .createHmac('sha256', keys.API_SECRET)
-        .update(dataQueryString)
-        .digest('hex');
-    const requestConfig = {
-        method,
-        url: `https://api.binance.com${path}?${dataQueryString}&signature=${signature}`,
-        headers: {
-            'X-MBX-APIKEY': keys.API_KEY
-        }
-    };
-    //   console.log(requestConfig)
-    //   return
-
-    try {
-        const response = await axios(requestConfig);
-        return response.data;
-    } catch (e) {
-        console.log(e.response.data);
-        throw e;
-    }
 };
 exchange._request = async function(method, path, signed = false, args = {}) {
     // add timestamp to args and stringify the args
@@ -268,7 +235,7 @@ exchange.depositIsCompleted = async function(amount, currencyName) {
             timestamp: Date.now()
         }
     );
-
+    // return result;
     currencyName = currencyName.toUpperCase();
     let found = false;
     for (const deposit of result.depositList) {
