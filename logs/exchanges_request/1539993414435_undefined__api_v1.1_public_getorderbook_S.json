@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=USDTO-BTC&type=sell&nonce=1539993414216&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "0a20a67310f0f0c6b426ef3a68065dc826f3734a1cab0c354fd36867ff80225d3dce1f2d62496fc105c8bf81c35b22e31c17bc54b5254e1d211a3c8748519736"
+        }
+    }
+}

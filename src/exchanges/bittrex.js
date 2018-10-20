@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { connectDb, getWithdrawFees } from '../database.js';
-import { keys } from '../../keys/binance.js';
+import { keys } from '../../keys/bittrex.js';
 import { logger } from '../loggers';
 
 const fs = require('fs');
@@ -15,12 +15,17 @@ const exchange = {
     tradingFees: 0.0025
 };
 
+exchange._catchRequestResponseErrors = function(response) {
+    if (!response.data.success) {
+        throw Error(response.data.message);
+    }
+};
+
 exchange._cleanMarketName = function(marketName) {
     const [baseCurrency, quoteCurrency] = marketName.split('/');
     return `${quoteCurrency}-${baseCurrency}`.toUpperCase();
 };
 exchange._request = async function(method, path, signed = false, args = {}) {
-    //! 'signed' parameter is ignore for the moment
     const nonce = Date.now();
     args = Object.assign(args, {
         nonce,
@@ -41,32 +46,14 @@ exchange._request = async function(method, path, signed = false, args = {}) {
             apisign: signature
         }
     };
-
-    try {
-        const response = await axios(requestConfig);
-        // console.log('>>', response.data.result);
-        if (!response.data.success) {
-            throw Error(`request has failed: ${response.data.message}`);
-        }
-
-        return response.data;
-    } catch (e) {
-        let message = `Bittrex api call has failed: ${e.message}`;
-        if (e.response) {
-            message += `\n\tAxios related error: ${JSON.stringify(
-                e.response.data
-            )}`;
-        }
-        logger.log('error', message);
-        throw e;
-    }
+    return await this._makeRequest(exchange, path, requestConfig);
+};
+exchange.logThis = async function() {
+    console.log(this);
 };
 exchange.getCurrencies = async function() {
     // proceed request
-    const result = await exchange._request(
-        'get',
-        '/api/v1.1/public/getcurrencies'
-    );
+    const result = await this._request('get', '/api/v1.1/public/getcurrencies');
 
     const rawCurrencies = result.result;
     const currencies = {};
@@ -81,8 +68,7 @@ exchange.getCurrencies = async function() {
     return currencies;
 };
 exchange.getMarkets = async function() {
-    // proceed request
-    const result = await exchange._request(
+    const result = await this._request(
         'get',
         '/api/v2.0/pub/markets/GetMarketSummaries'
     );
@@ -130,7 +116,7 @@ exchange.getOrderBook = async function(marketName, type) {
     type = type == 'bid' ? 'buy' : type;
     type = type == 'ask' ? 'sell' : type;
 
-    const result = await exchange._request(
+    const result = await this._request(
         'get',
         '/api/v1.1/public/getorderbook',
         true,
@@ -151,7 +137,7 @@ exchange.getOrderBook = async function(marketName, type) {
 };
 
 exchange.getWalletAmount = async function(currencyName) {
-    const result = await exchange._request(
+    const result = await this._request(
         'get',
         '/api/v1.1/account/getbalance',
         true,
@@ -159,11 +145,12 @@ exchange.getWalletAmount = async function(currencyName) {
             currency: currencyName
         }
     );
-
+    //TODO: throw error is symbol not found
     return result.result.Available;
 };
 exchange.getDepositAddress = async function(currencyName) {
-    const result = await exchange._request(
+    //TODO: // check for api error : ADDRESS_GENERATING
+    const result = await this._request(
         'get',
         '/api/v1.1/account/getdepositaddress',
         true,
@@ -171,29 +158,80 @@ exchange.getDepositAddress = async function(currencyName) {
             currency: currencyName
         }
     );
+    // throw result.result;
+    const returnedAddress = result.result.Address;
+    if (!returnedAddress) {
+        throw Error(
+            `Deposit address for ${currencyName} on ${exchange.name} is empty`
+        );
+    }
 
-    return result.result.Address;
+    // if currency rely on tag address, get base address first
+    let baseAddress;
+    if (['xrp', 'xlm', 'lsk'].includes(currencyName)) {
+        const result = await this._request(
+            'get',
+            '/api/v1.1/public/getcurrencies'
+        );
+
+        const currencies = result.result.filter(
+            currency => currency.Currency == currencyName.toUpperCase()
+        );
+        if (currencies.length === 0) {
+            throw Error('Cannot get currency base address');
+        }
+        baseAddress = currencies[0].BaseAddress;
+    }
+
+    let address;
+    if (baseAddress) {
+        address = { address: baseAddress, tag: returnedAddress };
+    } else {
+        address = { address: returnedAddress, tag: '' };
+    }
+
+    return address;
 };
 exchange.applyWithdrawFees = async function(currencyName, amount) {
-    if (srcTradeOutput < currencyFees.withdrawMin) {
-        throw 'withdraw disabled';
-    }
     const db = connectDb();
-    const currencyFees = await getWithdrawFees(db, this.name, currencyName);
+    let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
+    if (!currencyFees) {
+        throw 'cannot get fees from database';
+    }
+    currencyFees = currencyFees[0];
+    if (amount < currencyFees.withdrawMin) {
+        throw `withdraw too low ${amount} < ${currencyFees.withdrawMin}`;
+    }
     if (!currencyFees.withdrawEnabled) {
         throw 'withdraw disabled';
     }
-    const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee;
+    const withdrawOutput = amount - currencyFees.withdrawFee;
     return withdrawOutput;
 };
-exchange.applyTradingFees = async function(amount) {
-    return amount * (1 - this.tradingFees);
+exchange.applyTradingFees = function(amount) {
+    return amount * (1 - exchange.tradingFees);
 };
 exchange.orderIsCompleted = async function(marketName, orderId) {
-    throw Error('Not implemented');
+    const result = await this._request(
+        'get',
+        '/api/v1.1/account/getorderhistory'
+    );
+
+    if (result.result.length === 0) {
+        throw Error('Bittrex return no order');
+    }
+
+    const matchingOrder = result.result.filter(
+        order => order.OrderUuid === orderId
+    );
+    if (matchingOrder.length === 0) {
+        throw Error('Order has not been found');
+    }
+
+    return matchingOrder[0].QuantityRemaining === 0;
 };
 exchange.withdrawIsCompleted = async function(withdrawId) {
-    const result = await exchange._request(
+    const result = await this._request(
         'get',
         '/api/v1.1/account/getwithdrawalhistory'
     );
@@ -207,9 +245,8 @@ exchange.withdrawIsCompleted = async function(withdrawId) {
             }
         }
     }
-
     if (!found) {
-        throw `Withdraw ${withdrawId} not found!`;
+        throw Error(`Withdraw ${withdrawId} not found!`);
     }
 
     return false;
@@ -233,7 +270,7 @@ exchange.makeWithdrawal = async function(
         paymentid: addressTag
     };
 
-    const result = await exchange._request(
+    const result = await this._request(
         'get',
         '/api/v1.1/account/withdraw',
         data
@@ -279,10 +316,16 @@ async function test() {
 
     // fs.writeFile('binance_addresses.json', JSON.stringify(addresses,null,4))
 
-    const a = await exchange.getMarkets();
-    console.log(a);
+    // const a = await exchange.getDepositAddress('xrp');
+
+    const result = await this._request(
+        'get',
+        '/api/v1.1/account/getorderhistory'
+    );
+
+    console.log(result);
 }
-test();
+// test();
 
 /*
 TRADE 01

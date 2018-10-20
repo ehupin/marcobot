@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=UNDEFINED-BTCUSDT&type=sell&nonce=1539991039501&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "8bb0c40b68690ce758e06c0b8c99a294fd38b84857e3981d3931ee958555938cb060499073b2fa5226a13b132abf066bae3287d64095421832f2f4d8fe4a4ba3"
+        }
+    }
+}

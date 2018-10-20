@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getorderhistory?nonce=1539905536993&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ddf10cb0f6b07e49408e719607bb4f3345d1985bdd8fca49f7f9102bc9af3bcbb7a41f5341e3307ccb85d10f2f75da1ce508db50be92e2bcde492160908402c2"
+        }
+    }
+}

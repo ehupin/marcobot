@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getbalance?currency=btc&nonce=1539999627235&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "d4ca1a7cb772a784dd539446a01f96fa7df0e3ce2cee078e651d49654ba86801b2a5eb87854ff877d4c6a827f57398d334032caa58ec114549fff028c99a0b5c"
+        }
+    }
+}

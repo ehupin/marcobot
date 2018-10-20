@@ -56,22 +56,81 @@ const requestApiOutput = {
         }
     },
     getWalletAmount: {
-        get: {}
+        get: {
+            result: {
+                Currency: 'BTC',
+                Balance: 0,
+                Available: 0,
+                Pending: 0,
+                CryptoAddress: '148NCF4RqFSYWf3R16S9vHUqcZbP15bfnw'
+            }
+        }
     },
     getDepositAddress: {
-        get: {}
+        get: {
+            result: {
+                Currency: 'BTC',
+                Address: '148NCF4RqFSYWf3R16S9vHUqcZbP15bfnw'
+            }
+        }
     },
     getOrderBook: {
-        get: {}
+        get: {
+            result: [
+                { Quantity: 3.42130352, Rate: 0.03175 },
+                { Quantity: 42.299, Rate: 0.03179999 }
+            ]
+        }
     },
     orderIsCompleted: {
-        isCompleted: {},
-        isNotCompleted: {}
+        isCompleted: {
+            result: [
+                {
+                    OrderUuid: '123456',
+                    QuantityRemaining: 0
+                }
+            ]
+        },
+        isNotCompleted: {
+            result: [
+                {
+                    OrderUuid: '123456',
+                    QuantityRemaining: 100000.0
+                }
+            ]
+        }
     },
     withdrawIsCompleted: {
-        isCompleted: {},
-        isNotCompleted: {},
-        isNotFound: {}
+        isCompleted: {
+            result: [
+                {
+                    PaymentUuid: '123456',
+                    Currency: 'BTC',
+                    Authorized: true,
+                    PendingPayment: false
+                }
+            ]
+        },
+        isNotCompleted: {
+            result: [
+                {
+                    PaymentUuid: '123456',
+                    Currency: 'BTC',
+                    Authorized: false,
+                    PendingPayment: true
+                }
+            ]
+        },
+        isNotFound: {
+            result: [
+                {
+                    PaymentUuid: '123456',
+                    Currency: 'BTC',
+                    Authorized: false,
+                    PendingPayment: true
+                }
+            ]
+        }
     },
     depositIsCompleted: {
         isCompleted: {},

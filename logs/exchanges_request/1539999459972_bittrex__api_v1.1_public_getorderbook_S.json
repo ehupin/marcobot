@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-ETH&type=sell&nonce=1539999459747&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7a3e89cc4212273036672b72f3d3001e80991d44ed3be44001f9b899e740c4a8da46c543682311bb8af3c45fff35e4683934d07d3ac7cdd556e785a0a5168918"
+        }
+    }
+}

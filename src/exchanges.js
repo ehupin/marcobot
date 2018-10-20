@@ -1,44 +1,309 @@
-import fs from 'fs'
+import fs from 'fs';
+import { logger } from './loggers';
+import axios from 'axios';
 
+/*
+Return existing exchanges by reading the content of src/exchanges and loading the js files in it.
+The returned exchanges are proxified first. 
+All this process is made by getExchange, whereas getExchanges is just in charge of looping throught exchanges dir.
+*/
 export function getExchanges() {
-    const exchanges = []
-    const exchangeModuleFiles = fs.readdirSync('./src/exchanges')
+    const exchanges = [];
+    const exchagesDir = './src/exchanges/';
+    const exchangeModuleFiles = fs.readdirSync(exchagesDir);
     for (const exchangeModuleFile of exchangeModuleFiles) {
-        const exchangeName = exchangeModuleFile.split('.')[0]
-        exchanges.push(getExchange(exchangeName))
+        // console.log(fs.statSync(exchagesDir + exchangeModuleFile).isFile());
+        if (fs.statSync(exchagesDir + exchangeModuleFile).isFile()) {
+            const exchangeName = exchangeModuleFile.split('.')[0];
+            exchanges.push(getExchange(exchangeName));
+        }
     }
-    return exchanges
+    return exchanges;
 }
 
+/*
+Return required exchange, which is a proxy around the exchange contain in file.
+Indeed, this function first load exchange from file, then proxify it.
+*/
 export function getExchange(exchangeName) {
-    const exchange = require(`./exchanges/${exchangeName}.js`)[exchangeName]
-    return _proxifyExchange(exchange)
+    const exchange = require(`./exchanges/${exchangeName}.js`).default;
+    return _proxifyExchange(exchange);
 }
 
+/*
+This object contain function dedicated to check arguments sent to exchanges functions.
+It helps to reduce the replciaiton of code for each exchange.
+Indeed, when creating new exchages, developper will not have to check received arguments.
+*/
+// TODO refactor all this to make it DRY (attributes check are often the same)
+const checkExchangeFunctionsArguments = {
+    getMarkets() {},
+    getCurrencies() {},
+    getOrderBook(marketName, type) {
+        if (
+            !typeof marketName === 'string' ||
+            !marketName.match(/^\w+\/\w+$/)
+        ) {
+            throw Error(`getOrderBook: marketName is not valid: ${marketName}`);
+        }
+
+        if (!typeof type === 'string' || !['ask', 'bid'].includes(type)) {
+            throw Error(`getOrderBook: type is not valid: ${type}`);
+        }
+    },
+    getWalletAmount(currencyName) {
+        if (!typeof currencyName === 'string' || !currencyName.match(/^\w+$/)) {
+            throw Error(
+                `getWalletAmount: currencyName is not valid: ${currencyName}`
+            );
+        }
+    },
+    getDepositAddress(currencyName) {
+        if (!typeof currencyName === 'string' || !currencyName.match(/^\w+$/)) {
+            throw Error(
+                `getDepositAddress: currencyName is not valid: ${currencyName}`
+            );
+        }
+    },
+    applyWithdrawFees(currencyName, amount) {
+        if (!typeof currencyName === 'string' || !currencyName.match(/^\w+$/)) {
+            throw Error(
+                `applyWithdrawFees: currencyName is not valid: ${currencyName}`
+            );
+        }
+
+        if (!typeof amount === 'number' || amount <= 0) {
+            throw Error(`applyWithdrawFees: amount is not valid: ${amount}`);
+        }
+    },
+    applyTradingFees(amount) {
+        if (!typeof amount === 'number' || amount <= 0) {
+            throw Error(`applyTradingFees: amount is not valid: ${amount}`);
+        }
+    },
+    orderIsCompleted(marketName, orderId) {
+        if (
+            !typeof marketName === 'string' ||
+            !marketName.match(/^\w+\/\w+$/)
+        ) {
+            throw Error(
+                `orderIsCompleted: marketName is not valid: ${marketName}`
+            );
+        }
+
+        if (!typeof orderId === 'string' || orderId === '') {
+            throw Error(
+                `orderIsCompleted: withdrawId is not valid: ${withdrawId}`
+            );
+        }
+    },
+    withdrawIsCompleted(withdrawId) {
+        if (!typeof withdrawId === 'string' || withdrawId === '') {
+            throw Error(
+                `withdrawIsCompleted: withdrawId is not valid: ${withdrawId}`
+            );
+        }
+    },
+    //TODO: change signature attribute order to match applyWithdrawFees
+    depositIsCompleted(amount, currencyName) {
+        if (!typeof currencyName === 'string' || !currencyName.match(/^\w+$/)) {
+            throw Error(
+                `depositIsCompleted: currencyName is not valid: ${currencyName}`
+            );
+        }
+
+        if (!typeof amount === 'number' || amount <= 0) {
+            throw Error(`depositIsCompleted: amount is not valid: ${amount}`);
+        }
+    },
+    placeOrder(marketName, amount, type) {
+        if (
+            !typeof marketName === 'string' ||
+            !marketName.match(/^\w+\/\w+$/)
+        ) {
+            throw Error(`placeOrder: marketName is not valid: ${marketName}`);
+        }
+
+        if (!typeof amount === 'number' || amount <= 0) {
+            throw Error(`placeOrder: amount is not valid: ${amount}`);
+        }
+
+        if (!typeof type === 'string' || !['buy', 'sell'].includes(type)) {
+            throw Error(`placeOrder: type is not valid: ${type}`);
+        }
+    },
+    makeWithdrawal(currencyName, amount, address, addressTag) {
+        if (!typeof currencyName === 'string' || !currencyName.match(/^\w+$/)) {
+            throw Error(
+                `makeWithdrawal: currencyName is not valid: ${currencyName}`
+            );
+        }
+
+        if (!typeof amount === 'number' || amount <= 0) {
+            throw Error(`makeWithdrawal: amount is not valid: ${amount}`);
+        }
+
+        if (!typeof address === 'string' || address === '') {
+            throw Error(`makeWithdrawal: address is not valid: ${address}`);
+        }
+
+        //TODO: manage addressTag requirement based on currency ??
+    }
+};
+
+/*
+Return a proxified version of given exchange.
+Extra functions are also added (e.g. _makeRequest).
+Original functions are wrapped in order to check values passed as arguments
+before the original exchange function is ran.
+*/
 function _proxifyExchange(exchange) {
-    return exchange
-    return new Proxy(exchange, {
-        get(instance, property) {
-            const value = instance[property]
-            if (typeof value === 'function') {
-                if (value.toString().startsZith('async')) {
-                    return async function (...args) {
-                        try {
-                            return await value(...args)
-                        } catch (e) {
-                            console.log(e)
-                        }
+    // create proxifiedExchange from original exchange
+    let proxifiedExchange = Object.assign({}, exchange);
+
+    // assign _makeRequest and re-bind _request
+    proxifiedExchange._makeRequest = _makeRequest;
+    proxifiedExchange._request = exchange._request.bind(proxifiedExchange);
+
+    // wrap functions
+    Object.keys(proxifiedExchange).map(key => {
+        if (Object.keys(checkExchangeFunctionsArguments).includes(key)) {
+            const ffunction = proxifiedExchange[key];
+            const functionName = key;
+            proxifiedExchange[functionName] = async function(...args) {
+                checkExchangeFunctionsArguments[functionName](...args);
+                const wrappedFunction = ffunction.bind(proxifiedExchange);
+                return await wrappedFunction(...args);
+            };
+        }
+    });
+
+    return proxifiedExchange;
+}
+
+/*
+Run request using given requestConfig and return result sent by api servers.
+*/
+async function _makeRequest(exchange, path, requestConfig) {
+    let response, errorMessage;
+
+    // try to run the request
+    try {
+        const response = await axios(requestConfig);
+
+        // catch generic axios error
+        if (!response.data) {
+            throw Error(`request has failed: ${response.data}`);
+        }
+
+        // catch api related errors if exchange have a _catchRequestResponseErrors function
+        if (exchange._catchRequestResponseErrors) {
+            try {
+                exchange._catchRequestResponseErrors(response);
+            } catch (e) {
+                throw Error(`request has failed (api error): ${e.message}`);
+            }
+        }
+
+        return response.data;
+    } catch (e) {
+        // catch errors, reformat them, log them and throw them up
+        let errorMessage = `Bittrex api call has failed: ${e.message}`;
+
+        // add related axios error data if it exists
+        if (e.response) {
+            errorMessage += `\n\tAxios related error: ${JSON.stringify(
+                e.response.data
+            )}`;
+        }
+
+        // log error and throw it
+        logger.log('error', errorMessage);
+        throw e;
+    } finally {
+        // finally write a log file specific to this request
+        // TODO: should it be included in general logger ?
+        // make log object and stringify it
+        const log = {
+            requestConfig,
+            response: response ? response.data : response,
+            errorMessage
+        };
+        const logString = JSON.stringify(log, null, 4);
+
+        // build log file path
+        const logFileDir = './logs/exchanges_request/';
+        const cleanedPath = path.replace(/\//g, '_');
+        const logFileName = `${Date.now()}_${exchange.name}_${cleanedPath}_${
+            errorMessage ? 'E' : 'S'
+        }.json`;
+        const logFilePath = logFileDir + logFileName;
+
+        fs.writeFileSync(logFilePath, logString);
+    }
+}
+
+const testedFunctionArgs = {
+    getCurrencies: [],
+    getMarkets: [],
+    getOrderBook: ['eth/btc', 'bid'],
+    getWalletAmount: ['btc'],
+    getDepositAddress: ['xrp'],
+    applyWithdrawFees: ['btc', 0.5],
+    applyTradingFees: ['0.5']
+    // orderIsCompleted: [],
+    // withdrawIsCompleted: [],
+    // depositIsCompleted: [],
+    // placeOrder: [],
+    // makeWithdrawal: []
+};
+
+async function testExchanges() {
+    const testedExchangeNames = ['binance', 'bittrex'];
+    const exchanges = getExchanges();
+    for (const functionName of Object.keys(testedFunctionArgs)) {
+        for (const exchange of exchanges) {
+            if (!testedExchangeNames.includes(exchange.name)) {
+                continue;
+            }
+
+            const args = testedFunctionArgs[functionName];
+            console.log(
+                `\n\n=> Testing ${exchange.name}.${functionName}() ...`
+            );
+            // continue;
+            try {
+                const result = await exchange[functionName](...args);
+
+                if (typeof result === 'object') {
+                    const keys = Object.keys(result);
+                    // console.log(keys.length);
+                    // return;
+                    if (keys.length > 2) {
+                        let prunedObject = {};
+                        keys.slice(0, 2).map(
+                            key => (prunedObject[key] = result[key])
+                        );
+                        console.log(prunedObject);
+                        continue;
                     }
                 }
 
-                return function (...args) {
-                    try {
-                        return value(...args)
-                    } catch (e) {
-                        console.log(e)
+                if (typeof result === 'array') {
+                    continue;
+                    if (result.length > 2) {
+                        let prunedArray = [];
+                        console.log(result.slice(0, 2));
                     }
                 }
+
+                console.log(result);
+            } catch (e) {
+                console.log('!!! ERROR !!! - ', e);
             }
-        },
-    })
+        }
+    }
+
+    return;
 }
+testExchanges();

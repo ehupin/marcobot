@@ -290,3 +290,21 @@
 2018-10-16T15:24:50.401Z error: Binance api call has failed: Network Error
 2018-10-16T15:25:01.427Z debug: Binance api call https://api.binance.com/wapi/v3/depositHistory.html?timestamp=1539703501426&recvWindow=20000&signature=70fc113d411284f5f97a0cf37cb2be27021b579baee8e9329856e86867f289e8
 2018-10-16T15:25:01.716Z error: Binance api call has failed: Network Error
+2018-10-17T15:59:18.671Z error: Bittrex api call has failed: request has failed: TYPE_NOT_PROVIDED
+2018-10-17T15:59:42.452Z error: Bittrex api call has failed: request has failed: APIKEY_INVALID
+2018-10-17T15:59:53.392Z error: Bittrex api call has failed: request has failed: APIKEY_INVALID
+2018-10-17T16:00:10.843Z error: Bittrex api call has failed: request has failed: APIKEY_INVALID
+2018-10-17T16:17:00.871Z error: Bittrex api call has failed: request has failed: CURRENCY_DOES_NOT_EXIST
+2018-10-17T16:34:47.413Z error: Bittrex api call has failed: request has failed: ADDRESS_GENERATING
+2018-10-18T20:27:44.634Z error: Bittrex api call has failed: getaddrinfo ENOTFOUND bittrex.comapi bittrex.comapi:443
+2018-10-19T22:05:40.330Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T22:06:10.099Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T22:06:35.440Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T22:07:54.881Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T23:16:03.172Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T23:17:09.651Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T23:17:19.674Z error: Bittrex api call has failed: request has failed: INVALID_MARKET
+2018-10-19T23:57:38.827Z error: Bittrex api call has failed: request has failed (api error): INVALID_MARKET
+2018-10-20T00:12:06.859Z debug: Binance api call https://api.binance.com/api/v1/depth?symbol=BTCUSDT
+2018-10-20T00:38:38.519Z error: Bittrex api call has failed: Request failed with status code 401
+	Axios related error: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}

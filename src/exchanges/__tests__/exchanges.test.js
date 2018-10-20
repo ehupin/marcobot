@@ -22,7 +22,7 @@ function setRequestResult(describedFunction, testName) {
     exchange._request = mockedFunction;
 }
 
-test('getCurrencies', () => {
+test.only('getCurrencies', () => {
     setRequestResult('getCurrencies', 'get');
     return exchange.getCurrencies().then(currencies => {
         expect(currencies).toEqual(expect.any(Object));
@@ -39,7 +39,7 @@ test('getCurrencies', () => {
     });
 });
 
-test.only('getMarkets', () => {
+test('getMarkets', () => {
     setRequestResult('getMarkets', 'get');
     return exchange.getMarkets().then(markets => {
         expect(markets).toEqual(expect.any(Object));
@@ -87,7 +87,7 @@ test('getWalletAmount', () => {
         .then(orders => expect(orders).toEqual(expect.any(Number)));
 });
 
-test('getDepostitAddress', () => {
+test('getDepositAddress', () => {
     setRequestResult('getDepositAddress', 'get');
 
     // TODO: what happened if parameter is empty ?
@@ -127,14 +127,14 @@ describe('orderIsCompleted', () => {
     test('order is completed', () => {
         setRequestResult('orderIsCompleted', 'isCompleted');
 
-        return exchange.orderIsCompleted('btc/usd').then(result => {
+        return exchange.orderIsCompleted('btc/usd', '123456').then(result => {
             expect(result).toBe(true);
         });
     });
     test('order is not completed', () => {
         setRequestResult('orderIsCompleted', 'isNotCompleted');
 
-        return exchange.orderIsCompleted('btc/usd').then(result => {
+        return exchange.orderIsCompleted('btc/usd', '123456').then(result => {
             expect(result).toBe(false);
         });
     });
@@ -155,7 +155,7 @@ describe('withdrawIsCompleted', () => {
     });
     test('withdraw is not found', async () => {
         setRequestResult('withdrawIsCompleted', 'isNotFound');
-        await expect(
+        return await expect(
             exchange.withdrawIsCompleted('111111')
         ).rejects.toThrowError();
     });

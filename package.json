@@ -4,7 +4,8 @@
     "description": "",
     "main": "src/bot.js",
     "scripts": {
-        "test": "jest --watch --verbose",
+        "testv": "jest --watch --verbose",
+        "test": "jest --watch",
         "fix-code": "prettier-eslint --write 'src/**/*.{js,json}' "
     },
     "repository": {
