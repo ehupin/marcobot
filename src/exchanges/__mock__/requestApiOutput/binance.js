@@ -1,3 +1,5 @@
+//TODO: check if returned types are valid (e.g. Number VS String)
+
 const requestApiOutput = {
     getMarkets: {
         get_0: {
@@ -8,9 +10,9 @@ const requestApiOutput = {
                     filters: [
                         {},
                         {
-                            minQty: 1,
-                            maxQty: 100,
-                            stepSize: 0.5
+                            minQty: '1',
+                            maxQty: '100',
+                            stepSize: '0.5'
                         }
                     ]
                 }

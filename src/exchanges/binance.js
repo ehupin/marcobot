@@ -1,13 +1,8 @@
-import axios from 'axios';
 import { connectDb, getWithdrawFees } from '../database.js';
 import { keys } from '../../keys/binance.js';
-import { logger } from '../loggers';
 
-const fs = require('fs');
 const crypto = require('crypto');
 const qs = require('qs');
-
-const cheerio = require('cheerio');
 const deepmerge = require('deepmerge');
 
 const exchange = {
@@ -30,18 +25,15 @@ exchange._getMarketsPrices = async function() {
 };
 exchange._request = async function(method, path, signed = false, args = {}) {
     // add timestamp to args and stringify the args
-
     if (signed) {
         const currentTimestamp = new Date().getTime();
         args.timestamp = currentTimestamp;
         args.recvWindow = 20000;
     }
-
     const dataQueryString = qs.stringify(args);
 
-    // build url, including url if required
+    // build url, add signature if required
     let url = `https://api.binance.com${path}?${dataQueryString}`;
-
     if (signed) {
         const signature = crypto
             .createHmac('sha256', keys.API_SECRET)
@@ -83,10 +75,10 @@ exchange.getCurrencies = async function() {
 };
 exchange.getMarkets = async function() {
     // proceed request
-    const apiResult = await this._request('get', '/api/v1/exchangeInfo');
+    const result = await this._request('get', '/api/v1/exchangeInfo');
     // build market objects
     let markets = {};
-    for (const remotePair of apiResult.symbols) {
+    for (const remotePair of result.symbols) {
         markets[remotePair.symbol] = {
             baseCurrency: remotePair.baseAsset.toLowerCase(),
             quoteCurrency: remotePair.quoteAsset.toLowerCase(),
@@ -288,7 +280,7 @@ exchange.makeWithdrawal = async function(
     currencyName,
     amount,
     address,
-    addressTag
+    addressTag //TODO: how tags are managed by binance?
 ) {
     const data = {
         asset: currencyName,
@@ -302,108 +294,3 @@ exchange.makeWithdrawal = async function(
 };
 
 export default exchange;
-
-async function test() {
-    // const amount = await binance.getWalletAmount('xrp')
-    // console.log(amount)
-
-    // const amount = await binance.makeWithdrawal('btc',
-    //                                             0.01,
-    //                                             '37HupeVwMQjSCVA9BdEkkX56hzyBwqBBD5')
-
-    // let amount = await binance.makeTrade('gto/btc', 1, 'buy')
-    // console.log(amount)
-
-    // const result = await binance._signedRequest('get','/wapi/v3/withdrawHistory.html',
-    //                                             {
-    //                                                 timestamp: Date.now()
-    //                                             })
-    // console.log(result)
-
-    // return
-
-    // let amount = await binance.depositIsCompleted(0.0494, 'btc')
-    // const amount = await binance.withdrawIsCompleted(0.0494, 'btc');
-    // console.log(amount);
-    // BTC
-    // Bitcoin
-    // 0.04869875
-
-    // const currencies = await binance.getCurrencies()
-    // let addresses = {}
-    // for (const currencyName of Object.keys(currencies)){
-    //     let a = await binance.getDepositAdress(currencyName)
-    //     // console.log(a)
-    //     addresses[currencyName] = a
-    // }
-
-    // fs.writeFile('binance_addresses.json', JSON.stringify(addresses,null,4))
-
-    const a = await exchange.getCurrencies();
-    // console.log(a)
-}
-// test();
-
-/*
-TRADE 01
-========
-{ symbol: 'XRPBTC',
-  side: 'BUY',
-  type: 'MARKET',
-  quantity: 10,
-  newOrderRespType: 'FULL',
-  timestamp: 1539284533376,
-  recvWindow: 10000 }
-{ symbol: 'XRPBTC',
-  orderId: 83715413,
-  clientOrderId: 'Z6fk6KQ54cYHyE10OOdDho',
-  transactTime: 1539284536134,
-  price: '0.00000000',
-  origQty: '10.00000000',
-  executedQty: '10.00000000',
-  cummulativeQuoteQty: '0.00065110',
-  status: 'FILLED',
-  timeInForce: 'GTC',
-  type: 'MARKET',
-  side: 'BUY',
-  fills:
-   [ { price: '0.00006511',
-       qty: '10.00000000',
-       commission: '0.01000000',
-       commissionAsset: 'XRP',
-       tradeId: 29455034 } ] }
-
-575.99000000
-
-
-TRADE 02
-========
-
-{ symbol: 'XRPBTC',
-  side: 'BUY',
-  type: 'MARKET',
-  quantity: 10,
-  newOrderRespType: 'FULL',
-  timestamp: 1539284846344,
-  recvWindow: 10000 }
-{ symbol: 'XRPBTC',
-  orderId: 83716005,
-  clientOrderId: 'hxJONVpJyAvV4yXna83h17',
-  transactTime: 1539284849295,
-  price: '0.00000000',
-  origQty: '10.00000000',
-  executedQty: '10.00000000',
-  cummulativeQuoteQty: '0.00065050',
-  status: 'FILLED',
-  timeInForce: 'GTC',
-  type: 'MARKET',
-  side: 'BUY',
-  fills:
-   [ { price: '0.00006505',
-       qty: '10.00000000',
-       commission: '0.01000000',
-       commissionAsset: 'XRP',
-       tradeId: 29455162 } ] }
-
-575.99 -> 585.98
-*/

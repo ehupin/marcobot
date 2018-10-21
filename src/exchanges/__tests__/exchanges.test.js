@@ -22,7 +22,7 @@ function setRequestResult(describedFunction, testName) {
     exchange._request = mockedFunction;
 }
 
-test.only('getCurrencies', () => {
+test('getCurrencies', () => {
     setRequestResult('getCurrencies', 'get');
     return exchange.getCurrencies().then(currencies => {
         expect(currencies).toEqual(expect.any(Object));
@@ -39,7 +39,7 @@ test.only('getCurrencies', () => {
     });
 });
 
-test('getMarkets', () => {
+test.only('getMarkets', () => {
     setRequestResult('getMarkets', 'get');
     return exchange.getMarkets().then(markets => {
         expect(markets).toEqual(expect.any(Object));

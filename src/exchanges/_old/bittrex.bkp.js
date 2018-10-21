@@ -1,83 +1,85 @@
-import { inspect } from 'util'
+import { inspect } from 'util';
 
-import axios from 'axios'
+import axios from 'axios';
 
 // import {Market} from '../markets.js'
-import { connectDb, getWithdrawFees } from '../database.js'
+import { connectDb, getWithdrawFees } from '../database.js';
 
-import { keys } from '../../keys/bittrex.js'
+import { keys } from '../../keys/bittrex.js';
 
-const fs = require('fs')
-const crypto = require('crypto')
-const qs = require('qs')
-const request = require('request-promise')
-const cheerio = require('cheerio')
+const fs = require('fs');
+const crypto = require('crypto');
+const qs = require('qs');
+const request = require('request-promise');
+const cheerio = require('cheerio');
 
-const marketPrices = {}
+const marketPrices = {};
 const bittrex = {
     name: 'bittrex',
     tradingFees: 0.0025,
 
     _cleanMarketName(marketName) {
-        const [baseCurrency, quoteCurrency] = marketName.split('/')
-        return `${quoteCurrency}-${baseCurrency}`.toUpperCase()
+        const [baseCurrency, quoteCurrency] = marketName.split('/');
+        return `${quoteCurrency}-${baseCurrency}`.toUpperCase();
     },
     async _signedRequest(method, path, args = {}) {
-        const nonce = Date.now()
+        const nonce = Date.now();
         args = Object.assign(args, {
             nonce,
-            apikey: keys.API_KEY,
-        })
+            apikey: keys.API_KEY
+        });
 
-        const dataQueryString = qs.stringify(args)
-        const url = `https://bittrex.com${path}?${dataQueryString}`
+        const dataQueryString = qs.stringify(args);
+        const url = `https://bittrex.com${path}?${dataQueryString}`;
         const signature = crypto
             .createHmac('sha512', keys.API_SECRET)
             .update(url)
-            .digest('hex')
+            .digest('hex');
 
         const requestConfig = {
             method,
             url,
             headers: {
-                apisign: signature,
-            },
-        }
+                apisign: signature
+            }
+        };
 
         try {
-            const response = await axios(requestConfig)
+            const response = await axios(requestConfig);
 
             if (!response.data.success) {
-                throw `request has failed: ${response.data.message}`
+                throw `request has failed: ${response.data.message}`;
             }
 
-            return response.data
+            return response.data;
         } catch (e) {
-            console.log(e)
-            throw e
+            console.log(e);
+            throw e;
         }
     },
 
     async getCurrencies() {
-        const result = await axios.get('https://bittrex.com/api/v1.1/public/getcurrencies')
-        const rawCurrencies = result.data.result
-        const currencies = {}
+        const result = await axios.get(
+            'https://bittrex.com/api/v1.1/public/getcurrencies'
+        );
+        const rawCurrencies = result.data.result;
+        const currencies = {};
         for (const currency of rawCurrencies) {
             currencies[currency.Currency.toLowerCase()] = {
                 withdrawEnabled: currency.IsActive,
                 withdrawMin: currency.TxFee * 3,
                 withdrawFee: currency.TxFee,
-                depositEnabled: currency.IsActive,
-            }
+                depositEnabled: currency.IsActive
+            };
         }
-        return currencies
+        return currencies;
     },
     async getMarkets() {
         const apiResult = await axios.get(
-            'https://bittrex.com/api/v2.0/pub/markets/GetMarketSummaries',
-        )
+            'https://bittrex.com/api/v2.0/pub/markets/GetMarketSummaries'
+        );
 
-        const markets = {}
+        const markets = {};
         for (const rawMarket of apiResult.data.result) {
             const market = {
                 baseCurrency: rawMarket.Market.MarketCurrency.toLowerCase(),
@@ -85,59 +87,71 @@ const bittrex = {
                 bidPrice: rawMarket.Summary.Bid,
                 askPrice: rawMarket.Summary.Ask,
                 baseVolume: rawMarket.Summary.Volume,
-                quoteVolume: rawMarket.Summary.BaseVolume,
-            }
-            const label = `${market.baseCurrency}/${market.quoteCurrency}`
-            markets[label] = market
+                quoteVolume: rawMarket.Summary.BaseVolume
+            };
+            const label = `${market.baseCurrency}/${market.quoteCurrency}`;
+            markets[label] = market;
         }
-        return markets
+        return markets;
     },
     async getWalletAmount(currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getbalance', {
-            currency: currencyName,
-        })
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/account/getbalance',
+            {
+                currency: currencyName
+            }
+        );
 
-        return result.result.Available
+        return result.result.Available;
     },
     async getDepositAddress(currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getdepositaddress', {
-            currency: currencyName,
-        })
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/account/getdepositaddress',
+            {
+                currency: currencyName
+            }
+        );
 
-        return result.result.Address
+        return result.result.Address;
     },
     async getOrderBook(marketName, type) {
-        marketName = this._cleanMarketName(marketName)
-        type = type == 'bid' ? 'buy' : type
-        type = type == 'ask' ? 'sell' : type
-        const result = await this._signedRequest('get', '/api/v1.1/public/getorderbook', {
-            market: marketName,
-            type,
-        })
-        const orders = []
+        marketName = this._cleanMarketName(marketName);
+        type = type == 'bid' ? 'buy' : type;
+        type = type == 'ask' ? 'sell' : type;
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/public/getorderbook',
+            {
+                market: marketName,
+                type
+            }
+        );
+        const orders = [];
         for (const order of result.result) {
             orders.push({
                 price: order.Rate,
-                amount: order.Quantity,
-            })
+                amount: order.Quantity
+            });
         }
-        return orders
+        return orders;
     },
 
     async applyWithdrawFees(currencyName, srcTradeOutput) {
         if (srcTradeOutput < currencyFees.withdrawMin) {
-            throw 'withdraw disabled'
+            throw 'withdraw disabled';
         }
-        const db = connectDb()
-        const currencyFees = await getWithdrawFees(db, this.name, currencyName)
+        const db = connectDb();
+        const currencyFees = await getWithdrawFees(db, this.name, currencyName);
         if (!currencyFees.withdrawEnabled) {
-            throw 'withdraw disabled'
+            throw 'withdraw disabled';
         }
-        const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee
-        return withdrawOutput
+        const withdrawOutput = srcTradeOutput - currencyFees.withdrawFee;
+        return withdrawOutput;
     },
     async applyTradingFees(srcTradeOutput) {
-        return srcTradeOutput * (1 - this.tradingFees)
+        return srcTradeOutput * (1 - this.tradingFees);
     },
 
     // async orderIsCompleted(marketName,orderId){
@@ -151,46 +165,53 @@ const bittrex = {
     //     return result.status === 'FILLED'
     // },
     async withdrawIsCompleted(withdrawId) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getwithdrawalhistory')
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/account/getwithdrawalhistory'
+        );
 
-        let found = false
+        let found = false;
         for (const withdraw of result.result) {
             if (withdraw.PaymentUuid === withdrawId) {
-                found = true
+                found = true;
                 if (withdraw.Authorized && !withdraw.PendingPayment) {
-                    return true
+                    return true;
                 }
             }
         }
 
         if (!found) {
-            throw `Withdraw ${withdrawId} not found!`
+            throw `Withdraw ${withdrawId} not found!`;
         }
 
-        return false
+        return false;
     },
     async depositIsCompleted(amount, currencyName) {
-        const result = await this._signedRequest('get', '/api/v1.1/account/getdeposithistory', {
-            // currency: currencyName.toUpperCase()
-        })
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/account/getdeposithistory',
+            {
+                // currency: currencyName.toUpperCase()
+            }
+        );
 
-        console.log(result)
-        return
-        let found = false
+        console.log(result);
+        return;
+        let found = false;
         for (const withdraw of result.result) {
             if (withdraw.Amount == amount) {
-                found = true
+                found = true;
                 if (withdraw.status === 1) {
-                    return true
+                    return true;
                 }
             }
         }
 
         if (!found) {
-            throw `Deposit of ${amount} ${currencyName} not found!`
+            throw `Deposit of ${amount} ${currencyName} not found!`;
         }
 
-        return false
+        return false;
     },
 
     // async placeOrder(marketName, amount, type){
@@ -217,16 +238,20 @@ const bittrex = {
             currency: currencyName,
             quantity: amount,
             address,
-            paymentid: addressTag,
-        }
+            paymentid: addressTag
+        };
 
-        const result = await this._signedRequest('get', '/api/v1.1/account/withdraw', data)
+        const result = await this._signedRequest(
+            'get',
+            '/api/v1.1/account/withdraw',
+            data
+        );
 
-        return { id: result.uuid }
-    },
-}
+        return { id: result.uuid };
+    }
+};
 
-export { bittrex }
+export { bittrex };
 
 /*
 TODO: check quantity of place order (0.005 satoshis)
@@ -238,8 +263,8 @@ TODO: add orderIsCompleted
 */
 
 async function test() {
-    let r = null
-    r = await bittrex.depositIsCompleted(0.9898, 'go')
+    let r = null;
+    r = await bittrex.depositIsCompleted(0.9898, 'go');
 
     // const amount = await bittrex.getWalletAmount('usdt')
     // // let a = await bittrex.placeOrder('go/btc', 0.1, 'sell')
