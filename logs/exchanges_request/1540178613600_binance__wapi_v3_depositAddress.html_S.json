@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=zrx&timestamp=1540178613276&recvWindow=20000&signature=5502fbe5e6bf51ce76343223977424bbaa95c1276c053bb05ccaa799dc64769d",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "0xc17f5d576cc50a360bf5d5d30c1243e184dafd6c",
+        "success": true,
+        "addressTag": "",
+        "asset": "zrx"
+    }
+}

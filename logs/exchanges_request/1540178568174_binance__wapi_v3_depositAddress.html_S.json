@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=wtc&timestamp=1540178567847&recvWindow=20000&signature=b178f83006afc86feed4acd762a5ab628eabe8966830d4b5e2ce604fc1e775eb",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "0xc17f5d576cc50a360bf5d5d30c1243e184dafd6c",
+        "success": true,
+        "addressTag": "",
+        "asset": "wtc"
+    }
+}

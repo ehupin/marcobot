@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TUBE&nonce=1540175138014&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c78f874f93aa282b32ded5ffa91311afa10f496d3d192013cdc3817e3e17ebaf062191aeb9117d48118d5feeb1c26c5580fde979a7708e1d36a9242d65dc2cdd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TUBE",
+            "Address": "31103bad998849bc877180611eb9cd125cc6b6782c5c45cab32e32996be384a3"
+        }
+    }
+}

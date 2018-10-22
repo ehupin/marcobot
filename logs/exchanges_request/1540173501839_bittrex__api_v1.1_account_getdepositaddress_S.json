@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ABY&nonce=1540173501682&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b14fdcba89c5c1a4a197bf07cec7ef9c8422b43cd49325e3f1d8d836cc7c58816ee453a1420e7c768fc6eba2920f5996d95ffa780c53e922ab3a2ec216bf500e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ABY",
+            "Address": "ALEgSB6QY3Xgz4J38fYwgubHf8P1VUNa4e"
+        }
+    }
+}

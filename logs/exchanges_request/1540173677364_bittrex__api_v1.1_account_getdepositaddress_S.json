@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ZCL&nonce=1540173677198&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "e1c08e273ed9ebc61efeabdda84903054bfd3e33408615183f6c3c88b90281c6a86f2a3e742c77f3f36dbeb07e15087f9b6f7efe821b2b9e3461ea4ced3287f0"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=UBQ&nonce=1540177779432&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "0708d0f800a3582b36c96e5f923a6ef08b1527e97342f7b35bd9f8c053f7f446cacd54d4851276e161c29e642ef678935c64150babd4362d4f65d3d63e3648cb"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

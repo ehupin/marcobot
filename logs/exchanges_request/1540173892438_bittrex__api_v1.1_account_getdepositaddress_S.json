@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GTO&nonce=1540173892275&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4949de6a861bf68bd944593f969542558ca508cf0daedeed37ced75eae26a687f83296f564dffce22a89520f9b482efb55ea63b1ffaaefd54b9381df7d0a1a06"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GTO",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

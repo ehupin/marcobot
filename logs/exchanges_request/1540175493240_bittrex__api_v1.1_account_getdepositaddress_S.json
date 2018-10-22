@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PTOY&nonce=1540175493084&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "e7c45fbfc563795053dbc0325879b39616892673c0b3e83487c4a1257589cd86cfb5c8b283f7d2bccf69a522d93a3da04bdd3bbdb14db39e443ae7cdcb01c158"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PTOY",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

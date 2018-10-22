@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PIVX&nonce=1540177681555&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "bc1bf7b2818e0e38a2a12e4ae5e997d4e7708935879af595095a0498449b1cf8f4d03de7724277cd4ae01aae97ad656cc8c5b8f1ffeb73e41696bd1291637bcd"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DGB&nonce=1540175011104&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "cd38c4b56040d5ddd4953e1ed756e6d6db3d88f03ccf523986f20082bf47e45cf22fbdf2d07df50a1714b1c5ba3d9bbca64b143a070c2c5e9224e26c9023e9dd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DGB",
+            "Address": "DNjRRFxFXD1gXGwWq81cA3LZJoZQhkvvSd"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=POLY&nonce=1540175542529&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "adcde40cde07fc1dc2d56d1c0e2524b4cb64b1627a4bfef263854431823a67eef91650f1d00d018b49319553c9701c0af5e7f3710d9d4e94a20ecfedccec423e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "POLY",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

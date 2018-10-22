@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NEOS&nonce=1540175444481&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "220aba8b2488da45c437d9a75449643b4f59c14e9e7cdfbb06666e6dd0034e1eab19a0754bada10bb58cfef9e36e5ced96f607f7742cacbc0a9a83b10f1bb1ee"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NEOS",
+            "Address": "NXADAHizsM5gJuLge4hVXLM9ajJ2o7sTjx"
+        }
+    }
+}

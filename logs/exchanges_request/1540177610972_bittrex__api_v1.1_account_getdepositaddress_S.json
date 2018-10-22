@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GRC&nonce=1540177610826&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "3387704327679e02d6250624d325594e2a4aa81aab94649985414e9123d5d352942e9b6952fbdfdb9a42a97fc1d14f672fb0e4a902e2bddf1b86e66391cd722f"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GRC",
+            "Address": "S125vukU5tGqogeqeJjjtUyN1nbfUWNNmT"
+        }
+    }
+}

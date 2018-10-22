@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VEE&nonce=1540173848356&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "358ea4b77bab0d46976730deb8f3917bb111f00786d60079b17b25f761630dacdd6fee067a17c298a2bf0f9d6ea6097bab734fcf02d4d46711ecd8719199e130"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "VEE",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

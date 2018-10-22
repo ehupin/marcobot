@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=FLDC&nonce=1540173521894&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b62d12b823deb1e53a3d4c85756b233c7bc6f8603872ab7644e2ec88ab3a04ceb17920dc956f27fce299a029bfbea25f79900e1f3c21f6b32d5460105b917d43"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NBT&nonce=1540177612205&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "e5de1cc1023216e3868b5a8d54347be466e6efe8571dd76bdbc9dee5a798dcaecf6d7f7f1455a1865a371684c27d58627657a353b808458798a6feba52dea5df"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NBT",
+            "Address": "BQ3PmSBaMZBtdw785HUhEyjyi6Ju4xKppV"
+        }
+    }
+}

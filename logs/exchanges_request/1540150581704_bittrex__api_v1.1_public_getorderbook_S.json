@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-BCPT&type=sell&nonce=1540150581519&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f28ebacf82151ec70d6bf476670dffbb0519d32d6da31d47274d4ff89cdb948cc317db4a9d70fa86f2c42dca7156221aeadb63e6329476d01b867e78cca27a15"
+        }
+    }
+}

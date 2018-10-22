@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EMC2&nonce=1540171911601&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ea86b24c96e5d59d08185d056f16bbe3d5b41e48853d269314b1fe64393adc89c52f82618836a848db593bb3af44402710968e4a010c297c718b6e77233c539a"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "CURRENCY_OFFLINE",
+        "result": null
+    }
+}

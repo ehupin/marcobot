@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ANT&nonce=1540177870340&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "d6b8e2ea111cdc63359881464f3d241cfab4c604b4b1403cd4f46cf80188a7eda272d96cd2ced2b42f698c69802e1fe6b8af9daa9fd65e8f85e31b38bf49e4d0"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ANT",
+            "Address": ""
+        }
+    }
+}

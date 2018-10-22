@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BYC&nonce=1540175012582&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5b4adf3f74168efa3aa906ac831d1bfd62bf91c630ee583e065ddd2932cabc14a6290760c49fe67b2a253e9281e161f897f2b47bcb185e5ca9303c1f5a490f11"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BYC",
+            "Address": "B5hZ8hMvobpcpCfkkxTewfWWoLV2C5Ei8g"
+        }
+    }
+}

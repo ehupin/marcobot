@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=eos&timestamp=1540178653635&recvWindow=20000&signature=ec88c6977701f6a0c104a4ecc5295ab062f14b2192f6e3439f7e62c0da935663",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "binancecleos",
+        "success": true,
+        "addressTag": "107923905",
+        "asset": "eos"
+    }
+}

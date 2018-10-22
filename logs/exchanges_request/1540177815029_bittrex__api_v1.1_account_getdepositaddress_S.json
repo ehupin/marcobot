@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SIB&nonce=1540177814633&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "a9c857dc0b1f6030b7a95b1645865d6ecaa8eccc9a4323367951a0deeb1a85e87d8d0733b3a619378146892a30780e7a0b05f60e0e2845f6aa4addc77b95f33b"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

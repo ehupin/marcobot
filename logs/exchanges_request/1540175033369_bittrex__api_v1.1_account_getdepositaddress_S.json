@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SNT&nonce=1540175033209&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "17888b643aaf5908d03c1a9d14a073f80feca1916f5fef37c235a96c0a138735607cb8ed0a054b1b2ffed05bc61a052dce0ddfc9ba180acd8a9ae2431aa0a74e"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "Call to GetDepositAddress was throttled. Try again in 60 seconds.",
+        "result": null
+    }
+}

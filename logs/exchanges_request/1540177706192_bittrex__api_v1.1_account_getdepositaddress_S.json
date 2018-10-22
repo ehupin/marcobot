@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=STRAT&nonce=1540177706033&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "cfba0e3045778c541118a1fbfaec4e60b53d100af849dd799d1196501d9562f82c66931d964bdb4af356c2e52aa660d45b211a4945b0fa4a065f35ee7695a1ab"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

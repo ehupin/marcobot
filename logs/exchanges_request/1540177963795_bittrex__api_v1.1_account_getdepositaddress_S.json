@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MFT&nonce=1540177963648&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "80b347c7fd4508461fbd387214effd8926f18b1969cf97d06356161c86d14fced61efc0455e413850a44b94535e71bbc9baa641f91987b2ebc152a34c6e123ca"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MFT",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

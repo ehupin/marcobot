@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=sky&timestamp=1540178566358&recvWindow=20000&signature=d68f23b6a1bbe9ee4e8f97eacde7348d017d6a6dd9ba0e53b817dc1c06f9d43d",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "2j2a7MP9n5Kx149ZKjjLmdjhDWi5pKcEbn8",
+        "success": true,
+        "addressTag": "",
+        "asset": "sky"
+    }
+}

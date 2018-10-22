@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ARDR&nonce=1540173610547&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9375ee6c45b96dfcbde56bf1fbe6f3465d9cd36f6596b59809bfb83d79888e29d64a9212fd1408252aec9b9e987f4996e5c99d787be5ee4ee6f283e89b5c2360"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

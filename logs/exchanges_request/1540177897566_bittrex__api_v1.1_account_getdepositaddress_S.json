@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SALT&nonce=1540177897411&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "05535b195a13289d5584295936a8653b9d962c37d931429d50974ec3b23f5334c71f10d84765c050ab29672dced037cf146da648bae0f96b0c13418b1459e0de"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SALT",
+            "Address": ""
+        }
+    }
+}

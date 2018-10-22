@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EXP&nonce=1540177634676&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "ab07067e11e9423914872789825527b9592f3dc1c4184619172dd3336983471c7d78ab75c8f9fae9fe384abd8668374834a0237b834ad3d16f482380cfc44dd4"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

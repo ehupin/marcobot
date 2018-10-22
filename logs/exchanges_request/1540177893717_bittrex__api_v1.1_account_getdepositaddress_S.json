@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=QTUM&nonce=1540177893554&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "84c2fe8cf40b3c113a6a6ee59424cd3472d963d7a1ea63cf4f3fe3ac62ddfd889f64af6a9997ffbfadea8fc0a1df7ac4538e91761cf9846aef8998c40b2f3749"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "QTUM",
+            "Address": ""
+        }
+    }
+}

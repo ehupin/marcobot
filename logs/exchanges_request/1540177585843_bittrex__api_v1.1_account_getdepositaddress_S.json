@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XMG&nonce=1540177585656&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "1852ca6434024ecf9e9aa6b62ca7b9972e3373d1d6c185e0bec558602ef93119bd600b36de16ce283fbec12c23c10340e1495565c2284999962b3aa74f43b466"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

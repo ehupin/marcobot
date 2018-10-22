@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=START&nonce=1540173397565&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5e75eeba676d017dbc34df019c30835be244e3a5b2cd9b392e8375e029160a33a31596fe4f46653878a6569bdb7d2806262f2f7fe30741f7457b2c2d5a13954e"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TRST&nonce=1540177860039&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "e18f99be4f3260aeb569ff65f6124ee9c9d98bd0184f209302206257592641122ff609daf4f8a9cd24273626c3184ea87b80dffefef85b626d7bc728f80f8537"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TRST",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

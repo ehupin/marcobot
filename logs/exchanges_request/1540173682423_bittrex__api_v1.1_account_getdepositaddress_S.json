@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GBG&nonce=1540173682267&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "af0da3e82a296d84dc31e42e80db5bde0da3b44f51f44c9144cb21ab256a8e2c35d8f0c5904ca795ae9b00603b59539ba33a872398aa1e60ab18b41e19b683fb"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GBG",
+            "Address": "7d99e0e36cd841d69a9"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=USDT&nonce=1540177652446&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "173e44ccdc1ab6b92b82d7fe2bcc84a228eeb5d720ad260b76552e2ba38bffc8bf6ddd0559c703a09e56297cd0c1700f6fff477cf153e4e1734217310cf60102"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "USDT",
+            "Address": ""
+        }
+    }
+}

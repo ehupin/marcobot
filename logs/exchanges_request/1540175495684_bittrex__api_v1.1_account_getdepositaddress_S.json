@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DCT&nonce=1540175495517&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "40c7167b35ac2ed84f69bdbecb13a4d92b0e643a0b6221c766edd960855e5042c176cc7c7aff8ca14edf4e9e29c89a947b0fb8f7071184e0ff1ff4d0fb2b6fe5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DCT",
+            "Address": "a3538acdb7aa4587a59"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VTC&nonce=1540175405388&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "6ba0c79b4737cafc66e071e50c298a4e62fcf1a0f9494c8a6d68d3151397e921047b5dd686b79dca69545904ffa805f5f1cadee74419e6d8e0256915bac3956a"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "VTC",
+            "Address": "3NTBAowATDoGFZDqdXRrxPb2EAJKgngc7J"
+        }
+    }
+}

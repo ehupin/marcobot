@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-LUN&type=sell&nonce=1540150580792&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "8baffe99551d78e8ac3d8eb9d534725a109664058f5a9ef17cdd38f48415a88f9661e5a25fce4da8a74567556c36e4c55c9c05db071cb23e3d04a8c61a6f4b22"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SBD&nonce=1540177701594&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "bee6a49744ea1ed9e14e7f8f3037edb8e1e6b97306e0ed1d932ad43ee386539188ee147ea0283c794fe16ea0868a2459541a83fa1b6eb426315d949a04f56131"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SBD",
+            "Address": "f2d94a7a44944c098ba"
+        }
+    }
+}

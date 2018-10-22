@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XCP&nonce=1540173512979&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "3e0889b50e742a4948b0496b7d8d72cdc6af4766ea4f32e92fc5f13d2b5f556f24b8b690b3c7409aea97fe4618e6d91ca904e79edea7c844a0c07f82b6ff4648"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TUSD&nonce=1540173849576&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f6037f3d0bb43873e876650aa29851cc3cf01031c5994f17fbec63928edb2e161e6d01f7b182163bc5bbb7fef32ecd57735821dd477d4c04c57f2c81e85485a2"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,4 +1,4 @@
-const winston = require('winston')
+const winston = require('winston');
 
 const logLevels = {
     levels: {
@@ -7,7 +7,7 @@ const logLevels = {
         info: 2,
         http: 3,
         sql: 4,
-        debug: 5,
+        debug: 5
     },
     colors: {
         error: 'red',
@@ -15,43 +15,34 @@ const logLevels = {
         info: 'black',
         http: 'green',
         sql: 'blue',
-        debug: 'gray',
-    },
-}
-winston.addColors(logLevels)
-
+        debug: 'gray'
+    }
+};
+winston.addColors(logLevels);
 
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`),
+        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+        winston.format.printf(
+            info => `${info.timestamp} ${info.level}: ${info.message}`
+        )
     ),
     transports: [
         new winston.transports.Console({
             level: 'debug',
             handleExceptions: true,
-            json: false,
-            colorize: false,
-            format: winston.format.combine(
-                winston.format.colorize(),
-                winston.format.timestamp(),
-                winston.format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`),
-            ),
+            json: false
         }),
         new winston.transports.File({
             level: 'debug',
-            filename: 'app.log',
+            filename: `./logs/${new Date().getTime()}`,
             handleExceptions: true,
             json: true,
             maxsize: 5242880, // 5MB
-            maxFiles: 5,
-            format: winston.format.combine(
-                winston.format.timestamp(),
-                winston.format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`),
-            ),
-        }),
-    ],
-})
+            maxFiles: 5
+        })
+    ]
+});
 
-export { logger }
+export { logger };

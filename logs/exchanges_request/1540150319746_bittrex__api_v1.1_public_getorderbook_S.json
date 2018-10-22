@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-GRS&type=sell&nonce=1540150319566&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "195994154b877cb19f23338a072430454450b30183ca20f5d711585f7d0a03b42fda8010537466de4137f96ce165be7db66bdd9e83007dcdfdfef4705a7013d5"
+        }
+    }
+}

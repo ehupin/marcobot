@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CURE&nonce=1540173390352&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "8d7656ecfce44b93180a9803274c1fcc4e6dd2d8b94b7ee0aa0aac105bde79a7cf0c6ce49cd4c5d5ae93ce18848d70025a8bbe1d073604b9746f8674004c3296"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

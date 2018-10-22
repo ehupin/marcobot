@@ -1,0 +1,2 @@
+2018-10-21 18:44:58 error: Bittrex api call has failed: Request failed with status code 400
+	Axios related error: {"code":-1102,"msg":"Mandatory parameter 'symbol' was not sent, was empty/null, or malformed."}

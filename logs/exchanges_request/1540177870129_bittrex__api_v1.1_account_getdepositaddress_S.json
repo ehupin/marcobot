@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=HMQ&nonce=1540177869962&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "893c5fd7cc6f165cd98cb26f6cc44106152dc0cae7b2189f8cd7548effae7ef4d78b2f7b4eb854fa45498570b40c2c477d6f51b1a871000ab3c949f8feabe804"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "HMQ",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=sys&timestamp=1540178644675&recvWindow=20000&signature=4a2e0f11c1c3383b278eb68bdfbb601889f629c5759f9d66d5178054a9a00fd3",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "1CDxakicghRVGPmKfDUujpi3nrge2ZWC2P",
+        "success": true,
+        "addressTag": "",
+        "asset": "sys"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GCR&nonce=1540175017707&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2449b093fed25f0d0340ff78af87cab79e830ac28ffd8259882a5f71ef868107ba22f86fa5ec9f763469d8610aa42934ab19c08d8cb1f94afddc46d29d74dc53"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GCR",
+            "Address": "GYmjLc5WYdKqhACbMBRpEYF7GxfmNL7PdY"
+        }
+    }
+}

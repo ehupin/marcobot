@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=KMD&nonce=1540173684582&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "874a4eda9424bef98c4672e0f2c29e4ee4cf92717182d9dbd1ee7f1130f37076e51f641b16bbae435cbcb640891918f8930124cffb42f2447eef38846a8bcf25"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

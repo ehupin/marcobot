@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=AID&nonce=1540177953899&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "32e8f51cba594d10924c59f39cd58b59770c101a89744ff35220ccd29a2615f49df8ee6330ceb41911e551738cf06c528d138a872eaa8a07d17dda9f3c0315dd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "AID",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

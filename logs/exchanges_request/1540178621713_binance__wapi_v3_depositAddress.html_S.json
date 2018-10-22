@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=powr&timestamp=1540178621116&recvWindow=20000&signature=358ac35f9149f9e269f352f58900f1a3802fd8f28a4efc9118b3e7c64e656a46",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "0xc17f5d576cc50a360bf5d5d30c1243e184dafd6c",
+        "success": true,
+        "addressTag": "",
+        "asset": "powr"
+    }
+}

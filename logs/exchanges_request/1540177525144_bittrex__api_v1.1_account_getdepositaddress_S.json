@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NLG&nonce=1540177524982&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "7df2951d6e093932ce897f9f7a347857b737ae1f2f5b64504d809bb6da18bf2849edecf24a78cce642a068c1bb318152f2c4ff2e915a443504a00ac55e4701b1"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

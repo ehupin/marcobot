@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=nuls&timestamp=1540178644386&recvWindow=20000&signature=d07f9f41710f5da97bfe9fd00bc3f3109e0a9171648f00529d70d2c5c4ba07b3",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "NsdupTTwWYisU6HJ2jh1JKx9eD7tXBvf",
+        "success": true,
+        "addressTag": "",
+        "asset": "nuls"
+    }
+}

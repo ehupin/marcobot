@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BOXX&nonce=1540175551949&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "6ee3987c791ea5207a0509ecd90bebf84a87308f2664e093138bc1251e06de1f965c863d8ef8e0ea3f22c760d95240f62e3c7c7498ef4cb25f69ab2fc2c86ee3"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BOXX",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

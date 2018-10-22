@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XEL&nonce=1540175095870&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "cfe950d376213885e840ff74e8ce9d35111be8795d49a36167e50549393e0eeb52dd3cc97f6124f6138330530e6f23c2ab68de0e3ee3ad6db7aba9356ba5230e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XEL",
+            "Address": "132b24d7ddb249998c17b673d97d67da1baff9b70d8944958c51cda46d411470"
+        }
+    }
+}

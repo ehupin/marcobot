@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GO&nonce=1540177969587&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "62e7ef3835e3e773d94b4e563d781dd1999d94bb015f7c550a015a7f01d6a67e68323009efc117e416b2910ef3cb3e92b57a141931ec1b4520313aee5a77a6f2"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

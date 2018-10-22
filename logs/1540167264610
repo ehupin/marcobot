@@ -1,0 +1,2 @@
+2018-10-21 20:14:26 error: Bittrex api call has failed: Request failed with status code 401
+	Axios related error: {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}

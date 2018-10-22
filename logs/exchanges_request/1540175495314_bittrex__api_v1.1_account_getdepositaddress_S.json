@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SNT&nonce=1540175495148&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "60749d2780c7a55e321ef23e754ca762e6b357132ab614e3f3874a55a9f92877c6403a15313b8ec3dfe28c7d09d045e8f299b9d7f166ce2b8b0da0374941d1e6"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SNT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

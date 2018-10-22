@@ -1,0 +1,12 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=eon&timestamp=1540178652995&recvWindow=20000&signature=58e73e8e820d4260faf973dbd01e24417be63fce0a75dcee0d9bfff3e927d88d",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "success": false
+    }
+}

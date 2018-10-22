@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TKN&nonce=1540173778047&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "671350b317bbc138da17d36a716d547ea0c0705ab3f7315193d1388597e98df7bb9550ca5750d8021f26a13d960d69a996a207de85ccf9a4193a264aeeb9cfb5"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

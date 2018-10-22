@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BTCP&nonce=1540175508634&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b40b533a99efe515ad3cf0cbd33728fa93a9b578e77c5551ac98a012660f5e93f48f113f220526a2334061a90c0ca8b2f8d566d5885041ca684b5fc9a46608a6"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BLT&nonce=1540173888152&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "34f8e8e96e770ecdabf0624c8b37d6eccdc967283e52c2e0dd8e51e8c65d26dd3e6e5894c6f2fd4306926ec306ebeec7473753830fcdfc19bf085ce2b9afcfd5"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

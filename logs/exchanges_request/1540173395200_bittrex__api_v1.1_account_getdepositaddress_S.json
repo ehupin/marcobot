@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CLOAK&nonce=1540173395041&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b4a6736d1d39577a32046be95ae30bcb435540dd83e7d7ff6b9d8baed0966120c3d8d9f3f3c97245468a4ad68f886f62fe88b02ba6caa7c1e99e89126663f662"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CLOAK",
+            "Address": "C9tZ6bVXu4a7VPMtB4xB4coY5ypfNnriuu"
+        }
+    }
+}

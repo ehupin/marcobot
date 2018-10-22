@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=FAIR&nonce=1540175434543&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a8edf38183bf5d09452a3f31e6310bf755050c6297a9430d1c4b723c7cccae662f2068cde01d7412ef8adcbffdaf71d15655d4bab7dffde4eb9554ac6a5e44be"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "FAIR",
+            "Address": "fNnry4AR7zVQX2kd7Hwr3URL4wxMkUWw4U"
+        }
+    }
+}

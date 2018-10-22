@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GBYTE&nonce=1540177854849&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "b52e2d288f11a4f7e27011c97b78a3a3e96150fdfa252e3297e6b615a93500682ee90be6ab8f2ace2e944151030c2a1dafd9799e3b8345de178a0165d747adbb"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MANA&nonce=1540175501380&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "e21edb5ad77969db81735e2ef715a6e1e6b58795a0aa76b8d0d448b92e0910c919a91bc0c51bbbbae35c7cb353aba5f081e1ee5932851e0ca649fb6c12d7e831"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MANA",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

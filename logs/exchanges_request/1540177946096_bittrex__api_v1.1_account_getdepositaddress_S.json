@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LRC&nonce=1540177945919&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "fc4ac561c183f8f4d714bd4690c5850e9591061de6693ae06d0550b95620887d890352329853479b6d3c5da9bde6727943e36151c1b04f150e43bfd18c508c62"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GAM&nonce=1540177620482&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "65fa643420def09f4c4a0201b0b1b27c4593ab61d47757108943a1f2f9672d0cc44ea461728900afff5ca0ee1c9a35e3ff826e89cf23c7d579b66abe19c7a062"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

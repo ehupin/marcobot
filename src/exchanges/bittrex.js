@@ -1,5 +1,6 @@
 import { connectDb, getWithdrawFees } from '../database.js';
 import { keys } from '../../keys/bittrex.js';
+import { logger } from '../loggers.js';
 
 const crypto = require('crypto');
 const qs = require('qs');
@@ -161,15 +162,33 @@ exchange.getWalletAmount = async function(currencyName) {
     return result.Available;
 };
 exchange.getDepositAddress = async function(currencyName) {
-    //TODO: check for api error : ADDRESS_GENERATING
-    const result = await this._request(
-        'get',
-        '/api/v1.1/account/getdepositaddress',
-        true,
-        {
-            currency: currencyName
+    let attemptRequest = true;
+    while (attemptRequest) {
+        try {
+            console.log('popopo');
+            return;
+            const result = await this._request(
+                'get',
+                '/api/v1.1/account/getdepositaddress',
+                true,
+                {
+                    currency: currencyName
+                }
+            );
+            attemptRequest = false;
+        } catch (e) {
+            console.log(e);
+            console.log('>>>', e.message);
+            if (e.message === 'ADDRESS_GENERATING') {
+                logger.debug(
+                    `Bittrex exchange: generating address for ${currencyName}`
+                );
+            } else {
+                throw e;
+            }
         }
-    );
+    }
+
     // throw result;
     const returnedAddress = result.Address;
     if (!returnedAddress) {
@@ -268,17 +287,12 @@ exchange.depositIsCompleted = async function(amount, currencyName) {
 exchange.placeOrder = async function(marketName, amount, type) {
     throw Error('Not implemented');
 };
-exchange.makeWithdrawal = async function(
-    currencyName,
-    amount,
-    address,
-    addressTag
-) {
+exchange.makeWithdrawal = async function(currencyName, amount, address) {
     const data = {
         currency: currencyName,
         quantity: amount,
-        address,
-        paymentid: addressTag
+        address: address.address,
+        paymentid: address.tag
     };
 
     const result = await this._request(

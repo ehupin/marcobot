@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=lsk&timestamp=1540178643847&recvWindow=20000&signature=d80163cad68951021174e2988d14474eec84473d1ded52187a525deea82473fe",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "9390398451342965770L",
+        "success": true,
+        "addressTag": "",
+        "asset": "lsk"
+    }
+}

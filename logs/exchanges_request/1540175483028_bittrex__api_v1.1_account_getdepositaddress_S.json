@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TKS&nonce=1540175482884&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "79cfcc67f5a4208ac5c7c53d78d4cb2f185902caf3fa1d7e92e2e9df586b5da9ca5c307f4fed47d259a4d27a8d2e6f23ec82aabc1dd3a49048c20f456dfc21f1"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TKS",
+            "Address": "3P5JRfqWzWQBiAuFMVAQsmHYiExzUJXfmZS"
+        }
+    }
+}

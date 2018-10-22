@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ADT&nonce=1540173825297&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a4ef9b8dd281fe425e942245c5d91836aa4792ab0f813707a9b91ee84ea132a6bd3a988b64b9abd3cfc614c04284deed9228b72b3bbc9a024b08c38bf8ad514d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ADT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

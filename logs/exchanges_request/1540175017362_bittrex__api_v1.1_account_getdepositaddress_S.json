@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CPC&nonce=1540175017199&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "465995467c6bda5c337891b3ae1566252d15455ab0263e5be9b3d05ea80c4a72876b067fba746de83cfb2091d8201763fcad53e00adf93e43338fbe3488c042e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CPC",
+            "Address": "CGYF8pswnn1GoLFKAGzVaKRMBM3uYWnxey"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RVR&nonce=1540177658695&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "b4ffd549f19aac0bbfaed7f01d0a58f18c8cad8923122fe9667c533b5a18a122e87845a359363fcaea0f501f3fd4c2bddc4fe2c694889d20da80e81c9e15cd92"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

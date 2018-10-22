@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DMT&nonce=1540173886263&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7e97cb36b015204c88761e50c7e530311a94acfbc9c3b2683db83cfb00e74fb9009997290c8a24b2388fa8da33bce4ff49298eb6357d6fda581f1d33f7b1adaf"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DMT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

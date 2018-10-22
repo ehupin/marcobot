@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BCPT&nonce=1540173849271&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "97ee2dbb9e11b0916b3cca55da7533d7c1e28ffd5b1a906d81c7cfbd8d423701a5313f74de79d5b70d2cdada64abc12968b78137206a12df273b772e619851b5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BCPT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

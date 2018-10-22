@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-PIVX&type=sell&nonce=1540150583519&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c9a66bde851d0c7668aedb04f533bd15a5aa59fa91c9a829e831b7e6bb0c0c69ba8a0cd4d3ec6115c8161a6866e96e7f0ba8f3d706c3b078bd80672a33d1d9dc"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PPC&nonce=1540175430102&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "32ebb4f39402e97bdf30db258e4d2f0c9796dd4646b66740cdf4b2d8593620d95a24dba3b177264297c41d048fb8fa41a392e3ab98632cb4847f962aa43084a6"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PPC",
+            "Address": "PHoYB3gYVrsbyw75dsRWfAcVoFd8yeqXxg"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SEQ&nonce=1540177714224&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "551d433c957e8568a95a45f1ed8a718da7bb3d73eeab16b13038e6763a6d1a3f5b74f88963d07d7f8ba86b98ac80a32aadbbdabaf6d58d6c716fa1fec5096b02"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

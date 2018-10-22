@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SYS&nonce=1540175444098&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "061310ff9cf84106d8541f95f580312c9821b2f51e3b03d10998fb205e6baa1ed3942b61a63d95d0ac31e0ffc3d13122cf573afb579e935d3d547040f05b1005"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SYS",
+            "Address": "SVVnLTVVEeuG3RKVViA8xZw2vcp8tCtXcA"
+        }
+    }
+}

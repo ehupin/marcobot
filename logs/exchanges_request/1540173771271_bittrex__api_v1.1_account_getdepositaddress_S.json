@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EDG&nonce=1540173771114&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "76d20950713f3597f667fb151c6c39f022d0e28f154cd6cde14497ab4db5a1a0d82024ab69b959336c5c6fd03f2a83d97765e68b87b25763649cefb074e2e515"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "EDG",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MUSIC&nonce=1540177847783&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "b7deb446cbf3d163579ee32dd0d150b0c45d63e11d6d28178933bf13d61eab992d726ac9227293ba47635ec6209570becfd3ea73e3eb38e4b013c1d9fa8604a3"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

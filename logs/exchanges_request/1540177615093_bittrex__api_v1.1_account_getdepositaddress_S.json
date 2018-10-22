@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MUE&nonce=1540177614944&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "2f0349adf9727331fffde3826d68f97e1287c297ef54cb5a10682f7307e9a70c67bc53cae2553a53b024fd9bef96ebec803aaec79b895e4722de382e493a527e"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BCY&nonce=1540173540011&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "984093b32605a2e14d42486a14226fe9531207fc0dfb7caad41974d6cbe6752e33fb17aaccbd7fb6d3503e4973bdc8a75e725cecee25735017cc1f9ac72207ba"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

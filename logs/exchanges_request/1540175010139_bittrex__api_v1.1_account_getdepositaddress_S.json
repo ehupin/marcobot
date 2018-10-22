@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XST&nonce=1540175009976&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "445314e9195f6d03375f817e23585c6cd6322907adc27f6eed46ac405fdb0c04b3316f4d38fe64bfc50159821b58807a1102eef0c1e1313bea6e58fc78bcd2c7"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XST",
+            "Address": "RyNwWcfXVzmPMRTeLW4EPnAgafqQVu8evw"
+        }
+    }
+}

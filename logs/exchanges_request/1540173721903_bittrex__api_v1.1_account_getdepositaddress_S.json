@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LMC&nonce=1540173721747&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "36c9d5730dcebb25db3974a0ccc8d48173bbcdfd85873b22b758df8a672c456dc21bbdcf5ee7470ef526d5e0af90cd636ac1d0bcd6ff76d3d946b7c67ca896ee"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

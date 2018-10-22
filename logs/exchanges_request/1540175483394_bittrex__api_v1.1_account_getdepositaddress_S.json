@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ARK&nonce=1540175483232&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ec412221efff1bb4a56d02301fc3ee546e43f32e4d859583126f9d921edbd281530af6b4afb563b6be0be0d60e3a4af22be26b6a3b0b881bd18aa8c84ac01155"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ARK",
+            "Address": "AJZisEjnnmY6M83L3ACZFYAGC5dWgzpGgz"
+        }
+    }
+}

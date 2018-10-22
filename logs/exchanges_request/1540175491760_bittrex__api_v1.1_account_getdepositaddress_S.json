@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BAT&nonce=1540175491583&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "d4209d24eb3a8a38474f2b76ba22d4c50c731a85d836fac3b9a29b9372b1a4b8e38dce07e88ac199f425ec40c38f2dd698b7625e5381fcc1aa9abd0738a63192"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BAT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

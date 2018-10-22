@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ION&nonce=1540173719574&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "783bfd3572124ee6314991b6aa258b707cb78e716c9f93b49b31dcbe1958d10f6d26b0113dd96aab7106fd4d06012a03f45fc7b6fb284defe08bacd7269a5cda"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

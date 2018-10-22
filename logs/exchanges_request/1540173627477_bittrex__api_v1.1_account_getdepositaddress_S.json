@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ZEC&nonce=1540173627312&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f5294a03a05b326014802692aad7cbe13775da434d07c9a8bfc8c81910cee1e6e3fec177428c0c112f017b558612401aa1e960645312ddc73e4533db4dc95ec7"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

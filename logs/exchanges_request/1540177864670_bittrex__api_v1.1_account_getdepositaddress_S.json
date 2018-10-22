@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GUP&nonce=1540177864509&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "340e09eec076f6d34267d9ad84a392b8c5d7a704de9b6f85c0c7c9e97e691b2cbf714d441daa7efeda6e0c59aefbd494dfa338838542f829d7146cbe7a989841"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

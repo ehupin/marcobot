@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ADX&nonce=1540175498477&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9c182a473ef41356530eee21673f8884e2c0560d94b900f0e0f1b0e6f56058449d7e42325edd5c9d664856d8a17bed72732abb25974793a02f50039cca2a0d5c"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ADX",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

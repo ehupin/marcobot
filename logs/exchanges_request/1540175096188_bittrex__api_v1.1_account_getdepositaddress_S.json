@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MCO&nonce=1540175096042&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7a747224985f7babd3361fc47b8deab7cf72a9046bf32f02299f0c14d4e28788fb59d3a8c5fc8a8f02085cfcb2bcf458baa60741362d9f1a2bf80b0c0a2f6500"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MCO",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=POT&nonce=1540173371736&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5083bbeca88a5487bccd1640dfcebd640d9130fcfe880d4a228da37b10bd750d62382b05e17e1b18b3fc08f36477b08ff2d0743d4e99c954ee7e600b9b082bb5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "POT",
+            "Address": "PJbcVja1D3FmVztv4mauU9XiuMJ7LZtHaP"
+        }
+    }
+}

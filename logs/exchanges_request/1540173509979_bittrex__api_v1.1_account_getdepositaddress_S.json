@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GAME&nonce=1540173509803&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a69807af9e090ec7b4baec40153b395693d3c5f889092f0b6530c367537da00f1d9963bc3e0d6caec6dc41fa694af11d14f279c7a14a05ec485031706638b178"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

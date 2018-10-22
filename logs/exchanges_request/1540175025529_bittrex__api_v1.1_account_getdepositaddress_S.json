@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XZC&nonce=1540175025372&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "762e18d5dc18cc3426e8677899835358c811b859efb598695b1001bb532bed9d3eb3932274af899873e488642fbcca3c1e9cbbeb7ad910ef6c8dd3c2484aa602"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XZC",
+            "Address": "a6uERReUPLZoPnaEuVmg4dPqRhybHier4c"
+        }
+    }
+}

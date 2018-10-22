@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=COVAL&nonce=1540173511480&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "1e3e13f3e4f9090887eb6bff3e5a333c56c036eb56513e0ca06137bcae5e7148fb20d93bb2a2c353bcf9b2b905beef16d06ffe9f21e72c1c0e9cda495611102e"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XWC&nonce=1540173378361&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "56f27090b79ba57264027d2861f432c33c6fdce96faa00410432f79b8b9e4bebe95e3fac10d46f1eefbc6ed1724a07441126bc9c74e6437b8ef7defd200e5e3e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XWC",
+            "Address": "WjU6u4U65tx1BJKgsPnYiJk9AF9QFkoveU"
+        }
+    }
+}

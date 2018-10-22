@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CRB&nonce=1540175032224&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ec46b514f29d849eacd6dbf0342fc5462e8d67fb6d19d466e426d19bfc644f83aea4014a204d59e16da675f5886f000c14d9e70b30509cfbaa50cca12661311b"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CRB",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

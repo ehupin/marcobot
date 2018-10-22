@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=iotx&timestamp=1540178609289&recvWindow=20000&signature=eae9bb989e0cc1bc25ee6c7a3919caf7560e32bfd2b4db2c57eb6260e4cfa160",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "0xc17f5d576cc50a360bf5d5d30c1243e184dafd6c",
+        "success": true,
+        "addressTag": "",
+        "asset": "iotx"
+    }
+}

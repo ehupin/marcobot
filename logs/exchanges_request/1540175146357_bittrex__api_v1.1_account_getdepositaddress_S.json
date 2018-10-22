@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BFT&nonce=1540175146202&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2b226a7be624cead58923a695793b377a79720076b825decbcb456265110a4ec437b366d7805a1390dac826bb2f610360ddd15bae073e5e6c4a86c38169d24fa"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BFT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

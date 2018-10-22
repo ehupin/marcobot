@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NAV&nonce=1540173409533&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "05e880e604034abca4019ec2eac617bbe45b8991e7422896162001ea6f70063de0412699979698c0ef2e68aafa0114dd4365051ceb7c8a105ca93cc365bc07cd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NAV",
+            "Address": "Ng64BF4doJc295Zq5YW9SWd3wy9mpT3Dnu"
+        }
+    }
+}

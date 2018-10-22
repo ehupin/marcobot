@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=OK&nonce=1540177623251&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "6c4652712f397e2ebb5920711d83cf508f093827fd01dcd76943311956e1bc48bb35fdd314301b7669cf42c0326ebc428ff48219d9a8795313e69e5955745e30"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

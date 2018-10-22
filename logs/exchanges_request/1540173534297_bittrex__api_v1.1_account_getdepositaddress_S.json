@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SNRG&nonce=1540173534120&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5f9383b706033d75f76e0da1d8626ad6e1a06430076c1588fc3d3fa5fa11f66a27d964d8e6cb88b4bbe7098b4f64f657cf95ea8aefdd365db6915f1b51c1ae22"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

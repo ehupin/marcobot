@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CMCT&nonce=1540175139020&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ed3951b668784419e68fa199b8b7c60fd89cd84d4e256cd219dfd22b9b835fe0470852f813f0b74d9adb00b8c91166d21eb95351a54bc88cf6f6c111e98a1898"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

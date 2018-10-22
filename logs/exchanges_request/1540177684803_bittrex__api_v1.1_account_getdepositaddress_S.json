@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=2GIVE&nonce=1540177684628&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "dd36a729f315b8dc84ba69de25e75f608210fbb9fd66c6306d30f1a9057e65a62dd17e908a96211b97a3a49bb3722bf84bfed7016845e7ba20c80eef7db658b5"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

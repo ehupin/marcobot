@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SHIFT&nonce=1540177718693&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "45e75a98d0dac6ab6e3bea6cd0195264af278d3d79c75ff567bb651de1a8f471866a7afd41d7480b7b60db5b2202b4f5ee5a8a53d3055b33ee8329b1f7318abc"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SHIFT",
+            "Address": "5231053893605067867S"
+        }
+    }
+}

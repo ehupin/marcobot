@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EFL&nonce=1540172037705&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "8a5816591f38f308626adfe5b8efb17a7b9d70beddeb855d79c3c6540fa29d8ad32afa757ed93e572d645ea7dfa1a456c1fef60cfe7e9c8f17c8321f6275b83f"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

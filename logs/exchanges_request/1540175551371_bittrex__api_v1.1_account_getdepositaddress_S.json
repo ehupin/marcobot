@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DTA&nonce=1540175551201&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "518ed63a9479c24a3d2cf31e90f72d7dd5fedbd2cb023b1e295d6381379cd5e849a1cb2d2053af0993995958638a3a21a18f1b0d716cc89917affb02a8097373"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DTA",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

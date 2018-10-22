@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CLUB&nonce=1540177657675&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "8e9780460ad9cab215d0631f8a9b7aa75195533b7c7720ce25c578933b70f807694cc9f1abf730a7fb5001c3a735ac6f0ef49be3c2d462605c3fc1caba200334"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

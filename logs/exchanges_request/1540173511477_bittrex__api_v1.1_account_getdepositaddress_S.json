@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NXS&nonce=1540173511318&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ce3f741ab4814c1b5e000bc489565212f1d130ee024f8013eb52f8915557134e7460a708cb13110a1e01bae02130f5cd54eeade31a86b724b41d1d8b58470636"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NXS",
+            "Address": "2SNP4Dok1L8SvUcvVXqaChRgzxtieCd3mYNzupBcM94GQuWYfbP"
+        }
+    }
+}

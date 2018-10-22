@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BITCNY&nonce=1540175463345&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ffc9dc57fb0bbf40efb7d83d91c5d59aab13ebda6146db9c7616447d8a8ebdd9f08d992cc622568942a5cb6ea90d2f542c7cd98d111dac944b01c36d7fab7f0e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BITCNY",
+            "Address": "54475e04ab254a968ca"
+        }
+    }
+}

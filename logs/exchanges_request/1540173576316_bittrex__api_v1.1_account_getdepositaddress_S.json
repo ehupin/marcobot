@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SAFEX&nonce=1540173576169&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9933e6aa8f8b75c03e6a1b1844aaff9b87534d8a39bd06cd640463bbf9bc49f097338924fdd25011812525e408781c0fe2aba2ecb8d909ad259d35245cd83170"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

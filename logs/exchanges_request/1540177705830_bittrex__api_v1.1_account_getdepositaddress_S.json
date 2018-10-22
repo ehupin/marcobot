@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ETC&nonce=1540177705677&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "be59cd38d265c2610c5f6153a99f5bc8fe70945b51dce4f54755e103889a84bcb2499a698ce151839cead7ebe413303fa4ef95a58f6a83b9c275e4808e6d6c75"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ETC",
+            "Address": "0x69bc3ce0b55a2de979ef61e744116f19b5b1755f"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MTL&nonce=1540173827897&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c33776536c664ce4ca6df9013e03cb838761672669e7ccfc1fd2fb226298926445321b6e33656d30b6f8c2ab5828d1cabc89245af8fe3bd18b592dc523592f4c"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MTL",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

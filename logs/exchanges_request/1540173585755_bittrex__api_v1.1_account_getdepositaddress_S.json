@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PDC&nonce=1540173585455&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c6eef74aeee8db5a37310ef4ce403f0674182858b8983643663deca1801260c7456c7c1c3687ffb74c5cf780513fe9a545a61eceb55c8b44f5f8ca32b5b03cd4"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

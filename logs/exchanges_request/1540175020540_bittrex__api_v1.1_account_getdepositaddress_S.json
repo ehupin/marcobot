@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EGC&nonce=1540175020383&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "38a2e43c40fedd8d01dd4288801da6d2fe133c7820a32ca5abb4541a84df9d2817d934ef2c36f37629409b49c010288aac680c106941094f001a3beeb751e416"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "EGC",
+            "Address": "EViczJZPMxVYonvDRqYiB8BaZeSBno9ayW"
+        }
+    }
+}

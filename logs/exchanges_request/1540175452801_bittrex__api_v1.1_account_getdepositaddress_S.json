@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XVG&nonce=1540175452643&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "df5f0e7c654aa645c88e6daa22bfbe64a2d2404f852ef45ef0ed5886c5f1d7b2e27ce49a1dbd0178499d58366007f1febb8fe0b175a77decf75f0339630a77cd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XVG",
+            "Address": "D9ug1pkpa7kZjcdLmnVrotDQuYRa87UKm7"
+        }
+    }
+}

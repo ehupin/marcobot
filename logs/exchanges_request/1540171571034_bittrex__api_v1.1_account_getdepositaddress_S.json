@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DOGE&nonce=1540171570875&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2e08a39f4bff7347b2a5aa12bd55a32e1ccd4038a2f96e2cb7bf84198fba2dfb7561152d8615c0f70c2d84beb7b925ecb7844709db50c1418fb919e83238c329"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DOGE",
+            "Address": "DArWvJpDpSuygNBQfskrWPTnh1NgLymd2j"
+        }
+    }
+}

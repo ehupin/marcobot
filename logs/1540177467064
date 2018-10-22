@@ -1,0 +1,1266 @@
+2018-10-21 23:04:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:28 debug: Bittrex exchange: generating address for DOGE
+2018-10-21 23:04:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:29 debug: Bittrex exchange: generating address for VTC
+2018-10-21 23:04:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:30 debug: Bittrex exchange: generating address for PPC
+2018-10-21 23:04:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:31 debug: Bittrex exchange: generating address for FTC
+2018-10-21 23:04:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:32 debug: Bittrex exchange: generating address for FTC
+2018-10-21 23:04:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:33 debug: Bittrex exchange: generating address for RDD
+2018-10-21 23:04:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:33 debug: Bittrex exchange: generating address for RDD
+2018-10-21 23:04:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:34 debug: Bittrex exchange: generating address for NXT
+2018-10-21 23:04:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:36 debug: Bittrex exchange: generating address for POT
+2018-10-21 23:04:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:36 debug: Bittrex exchange: generating address for POT
+2018-10-21 23:04:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:38 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:38 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:39 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:40 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:40 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:41 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:42 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:42 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:43 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:44 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:44 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:45 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:46 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:46 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:47 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:48 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:48 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:49 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:50 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:50 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:51 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:52 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:52 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:53 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:54 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:55 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:55 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:56 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:57 debug: Bittrex exchange: generating address for BLK
+2018-10-21 23:04:58 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
+2018-10-21 23:04:58 debug: Bittrex exchange: cannot get address for EMC2 CURRENCY_OFFLINE
+2018-10-21 23:04:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:58 debug: Bittrex exchange: generating address for XMY
+2018-10-21 23:04:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:04:59 debug: Bittrex exchange: generating address for AUR
+2018-10-21 23:05:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:00 debug: Bittrex exchange: generating address for AUR
+2018-10-21 23:05:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:01 debug: Bittrex exchange: generating address for EFL
+2018-10-21 23:05:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:02 debug: Bittrex exchange: generating address for GLD
+2018-10-21 23:05:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:03 debug: Bittrex exchange: generating address for FAIR
+2018-10-21 23:05:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:04 debug: Bittrex exchange: generating address for SLR
+2018-10-21 23:05:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:05 debug: Bittrex exchange: generating address for SLR
+2018-10-21 23:05:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:06 debug: Bittrex exchange: generating address for PTC
+2018-10-21 23:05:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:07 debug: Bittrex exchange: generating address for GRS
+2018-10-21 23:05:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:08 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:09 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:09 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:10 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:11 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:11 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:12 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:13 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:13 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:14 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:15 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:15 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:16 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:17 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:17 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:18 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:19 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:19 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:20 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:21 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:21 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:22 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:23 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:23 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:24 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:25 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:25 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:26 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:27 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:27 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:28 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:29 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:29 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:30 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:31 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:31 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:32 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:33 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:33 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:34 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:35 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:35 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:36 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:37 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:38 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:38 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:39 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:40 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:40 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:41 debug: Bittrex exchange: generating address for NLG
+2018-10-21 23:05:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:42 debug: Bittrex exchange: generating address for RBY
+2018-10-21 23:05:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:43 debug: Bittrex exchange: generating address for RBY
+2018-10-21 23:05:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:44 debug: Bittrex exchange: generating address for XWC
+2018-10-21 23:05:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:45 debug: Bittrex exchange: generating address for MONA
+2018-10-21 23:05:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:46 debug: Bittrex exchange: generating address for THC
+2018-10-21 23:05:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:47 debug: Bittrex exchange: generating address for ENRG
+2018-10-21 23:05:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:48 debug: Bittrex exchange: generating address for ENRG
+2018-10-21 23:05:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:48 debug: Bittrex exchange: generating address for ENRG
+2018-10-21 23:05:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:49 debug: Bittrex exchange: generating address for ENRG
+2018-10-21 23:05:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:50 debug: Bittrex exchange: generating address for ERC
+2018-10-21 23:05:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:51 debug: Bittrex exchange: generating address for ERC
+2018-10-21 23:05:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:52 debug: Bittrex exchange: generating address for VRC
+2018-10-21 23:05:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:53 debug: Bittrex exchange: generating address for CURE
+2018-10-21 23:05:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:54 debug: Bittrex exchange: generating address for XMR
+2018-10-21 23:05:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:55 debug: Bittrex exchange: generating address for CLOAK
+2018-10-21 23:05:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:56 debug: Bittrex exchange: generating address for BSD
+2018-10-21 23:05:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:57 debug: Bittrex exchange: generating address for START
+2018-10-21 23:05:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:58 debug: Bittrex exchange: generating address for KORE
+2018-10-21 23:05:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:59 debug: Bittrex exchange: generating address for KORE
+2018-10-21 23:05:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:05:59 debug: Bittrex exchange: generating address for KORE
+2018-10-21 23:06:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:00 debug: Bittrex exchange: generating address for KORE
+2018-10-21 23:06:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:01 debug: Bittrex exchange: generating address for XDN
+2018-10-21 23:06:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:02 debug: Bittrex exchange: generating address for TRUST
+2018-10-21 23:06:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:03 debug: Bittrex exchange: generating address for NAV
+2018-10-21 23:06:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:04 debug: Bittrex exchange: generating address for XST
+2018-10-21 23:06:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:05 debug: Bittrex exchange: generating address for XST
+2018-10-21 23:06:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:06 debug: Bittrex exchange: generating address for VIA
+2018-10-21 23:06:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:07 debug: Bittrex exchange: generating address for VIA
+2018-10-21 23:06:08 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
+2018-10-21 23:06:08 debug: Bittrex exchange: cannot get address for PINK CURRENCY_OFFLINE
+2018-10-21 23:06:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:08 debug: Bittrex exchange: generating address for IOC
+2018-10-21 23:06:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:09 debug: Bittrex exchange: generating address for IOC
+2018-10-21 23:06:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:09 debug: Bittrex exchange: generating address for IOC
+2018-10-21 23:06:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:10 debug: Bittrex exchange: generating address for CANN
+2018-10-21 23:06:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:11 debug: Bittrex exchange: generating address for CANN
+2018-10-21 23:06:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:12 debug: Bittrex exchange: generating address for SYS
+2018-10-21 23:06:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:13 debug: Bittrex exchange: generating address for NEOS
+2018-10-21 23:06:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:14 debug: Bittrex exchange: generating address for DGB
+2018-10-21 23:06:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:15 debug: Bittrex exchange: generating address for BTS
+2018-10-21 23:06:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:16 debug: Bittrex exchange: generating address for BURST
+2018-10-21 23:06:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:17 debug: Bittrex exchange: generating address for PXI
+2018-10-21 23:06:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:18 debug: Bittrex exchange: generating address for EXCL
+2018-10-21 23:06:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:19 debug: Bittrex exchange: generating address for EXCL
+2018-10-21 23:06:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:20 debug: Bittrex exchange: generating address for BITS
+2018-10-21 23:06:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:21 debug: Bittrex exchange: generating address for DOPE
+2018-10-21 23:06:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:22 debug: Bittrex exchange: generating address for BLOCK
+2018-10-21 23:06:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:23 debug: Bittrex exchange: generating address for ABY
+2018-10-21 23:06:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:24 debug: Bittrex exchange: generating address for BYC
+2018-10-21 23:06:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:25 debug: Bittrex exchange: generating address for XMG
+2018-10-21 23:06:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:26 debug: Bittrex exchange: generating address for BLITZ
+2018-10-21 23:06:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:27 debug: Bittrex exchange: generating address for BAY
+2018-10-21 23:06:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:28 debug: Bittrex exchange: generating address for SPR
+2018-10-21 23:06:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:29 debug: Bittrex exchange: generating address for VTR
+2018-10-21 23:06:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:30 debug: Bittrex exchange: generating address for VTR
+2018-10-21 23:06:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:31 debug: Bittrex exchange: generating address for VTR
+2018-10-21 23:06:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:32 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:33 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:34 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:34 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:35 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:36 debug: Bittrex exchange: generating address for GAME
+2018-10-21 23:06:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:37 debug: Bittrex exchange: generating address for NXS
+2018-10-21 23:06:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:38 debug: Bittrex exchange: generating address for COVAL
+2018-10-21 23:06:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:38 debug: Bittrex exchange: generating address for COVAL
+2018-10-21 23:06:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:39 debug: Bittrex exchange: generating address for XCP
+2018-10-21 23:06:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:40 debug: Bittrex exchange: generating address for XCP
+2018-10-21 23:06:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:41 debug: Bittrex exchange: generating address for BITB
+2018-10-21 23:06:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:42 debug: Bittrex exchange: generating address for XVG
+2018-10-21 23:06:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:43 debug: Bittrex exchange: generating address for XVG
+2018-10-21 23:06:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:44 debug: Bittrex exchange: generating address for GEO
+2018-10-21 23:06:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:44 debug: Bittrex exchange: generating address for GEO
+2018-10-21 23:06:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:45 debug: Bittrex exchange: generating address for FLDC
+2018-10-21 23:06:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:46 debug: Bittrex exchange: generating address for FLDC
+2018-10-21 23:06:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:47 debug: Bittrex exchange: generating address for FLDC
+2018-10-21 23:06:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:47 debug: Bittrex exchange: generating address for FLDC
+2018-10-21 23:06:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:48 debug: Bittrex exchange: generating address for FLDC
+2018-10-21 23:06:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:49 debug: Bittrex exchange: generating address for GRC
+2018-10-21 23:06:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:50 debug: Bittrex exchange: generating address for GRC
+2018-10-21 23:06:51 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
+2018-10-21 23:06:51 debug: Bittrex exchange: cannot get address for FLO CURRENCY_OFFLINE
+2018-10-21 23:06:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:51 debug: Bittrex exchange: generating address for NBT
+2018-10-21 23:06:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:53 debug: Bittrex exchange: generating address for MUE
+2018-10-21 23:06:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:53 debug: Bittrex exchange: generating address for MUE
+2018-10-21 23:06:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:54 debug: Bittrex exchange: generating address for MUE
+2018-10-21 23:06:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:55 debug: Bittrex exchange: generating address for MUE
+2018-10-21 23:06:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:55 debug: Bittrex exchange: generating address for MUE
+2018-10-21 23:06:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:56 debug: Bittrex exchange: generating address for XVC
+2018-10-21 23:06:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:57 debug: Bittrex exchange: generating address for CLAM
+2018-10-21 23:06:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:58 debug: Bittrex exchange: generating address for DMD
+2018-10-21 23:06:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:06:59 debug: Bittrex exchange: generating address for GAM
+2018-10-21 23:07:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:00 debug: Bittrex exchange: generating address for GAM
+2018-10-21 23:07:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:01 debug: Bittrex exchange: generating address for SPHR
+2018-10-21 23:07:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:02 debug: Bittrex exchange: generating address for SPHR
+2018-10-21 23:07:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:03 debug: Bittrex exchange: generating address for OK
+2018-10-21 23:07:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:04 debug: Bittrex exchange: generating address for OK
+2018-10-21 23:07:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:05 debug: Bittrex exchange: generating address for SNRG
+2018-10-21 23:07:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:06 debug: Bittrex exchange: generating address for PKB
+2018-10-21 23:07:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:06 debug: Bittrex exchange: generating address for PKB
+2018-10-21 23:07:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:07 debug: Bittrex exchange: generating address for CPC
+2018-10-21 23:07:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:08 debug: Bittrex exchange: generating address for CPC
+2018-10-21 23:07:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:09 debug: Bittrex exchange: generating address for AEON
+2018-10-21 23:07:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:11 debug: Bittrex exchange: generating address for GCR
+2018-10-21 23:07:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:12 debug: Bittrex exchange: generating address for TX
+2018-10-21 23:07:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:12 debug: Bittrex exchange: generating address for TX
+2018-10-21 23:07:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:13 debug: Bittrex exchange: generating address for BCY
+2018-10-21 23:07:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:14 debug: Bittrex exchange: generating address for EXP
+2018-10-21 23:07:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:15 debug: Bittrex exchange: generating address for EXP
+2018-10-21 23:07:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:16 debug: Bittrex exchange: generating address for EXP
+2018-10-21 23:07:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:17 debug: Bittrex exchange: generating address for INFX
+2018-10-21 23:07:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:18 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:18 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:19 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:20 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:20 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:21 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:22 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:22 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:23 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:24 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:24 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:25 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:26 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:26 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:27 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:28 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:28 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:29 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:30 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:30 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:31 debug: Bittrex exchange: generating address for OMNI
+2018-10-21 23:07:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:32 debug: Bittrex exchange: generating address for AMP
+2018-10-21 23:07:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:33 debug: Bittrex exchange: generating address for AMP
+2018-10-21 23:07:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:34 debug: Bittrex exchange: generating address for AGRS
+2018-10-21 23:07:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:36 debug: Bittrex exchange: generating address for BITCNY
+2018-10-21 23:07:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:37 debug: Bittrex exchange: generating address for CLUB
+2018-10-21 23:07:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:37 debug: Bittrex exchange: generating address for CLUB
+2018-10-21 23:07:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:38 debug: Bittrex exchange: generating address for RVR
+2018-10-21 23:07:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:40 debug: Bittrex exchange: generating address for EMC
+2018-10-21 23:07:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:40 debug: Bittrex exchange: generating address for EMC
+2018-10-21 23:07:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:42 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:42 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:43 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:44 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:44 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:45 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:46 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:46 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:47 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:48 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:48 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:49 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:50 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:50 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:51 debug: Bittrex exchange: generating address for MAID
+2018-10-21 23:07:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:52 debug: Bittrex exchange: generating address for EGC
+2018-10-21 23:07:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:53 debug: Bittrex exchange: generating address for SLS
+2018-10-21 23:07:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:54 debug: Bittrex exchange: generating address for SLS
+2018-10-21 23:07:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:55 debug: Bittrex exchange: generating address for RADS
+2018-10-21 23:07:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:55 debug: Bittrex exchange: generating address for RADS
+2018-10-21 23:07:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:57 debug: Bittrex exchange: generating address for DCR
+2018-10-21 23:07:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:57 debug: Bittrex exchange: generating address for DCR
+2018-10-21 23:07:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:58 debug: Bittrex exchange: generating address for DCR
+2018-10-21 23:07:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:07:58 debug: Bittrex exchange: generating address for DCR
+2018-10-21 23:08:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:00 debug: Bittrex exchange: generating address for SAFEX
+2018-10-21 23:08:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:01 debug: Bittrex exchange: generating address for PIVX
+2018-10-21 23:08:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:01 debug: Bittrex exchange: generating address for PIVX
+2018-10-21 23:08:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:02 debug: Bittrex exchange: generating address for MEME
+2018-10-21 23:08:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:03 debug: Bittrex exchange: generating address for STEEM
+2018-10-21 23:08:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:04 debug: Bittrex exchange: generating address for 2GIVE
+2018-10-21 23:08:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:05 debug: Bittrex exchange: generating address for 2GIVE
+2018-10-21 23:08:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:06 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:07 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:08 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:08 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:09 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:10 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:10 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:11 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:12 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:12 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:13 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:14 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:14 debug: Bittrex exchange: generating address for PDC
+2018-10-21 23:08:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:15 debug: Bittrex exchange: generating address for DGD
+2018-10-21 23:08:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:16 debug: Bittrex exchange: generating address for BRK
+2018-10-21 23:08:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:17 debug: Bittrex exchange: generating address for WAVES
+2018-10-21 23:08:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:19 debug: Bittrex exchange: generating address for RISE
+2018-10-21 23:08:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:20 debug: Bittrex exchange: generating address for LBC
+2018-10-21 23:08:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:21 debug: Bittrex exchange: generating address for SBD
+2018-10-21 23:08:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:22 debug: Bittrex exchange: generating address for BRX
+2018-10-21 23:08:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:23 debug: Bittrex exchange: generating address for ETC
+2018-10-21 23:08:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:23 debug: Bittrex exchange: generating address for ETC
+2018-10-21 23:08:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:24 debug: Bittrex exchange: generating address for ETC
+2018-10-21 23:08:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:25 debug: Bittrex exchange: generating address for ETC
+2018-10-21 23:08:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:26 debug: Bittrex exchange: generating address for STRAT
+2018-10-21 23:08:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:27 debug: Bittrex exchange: generating address for UNB
+2018-10-21 23:08:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:28 debug: Bittrex exchange: generating address for SYNX
+2018-10-21 23:08:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:29 debug: Bittrex exchange: generating address for TRIG
+2018-10-21 23:08:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:30 debug: Bittrex exchange: generating address for EBST
+2018-10-21 23:08:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:30 debug: Bittrex exchange: generating address for EBST
+2018-10-21 23:08:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:31 debug: Bittrex exchange: generating address for EBST
+2018-10-21 23:08:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:32 debug: Bittrex exchange: generating address for VRM
+2018-10-21 23:08:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:33 debug: Bittrex exchange: generating address for VRM
+2018-10-21 23:08:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:34 debug: Bittrex exchange: generating address for SEQ
+2018-10-21 23:08:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:35 debug: Bittrex exchange: generating address for SEQ
+2018-10-21 23:08:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:36 debug: Bittrex exchange: generating address for SNGLS
+2018-10-21 23:08:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:37 debug: Bittrex exchange: generating address for REP
+2018-10-21 23:08:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:38 debug: Bittrex exchange: generating address for SHIFT
+2018-10-21 23:08:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:39 debug: Bittrex exchange: generating address for ARDR
+2018-10-21 23:08:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:40 debug: Bittrex exchange: generating address for XZC
+2018-10-21 23:08:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:41 debug: Bittrex exchange: generating address for NEO
+2018-10-21 23:08:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:41 debug: Bittrex exchange: generating address for NEO
+2018-10-21 23:08:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:42 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:43 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:44 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:44 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:45 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:46 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:46 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:47 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:48 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:48 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:49 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:50 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:51 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:51 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:52 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:53 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:53 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:54 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:55 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:55 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:56 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:57 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:57 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:58 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:59 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:08:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:08:59 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:00 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:01 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:01 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:02 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:03 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:03 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:04 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:05 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:05 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:06 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:07 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:07 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:08 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:09 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:09 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:10 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:11 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:11 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:12 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:13 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:13 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:14 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:15 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:15 debug: Bittrex exchange: generating address for ZEC
+2018-10-21 23:09:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:16 debug: Bittrex exchange: generating address for IOP
+2018-10-21 23:09:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:17 debug: Bittrex exchange: generating address for IOP
+2018-10-21 23:09:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:18 debug: Bittrex exchange: generating address for GOLOS
+2018-10-21 23:09:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:19 debug: Bittrex exchange: generating address for GBG
+2018-10-21 23:09:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:20 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:21 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:22 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:22 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:23 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:24 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:24 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:25 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:26 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:26 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:27 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:28 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:28 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:29 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:30 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:30 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:31 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:32 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:32 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:33 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:34 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:34 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:35 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:36 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:36 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:37 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:38 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:38 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:39 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:40 debug: Bittrex exchange: generating address for UBQ
+2018-10-21 23:09:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:41 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:41 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:42 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:43 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:44 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:44 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:45 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:46 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:46 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:47 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:48 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:48 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:49 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:50 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:50 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:51 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:51 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:52 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:53 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:53 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:54 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:55 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:55 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:56 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:57 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:57 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:58 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:59 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:09:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:09:59 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:00 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:01 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:01 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:02 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:03 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:03 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:04 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:05 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:05 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:06 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:07 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:07 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:08 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:09 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:09 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:10 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:11 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:11 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:12 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:13 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:13 debug: Bittrex exchange: generating address for KMD
+2018-10-21 23:10:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:15 debug: Bittrex exchange: generating address for SIB
+2018-10-21 23:10:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:15 debug: Bittrex exchange: generating address for SIB
+2018-10-21 23:10:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:16 debug: Bittrex exchange: generating address for ION
+2018-10-21 23:10:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:17 debug: Bittrex exchange: generating address for LMC
+2018-10-21 23:10:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:18 debug: Bittrex exchange: generating address for LMC
+2018-10-21 23:10:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:19 debug: Bittrex exchange: generating address for QWARK
+2018-10-21 23:10:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:20 debug: Bittrex exchange: generating address for QWARK
+2018-10-21 23:10:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:21 debug: Bittrex exchange: generating address for CRW
+2018-10-21 23:10:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:21 debug: Bittrex exchange: generating address for CRW
+2018-10-21 23:10:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:23 debug: Bittrex exchange: generating address for SWT
+2018-10-21 23:10:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:24 debug: Bittrex exchange: generating address for TIME
+2018-10-21 23:10:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:25 debug: Bittrex exchange: generating address for MLN
+2018-10-21 23:10:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:26 debug: Bittrex exchange: generating address for TKS
+2018-10-21 23:10:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:27 debug: Bittrex exchange: generating address for ARK
+2018-10-21 23:10:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:28 debug: Bittrex exchange: generating address for DYN
+2018-10-21 23:10:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:28 debug: Bittrex exchange: generating address for DYN
+2018-10-21 23:10:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:29 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:30 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:31 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:31 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:32 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:33 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:34 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:34 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:35 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:36 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:36 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:37 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:37 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:38 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:39 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:39 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:40 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:41 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:41 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:42 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:43 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:43 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:44 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:45 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:45 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:46 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:47 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:47 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:48 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:49 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:49 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:50 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:51 debug: Bittrex exchange: generating address for MUSIC
+2018-10-21 23:10:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:52 debug: Bittrex exchange: generating address for DTB
+2018-10-21 23:10:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:52 debug: Bittrex exchange: generating address for DTB
+2018-10-21 23:10:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:53 debug: Bittrex exchange: generating address for INCNT
+2018-10-21 23:10:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:55 debug: Bittrex exchange: generating address for GBYTE
+2018-10-21 23:10:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:56 debug: Bittrex exchange: generating address for NXC
+2018-10-21 23:10:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:57 debug: Bittrex exchange: generating address for EDG
+2018-10-21 23:10:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:58 debug: Bittrex exchange: generating address for MORE
+2018-10-21 23:10:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:10:59 debug: Bittrex exchange: generating address for TRST
+2018-10-21 23:11:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:01 debug: Bittrex exchange: generating address for WINGS
+2018-10-21 23:11:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:02 debug: Bittrex exchange: generating address for RLC
+2018-10-21 23:11:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:03 debug: Bittrex exchange: generating address for GNO
+2018-10-21 23:11:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:04 debug: Bittrex exchange: generating address for GUP
+2018-10-21 23:11:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:05 debug: Bittrex exchange: generating address for LUN
+2018-10-21 23:11:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:06 debug: Bittrex exchange: generating address for APX
+2018-10-21 23:11:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:07 debug: Bittrex exchange: generating address for APX
+2018-10-21 23:11:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:08 debug: Bittrex exchange: generating address for TKN
+2018-10-21 23:11:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:09 debug: Bittrex exchange: generating address for HMQ
+2018-10-21 23:11:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:11 debug: Bittrex exchange: generating address for SC
+2018-10-21 23:11:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:12 debug: Bittrex exchange: generating address for BAT
+2018-10-21 23:11:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:13 debug: Bittrex exchange: generating address for 1ST
+2018-10-21 23:11:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:14 debug: Bittrex exchange: generating address for QRL
+2018-10-21 23:11:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:15 debug: Bittrex exchange: generating address for CRB
+2018-10-21 23:11:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:16 debug: Bittrex exchange: generating address for PTOY
+2018-10-21 23:11:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:17 debug: Bittrex exchange: generating address for MYST
+2018-10-21 23:11:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:18 debug: Bittrex exchange: generating address for CFI
+2018-10-21 23:11:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:19 debug: Bittrex exchange: generating address for BNT
+2018-10-21 23:11:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:20 debug: Bittrex exchange: generating address for NMR
+2018-10-21 23:11:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:21 debug: Bittrex exchange: generating address for SNT
+2018-10-21 23:11:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:22 debug: Bittrex exchange: generating address for DCT
+2018-10-21 23:11:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:23 debug: Bittrex exchange: generating address for XEL
+2018-10-21 23:11:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:24 debug: Bittrex exchange: generating address for MCO
+2018-10-21 23:11:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:25 debug: Bittrex exchange: generating address for ADT
+2018-10-21 23:11:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:26 debug: Bittrex exchange: generating address for FUN
+2018-10-21 23:11:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:27 debug: Bittrex exchange: generating address for PAY
+2018-10-21 23:11:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:28 debug: Bittrex exchange: generating address for MTL
+2018-10-21 23:11:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:30 debug: Bittrex exchange: generating address for ADX
+2018-10-21 23:11:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:31 debug: Bittrex exchange: generating address for CVC
+2018-10-21 23:11:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:32 debug: Bittrex exchange: generating address for PART
+2018-10-21 23:11:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:34 debug: Bittrex exchange: generating address for BCH
+2018-10-21 23:11:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:35 debug: Bittrex exchange: generating address for DNT
+2018-10-21 23:11:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:36 debug: Bittrex exchange: generating address for MANA
+2018-10-21 23:11:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:37 debug: Bittrex exchange: generating address for TIX
+2018-10-21 23:11:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:39 debug: Bittrex exchange: generating address for RCN
+2018-10-21 23:11:40 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:40 debug: Bittrex exchange: generating address for VIB
+2018-10-21 23:11:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:41 debug: Bittrex exchange: generating address for MER
+2018-10-21 23:11:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:42 debug: Bittrex exchange: generating address for ENG
+2018-10-21 23:11:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:44 debug: Bittrex exchange: generating address for UKG
+2018-10-21 23:11:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:45 debug: Bittrex exchange: generating address for IGNIS
+2018-10-21 23:11:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:46 debug: Bittrex exchange: generating address for SRN
+2018-10-21 23:11:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:47 debug: Bittrex exchange: generating address for WAX
+2018-10-21 23:11:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:48 debug: Bittrex exchange: generating address for ZRX
+2018-10-21 23:11:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:49 debug: Bittrex exchange: generating address for VEE
+2018-10-21 23:11:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:50 debug: Bittrex exchange: generating address for BCPT
+2018-10-21 23:11:51 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
+2018-10-21 23:11:51 debug: Bittrex exchange: cannot get address for TRX CURRENCY_OFFLINE
+2018-10-21 23:11:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:51 debug: Bittrex exchange: generating address for TUSD
+2018-10-21 23:11:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:52 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:53 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:54 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:54 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:54 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:55 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:56 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:56 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:57 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:58 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:58 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:11:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:11:59 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:00 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:00 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:00 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:01 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:01 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:02 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:02 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:02 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:03 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:03 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:04 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:04 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:04 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:05 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:06 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:06 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:07 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:07 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:08 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:08 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:08 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:09 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:09 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:09 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:10 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:10 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:11 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:11 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:11 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:12 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:12 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:13 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:13 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:13 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:14 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:14 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:15 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:15 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:15 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:16 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:16 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:17 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:17 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:17 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:18 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:18 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:19 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:19 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:19 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:20 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:20 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:21 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:21 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:21 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:22 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:22 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:23 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:23 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:23 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:24 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:24 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:25 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:25 debug: Bittrex exchange: generating address for BTCP
+2018-10-21 23:12:26 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:26 debug: Bittrex exchange: generating address for LRC
+2018-10-21 23:12:27 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:27 debug: Bittrex exchange: generating address for UP
+2018-10-21 23:12:28 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:28 debug: Bittrex exchange: generating address for DMT
+2018-10-21 23:12:29 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:29 debug: Bittrex exchange: generating address for POLY
+2018-10-21 23:12:30 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:30 debug: Bittrex exchange: generating address for PRO
+2018-10-21 23:12:31 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:31 debug: Bittrex exchange: generating address for BLT
+2018-10-21 23:12:32 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:32 debug: Bittrex exchange: generating address for STORM
+2018-10-21 23:12:33 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:33 debug: Bittrex exchange: generating address for AID
+2018-10-21 23:12:34 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:34 debug: Bittrex exchange: generating address for NGC
+2018-10-21 23:12:35 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:35 debug: Bittrex exchange: generating address for GTO
+2018-10-21 23:12:36 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:36 debug: Bittrex exchange: generating address for OCN
+2018-10-21 23:12:37 error: Bittrex api call has failed: request has failed (api error): INVALID_CURRENCY_TYPE
+2018-10-21 23:12:37 debug: Bittrex exchange: cannot get address for USD INVALID_CURRENCY_TYPE
+2018-10-21 23:12:37 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:37 debug: Bittrex exchange: generating address for TUBE
+2018-10-21 23:12:38 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:38 debug: Bittrex exchange: generating address for CBC
+2018-10-21 23:12:39 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:39 debug: Bittrex exchange: generating address for CMCT
+2018-10-21 23:12:41 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:41 debug: Bittrex exchange: generating address for NLC2
+2018-10-21 23:12:42 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:42 debug: Bittrex exchange: generating address for BKX
+2018-10-21 23:12:43 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:43 debug: Bittrex exchange: generating address for MFT
+2018-10-21 23:12:44 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:44 debug: Bittrex exchange: generating address for LOOM
+2018-10-21 23:12:45 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:45 debug: Bittrex exchange: generating address for RFR
+2018-10-21 23:12:46 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:46 debug: Bittrex exchange: generating address for RVN
+2018-10-21 23:12:47 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:47 debug: Bittrex exchange: generating address for BFT
+2018-10-21 23:12:48 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:48 debug: Bittrex exchange: generating address for GO
+2018-10-21 23:12:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:49 debug: Bittrex exchange: generating address for GO
+2018-10-21 23:12:49 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:49 debug: Bittrex exchange: generating address for GO
+2018-10-21 23:12:50 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:50 debug: Bittrex exchange: generating address for HYDRO
+2018-10-21 23:12:51 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:51 debug: Bittrex exchange: generating address for UPP
+2018-10-21 23:12:52 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:52 debug: Bittrex exchange: generating address for ENJ
+2018-10-21 23:12:53 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:53 debug: Bittrex exchange: generating address for MET
+2018-10-21 23:12:55 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:55 debug: Bittrex exchange: generating address for DTA
+2018-10-21 23:12:56 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:56 debug: Bittrex exchange: generating address for EDR
+2018-10-21 23:12:57 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:57 debug: Bittrex exchange: generating address for BOXX
+2018-10-21 23:12:58 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:58 debug: Bittrex exchange: generating address for IHT
+2018-10-21 23:12:59 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 23:12:59 debug: Bittrex exchange: generating address for XHV
+2018-10-21 23:13:00 error: Bittrex api call has failed: request has failed (api error): RESTRICTED_CURRENCY
+2018-10-21 23:13:00 debug: Bittrex exchange: cannot get address for NPXS RESTRICTED_CURRENCY

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=IOC&nonce=1540173499545&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "dcdae1fbc118c91b40aa06b4771beeb10a840ec1ee6cb7495633778d595bd798c64c330250d263be5acc835fde0a5ac7f0e06bdba2ea029b87ccb5c26aaf7348"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "IOC",
+            "Address": "iqqHwFEGRMmd35z11BeCDmG5NGKhbU7wXM"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BSD&nonce=1540175008993&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a12f6309655074d8fdc8eceb0f4b5d38cb1fd0502f31bc310139746a636b7d417dfb8f8e0997aacbbdb093dadba42659447d13e30c30ff709be3afc214dd2262"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BSD",
+            "Address": "i8PNNrcQsuThneQqgLjiQMLEg5RrzwY2iB"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=OCN&nonce=1540177956999&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "9ad731f76e9067ff0723ce1361c7ae5f10427cc199fc5863ffcfc6c33e5e6b130642d26646ab27e1f097d7f62a833fb1b99013a5efe8d1a798fa9e639cf5ef89"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "OCN",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

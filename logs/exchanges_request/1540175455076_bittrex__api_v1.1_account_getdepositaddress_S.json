@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XEM&nonce=1540175454895&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ac129fba4b1447a654b7b7f6608ff64cb64916851d3688c6af713fa1a9739ed660615d98379961261030c2378b6d904f497c8aadea333cb62ec6aa5017253cf6"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XEM",
+            "Address": "1b308d0b3e444caca2d"
+        }
+    }
+}

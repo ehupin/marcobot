@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EDR&nonce=1540175150710&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f56b210b817be2db1c9cbcd06211d56b1b3c77eb35ca90d1cb9dc93b98e7bd59151303a5d57bed4d1a87a110f7bcf3ee352516383fdc6e89f98d773384bc0df6"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

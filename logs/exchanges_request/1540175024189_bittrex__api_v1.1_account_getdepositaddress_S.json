@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TRIG&nonce=1540175024045&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ac771af370a442135d926cf241b5ba60f97fa4d59893715845380699d52860c604b8b2c5c5b862733637d30ae0fa7e66572f6ad21cd180177fa1ac8e85ce1acc"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TRIG",
+            "Address": "1BKy8p4dMf2UpWxiWsbQVrkpWa63Vpg7Zq"
+        }
+    }
+}

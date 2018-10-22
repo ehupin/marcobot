@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GNT&nonce=1540173769430&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9386da25649a5b765d6bda7484e79967406a9b84bd30c540fb0af18374623dd540dbf8f85dd06ac854b7591a91f2e2752bb95d8644310a70677419aa2343121d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GNT",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

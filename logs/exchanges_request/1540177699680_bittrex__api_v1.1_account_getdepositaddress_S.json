@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RISE&nonce=1540177699518&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "a1764dd9ed8ba4e006d7970ccd9a7bb81e64f9d299d717b5508bfa0b21bb6b4553f595966766351c02b8e091f353bf5a89e89d9e154eb446b1cf251fa4e27b37"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "RISE",
+            "Address": "5231053893605067867R"
+        }
+    }
+}

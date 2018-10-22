@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MET&nonce=1540175149711&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7fbf70773db98f2c7d2fe9e15c38592ec2965de31709d6bfe6e2e8bef4b7e6de24ba7451bf71d98f07f6cb933af3c981814fc40e8af7211f6334561cd7b6c492"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MET",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

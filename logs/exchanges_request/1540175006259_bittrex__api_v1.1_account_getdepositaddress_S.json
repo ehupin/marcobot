@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=AUR&nonce=1540175006106&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4ec7e7ebdc1424081f6fc196d3e1cbcebfdf39ec2e44ed1a3a128a78ee9129e32d8c153b041ab73a0237803df58f34d351927aba3382a832fba1ea3ffc87f60d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "AUR",
+            "Address": "AM9LsMjEpidSYuRwh57vj4a9GVrLrE5H37"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BLOCK&nonce=1540173440370&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "79fe11355c0fbf9d0aacae4eeb81368d5c8794e11fadb1fe01b2aca07a5d8083ec80e8511d6f17fa7c3e54b6408979f382a0e4cc3fddacb05f90e96c5e54a996"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BLOCK",
+            "Address": "BfdF6qEpNARmknMmQy2v9CBaBMPpssBP5S"
+        }
+    }
+}

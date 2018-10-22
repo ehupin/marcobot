@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RCN&nonce=1540173838355&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "25ec179ce00e4b5cf5108bb9707de61f6453a123f70282de179bbfbd0d1a89096a91baea854a33ab49e44a3e54ffc5170c32146945cf6045c47fb52b98241e1d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "RCN",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

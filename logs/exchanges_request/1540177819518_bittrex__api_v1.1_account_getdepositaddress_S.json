@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=QWARK&nonce=1540177819342&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "fb04b5fc98b7a1830b8d4cfcc98ce59c26135f87e8059ae024dff0b6205c8156daadc30cdc613075f5acb0f3beea20c8f75b55ac5a366a92f60ffc3fff50f80f"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

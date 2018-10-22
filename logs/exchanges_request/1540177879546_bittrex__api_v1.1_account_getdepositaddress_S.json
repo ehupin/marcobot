@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BNT&nonce=1540177879369&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "fdeb8e9c3d79717ef89069f686af70923e4f434aa51be4fd0a71b6331f642f4d689621e97bf4a5460875ee15ad3b208556e011ff8963377ed388e305ddd80b27"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

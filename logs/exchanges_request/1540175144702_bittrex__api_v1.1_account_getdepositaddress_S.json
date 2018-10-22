@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RFR&nonce=1540175144543&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9e90e4b7f22f416b99baa546b217b72dd192d89adbabdc379becd55cbdcb69911c394557d97f4bfefabc18c8e746957242dd8fc5183364b3c246a649d559b665"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "RFR",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=xrp&nonce=1540092513771&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a399e1cad636d570929cff2153ff18c23b432d360c4b8293c6e4aa5c92c6dec49642b91b3fe6ea33e1d00f8ac7e587be30ae0633aa6042affc04a6346e9136a8"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LTC&nonce=1540171903640&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "0b7e4dae1549ffd136b91b0c12214fbf70d6bab04a8ad4422b8926016af450894d126cd21ab58b69829206cd444f4980e36725131e09059a1c57b8d802545035"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "LTC",
+            "Address": "LbQ8VAJYpXYR9PmcxeMDMHf2MQDmgBCmif"
+        }
+    }
+}

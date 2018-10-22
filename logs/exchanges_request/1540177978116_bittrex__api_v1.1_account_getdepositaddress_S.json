@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=IHT&nonce=1540177977943&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "3b8b8a9dd487372f6e51c405cab8b991721e56a921667101305df8bdc68e608aa1fcbaeb58ef9c4afead6cb495162bb9a91b0460dc1dc9b3ccd9931cbf695e4c"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VRM&nonce=1540173606119&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9b3da15c57015f3461e2684256da57b6f517a717670f317ee187a6e4a9eb3aedab1c9b68b8c6cfc6ec4f8129d315d30e8f2233a019415e863a7d60cd91f7a7c6"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "VRM",
+            "Address": "VFsRUvgkT38cXCiFQbh4Pb6LhAZtD5W3gZ"
+        }
+    }
+}

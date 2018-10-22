@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SLR&nonce=1540173373090&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fbea534e869861e2ce322b6fa54506f0da6466044c60893550b30941dd0ae994ee4db3fdb11b6b9b9541d62dc25a56acf8ef3bdc04b1c73559384fd38ffafcb5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SLR",
+            "Address": "8dL6rhcpirPHJtLPE4rg7uWPg7p8Po3W77"
+        }
+    }
+}

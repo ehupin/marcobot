@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DMD&nonce=1540173530074&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "3ef0d555251dbfdb85bc55cbdd13f0678199475053c15332738bee5265cb0c728266be7a7900cc0c10b77d387b24ce1de147480a33e2137099bef6754d690918"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DMD",
+            "Address": "dWSm2XMrSXtQXviSq1XZwdULwNdW33jid7"
+        }
+    }
+}

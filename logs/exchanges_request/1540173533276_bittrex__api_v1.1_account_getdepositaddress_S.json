@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SPHR&nonce=1540173533121&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "e57ac8a9d6a4d51f521abebb3641ff3fa69061c565adddf4effde89230a62bd818e90aa73be6bae7c5aec980b9c385ff82da76963faa95f82f15a500f6fe6c0e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SPHR",
+            "Address": "BMKDWePiQZGsDWRGte4yLfhLspmrA3mVAL"
+        }
+    }
+}

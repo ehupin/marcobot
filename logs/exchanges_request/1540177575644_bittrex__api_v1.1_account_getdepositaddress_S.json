@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BTS&nonce=1540177575479&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "05599f3db9217f6dc9f5dcab575f8203f35bbadc0dff2b6693a86890ad0f1f861e59fba066bb121bfa7fd9a68ad20f1a1f9592ad5a0d13d540978c5cfbbc8aec"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

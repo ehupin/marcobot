@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=FUN&nonce=1540173825455&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "436f39b080a96a28465fa8f523d9b63ab6ecc94bb240139140334d8448f739bc6026dad5913e4af6abc079486f9e2bb9884cd94e2d96a5a94d03aeaa172ac6fe"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

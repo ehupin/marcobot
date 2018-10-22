@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DYN&nonce=1540177829441&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "96d2b7b389633808fd4e06a783575257e847f0c79cecd031dd5788dbbe7d60d80f262bbe60960479e7dcfcf1bf3b55d1895f2ca8ab7725cb861d9de3029a7948"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DYN",
+            "Address": "DSH9NPpDzqujdcbVy3VKCpeMPHeBC9yn7J"
+        }
+    }
+}

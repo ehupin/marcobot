@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NEO&nonce=1540177721771&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "c0737865e306b285988d94a265ee6069c6db9efa9c761885ef65d210d11da59e46c1a10f1e4f468f166fc7285cda1af8aef5ffba1441156fe2a0521ae837a3c3"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

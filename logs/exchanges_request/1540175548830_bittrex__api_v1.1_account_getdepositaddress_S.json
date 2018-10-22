@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RVN&nonce=1540175548672&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "896be622c7546a3b26a816923a8f411767f40a2d43d83b2a38d9ae6b8a19106db9acc30890f7909051491d98327bf616f2403d19b132e9d4df5654752acb72c8"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "RVN",
+            "Address": "RXpWb1FnCxgb9mnZCJC2AB7bMaEnN9Ljb9"
+        }
+    }
+}

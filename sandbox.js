@@ -1,3 +1,5 @@
-import { logger } from './loggers'
+async function a() {}
+function b() {}
 
-logger.log('info', 'A request was received')
+console.log(isAsync(a));
+console.log(isAsync(b));

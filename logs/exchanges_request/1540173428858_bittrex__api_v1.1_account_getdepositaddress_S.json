@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BURST&nonce=1540173428697&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c8c4fd9efac0deb217ab06e65450e3e92eef8f26510541f84a36f8261a76e5c06a55e9b7c635ee0f1990ac76d47edb3ba055804520382aab82e57727398a45b2"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BURST",
+            "Address": "ab9a1e0bbda347ca95fe0c494e7bda3248402e0951134e969c1bfecc44598d98"
+        }
+    }
+}

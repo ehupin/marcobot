@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=STORJ&nonce=1540175498104&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "196f71909ecfad8beee464f0dd25b03a6017186410c61cc838ddd6fe62f90468a6c2cb0e5f97b3d138c692883595b09dadc97968e96353ff894c5c3fd6a08220"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "STORJ",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

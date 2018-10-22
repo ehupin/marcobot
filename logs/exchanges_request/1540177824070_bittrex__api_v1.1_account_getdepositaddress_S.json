@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TIME&nonce=1540177823891&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "e539ec15fb891cfcb1639b21da1949c76efb954621a82f57238341ac3bce94205ac57be600febe96dab284a278d9323f2b6b8fc5d93a6e4107d558e23f7469e2"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

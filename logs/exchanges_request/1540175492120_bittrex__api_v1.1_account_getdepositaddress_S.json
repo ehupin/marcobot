@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=1ST&nonce=1540175491964&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ec14073ac39072dec7f3387e1b6f31ae64f40009a4d6de4d559052af56bdb4d2ee4866e9b10d64201faf39e1964ad02d570d6f5c090c583d9093332e1f41efa4"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "1ST",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

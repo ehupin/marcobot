@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=WAX&nonce=1540173845956&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fc5e52dba066f4cdf9642dec2a749900e07262eec7f605b9d792e669adedca7b78825dfcb4234ca8e95becf14552269d919eb3b001d2be2d62fa4351ad922d53"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

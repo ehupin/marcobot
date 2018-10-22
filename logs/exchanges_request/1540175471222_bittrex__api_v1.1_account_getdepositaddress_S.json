@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LBC&nonce=1540175471064&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7c92ab47efde352de242c5824bfb66213ef9020742e7f01c2419fa49e1bd0967127b6199b082d22e8aa447e5b7fe12c6348c3dd6332c2e9ca9470dd27ad17b4c"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "LBC",
+            "Address": "bNYs3ZD34gDNgxwuSNGdeLzHhJEgms87Db"
+        }
+    }
+}

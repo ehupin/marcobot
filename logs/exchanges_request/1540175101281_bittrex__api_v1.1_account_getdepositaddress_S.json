@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TRX&nonce=1540175101131&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "efb5123f277ea5aa3e45538484d2802330e14f6879c451e30f2c4b2ebfa76881178f18bda8d958b035e1ecff999060117c1cedd1819b24f0225ecd336ca6a1c7"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "CURRENCY_OFFLINE",
+        "result": null
+    }
+}

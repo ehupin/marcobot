@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ENJ&nonce=1540175148186&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "0e544c2f5a826178f3b5110b411a1301ca42594cbf1a9428c7c9ffa23f6495ca8290cf540d6d2eeb76edb30f4081ea7cd28c8ab119d436b9cb62f6e7bbccf3d3"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

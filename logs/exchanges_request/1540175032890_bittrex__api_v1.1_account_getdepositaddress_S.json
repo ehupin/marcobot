@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CFI&nonce=1540175032720&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5e9a07b03cf375a110497a56b296b13d970cf8e48e325c723d7d0c8bcf4ef909d82ce6eae05356257c532e7ea99af45a76a06065b5251d46323bb2b4898e39b3"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CFI",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

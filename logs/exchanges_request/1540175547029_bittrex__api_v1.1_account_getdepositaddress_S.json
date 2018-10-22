@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NLC2&nonce=1540175546865&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b6b86737888dc423a0a306a45f4f603f9265328497e7a6e2fbf761d549fad7e0fc95d3545758c1cfa67c161682eb45777c7b84faead9e04c239815ac3c556288"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NLC2",
+            "Address": "NP16iamKgS4kpkfkcaRxvzyKpUgn2qmiV6"
+        }
+    }
+}

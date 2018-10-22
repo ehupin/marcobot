@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DCR&nonce=1540177678823&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "3415231534c0a9e9d5e35597a993ef95cbd319fa3b9f8dcf873af7e59e2402b563c24214e06e0cc2f7dc384873cb3ca3e19ab16e9105be17447212e4f6bbd825"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

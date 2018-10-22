@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v2.0/pub/markets/GetMarketSummaries?nonce=1540139667892&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "efaf21cb76b2af00e278193e7d1b8dea0f81b1233ba1e898e0c93c1ccdfe800f61b1b1a1d33d46947c14cdbccac7cfc18b07b9cf3763792a89a0ba27bab9b553"
+        }
+    }
+}

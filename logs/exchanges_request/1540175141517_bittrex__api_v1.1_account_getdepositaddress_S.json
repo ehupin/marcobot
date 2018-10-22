@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BKX&nonce=1540175141360&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5954e7eec4409b6fde6f5b6da2e378df2598ca6526f7c66c327c85b478f6098c1905ce5072f8d4727bcfda60c9eee8daf8fa61f26c4fd358b6a74b282b59f077"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

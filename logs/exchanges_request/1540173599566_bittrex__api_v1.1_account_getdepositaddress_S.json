@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=UNB&nonce=1540173599399&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b5b8843277887f8dc827690919b9ebba0ad307827a4a0037c139cabef12a2b2bb4d608d9cb67ca51fdf9baa62ddcd7eebaa0711278e173e37d4b8705112640a8"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

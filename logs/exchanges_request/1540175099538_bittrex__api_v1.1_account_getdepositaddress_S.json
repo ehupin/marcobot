@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=POWR&nonce=1540175099388&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c6384c02ee2306ea8878d56c22e363d0aa7b2d7732dc201c0531b6c9cde41b659aeef2d92bd1e98ef6f3952ea226d59541afcd8b2aeaba2254efb4acad12806a"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "POWR",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

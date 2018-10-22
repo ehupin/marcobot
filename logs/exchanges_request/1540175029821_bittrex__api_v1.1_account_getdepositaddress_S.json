@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MORE&nonce=1540175029672&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f63de457a49b0666a674f8d54afa9cfb9e6bd83797411cb227217116b0516fcddd35466a36843077dfaf22501119982cc194fc38e3a711c4bd10307a6ec69cd8"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MORE",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

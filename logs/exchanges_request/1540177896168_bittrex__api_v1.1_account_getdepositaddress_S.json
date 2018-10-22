@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ADA&nonce=1540177896003&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "064d02d48aad20cf36f1dcbf08e8c730f64ad2a5281623dec2697d484b2ed18a77ceac35dc8ede4345ec9850e9ab1c1f0549208ebcce29b0abe320d481763375"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ADA",
+            "Address": ""
+        }
+    }
+}

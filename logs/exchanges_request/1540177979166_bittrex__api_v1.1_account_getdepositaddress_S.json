@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XHV&nonce=1540177978986&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "3c58792a136c98062b14482db587051cefb2748ff66d7fd49baaca7543db0c01a20c39b9f1b303d67b8797c1399a7d2b77a1dbd06c0fc436ef6559f26e018db3"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

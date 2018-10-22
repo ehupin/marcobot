@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EBST&nonce=1540177711483&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "bf603ca6e6b45469505f4c8af77e36377f3be80d2a9558add3067bc914aba8496667a0c0621833fb755a86a9595dec1a7b0e6c104ac3fcef9cd4758db81a3ffc"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

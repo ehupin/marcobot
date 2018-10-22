@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=WINGS&nonce=1540177861407&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "191aeabbe6bc50b986952295f24506c2019282c58354fea8eff4ab000f5aaa8ea76501d70132b7eaa56340736d193908f7dd6a3fafd0f5a2ea6b19d2e476e580"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

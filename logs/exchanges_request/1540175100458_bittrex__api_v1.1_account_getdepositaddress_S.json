@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SRN&nonce=1540175100244&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a335d1b4c96109b5800cdc8ba18c17b5a861325aad85fb7db3764aa5b1ef12dad2479b8c954ac47dcfb2b8cc5c117d6ad9d766d345665120df61e028ec423489"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SRN",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

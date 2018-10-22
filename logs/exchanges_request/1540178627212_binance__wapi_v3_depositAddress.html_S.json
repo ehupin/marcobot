@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=ardr&timestamp=1540178626940&recvWindow=20000&signature=0e76e773193a29d9845f8540d9cd2bbb14a52644d2578899bc3a935c2e3053f2",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "ARDOR-HFNE-E2VE-SMV3-DCRZ8",
+        "success": true,
+        "addressTag": "101147709",
+        "asset": "ardr"
+    }
+}

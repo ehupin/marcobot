@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VIB&nonce=1540177899892&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "ce1e1b6b86a05156a849455fa7ea2e55590332021ea45f87295464d658a273abed0bb57d853bab3c00135b0167b7480deb8a52e277048a36df87c32ea0baa258"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

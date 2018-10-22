@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=IOP&nonce=1540177757434&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "c0afb3a5b9d7b8271793cc9c3a46e63a597ca53125a765c44c7051e978c1da4f323ba7c52c4213e9c5d19dfc2436b5d387e71982131d71ce8303d36e53cad130"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

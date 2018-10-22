@@ -1,0 +1,15 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=grs&timestamp=1540178649083&recvWindow=20000&signature=f389d55bb3a2b6642b79edf5b02f67d7e3397c8951291325a2b19ddfae554268",
+        "headers": {
+            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
+        }
+    },
+    "response": {
+        "address": "Fh3pj7rDr1kQ4E5LDa3zDmPhqPDtHSBt8a",
+        "success": true,
+        "addressTag": "",
+        "asset": "grs"
+    }
+}

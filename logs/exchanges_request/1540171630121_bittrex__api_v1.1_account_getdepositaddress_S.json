@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NXT&nonce=1540171629952&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "06ef694ae77c7969555e0511b53ac52dcdd015902d2e8af834e4bb0a1536b75ac568814f2f5c87d7301d20ce7611229f143056971c47d5acdc3c71bf7a399b3b"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NXT",
+            "Address": "e3c55eb33ac14187a26dc7dcc1a25bf52e175723048540e78cd7b2c0bf568061"
+        }
+    }
+}

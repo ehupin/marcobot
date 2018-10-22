@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SNGLS&nonce=1540175475115&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2b636fda664de969e493dd51ebb198a8ec5cb58862bdb6b4ea23cf66fca522fb24a0e5102fee5b2e3db951e09d336efef67536bf7e6f1972eddcbfe0f88a2bc2"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SNGLS",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

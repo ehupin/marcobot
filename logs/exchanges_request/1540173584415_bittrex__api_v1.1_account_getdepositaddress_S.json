@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=STEEM&nonce=1540173584250&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "197b69527df9fc0405c7d5fc7f591ff34e916b98d882b3f11c0407b86f936f822b8623a4cf008f190915e8f9a287b4e99f5e84c9c2bc4486b2e1344cba98e043"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "STEEM",
+            "Address": "afe6f12bfea041b9908"
+        }
+    }
+}

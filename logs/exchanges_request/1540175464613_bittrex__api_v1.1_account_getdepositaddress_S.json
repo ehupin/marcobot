@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=EMC&nonce=1540175464453&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "6d3895cf6beff8515bad843d332f9acb4c60468ed38e0918d714df7124b976a4253a942716f8dc243ca91f4334d308f8a662a5ee5fe683dc5847492752db3d43"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "EMC",
+            "Address": "ERW23KrPc7wKGoDqqqVJaRNytS1p5hDEUK"
+        }
+    }
+}

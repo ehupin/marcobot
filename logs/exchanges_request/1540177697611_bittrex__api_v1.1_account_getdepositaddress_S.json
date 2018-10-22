@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BRK&nonce=1540177697451&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "98501f54816646797f924b981c900377ebd8c31f9a933cf8b303ee9b0f23b007b37ba964707c4c832059f5797a625f40a0077f5a495b033fe971bf811102107f"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BRK",
+            "Address": "brhJ6zJH4gcazRZAroBxz2vXMAUhouEvrF5"
+        }
+    }
+}

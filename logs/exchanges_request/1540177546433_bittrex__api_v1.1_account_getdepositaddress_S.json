@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=THC&nonce=1540177546241&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "b67b89c80086e693fc818e7facf547fb01acfc563d359a14a98e905e924378a1c701b27f87c34ab5e15180fe2e0ff1e442c0ab4091240506283e7ba2c82295bf"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

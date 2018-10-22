@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DOPE&nonce=1540175447135&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f9f51081586f60833d763f81cece90c3587700ed4b32493ef20ea9e12db65190c7c60b6b6a0ecb37b65dd1f356493915223d99350b755780065963d1386de507"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DOPE",
+            "Address": "DQ6UTNopSbvoy3JDqxkLzAPcBsMvm6ZtuH"
+        }
+    }
+}

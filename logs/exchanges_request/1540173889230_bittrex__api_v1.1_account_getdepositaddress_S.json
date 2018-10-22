@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=STORM&nonce=1540173889052&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4d41018559fb2029b0e6ca8da3e50f987b8d088874d3e3751b53bcffadf33c9962b77c64f5817d5ebe5377692549285bf197e1cc77065324eb78131921a8e0b1"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

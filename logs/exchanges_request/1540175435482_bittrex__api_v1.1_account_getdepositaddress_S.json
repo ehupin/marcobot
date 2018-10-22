@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PTC&nonce=1540175435311&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "bda3b6dec1846eebc94eb310e26c0d7192262f4bf7926b21244c297615bb2630724e122e39c75246e9eda39f005f4cbd3da8b19198c60d3673934c9f051658e5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PTC",
+            "Address": "L3C3Cv9EfbjWiTQbX1h5CxrSPnSKcArJeb"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MER&nonce=1540175503217&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fc8e9f32cebb138d140b100be0eec4a08d89d17c508d505f4f7073e9a011fe6d91b3b53d1b68b2c31cb8a93a71787760daca320569d7b87ed6ea2c7bbc29e4e2"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MER",
+            "Address": "3PMCF2ZfNXG9jupvZfMyahujMa2mKiWLS1n"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CRW&nonce=1540177821779&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "bb549507893f107f62abe8614c21eaabe3e35f89f4c6249123e76f87dc81844a8824609f6f93da9d6ea1643c14907ee4c2f995dc2fd1103497e21fd038a1f64f"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

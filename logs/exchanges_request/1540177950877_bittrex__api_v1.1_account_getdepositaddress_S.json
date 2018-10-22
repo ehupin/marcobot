@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PRO&nonce=1540177950711&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "12fec2b982e8dd456bb32e4242ee609442be88c30e072a8cb2bc068cad82cf7b00b88eab46fad8690dc4b06ea9f2d6a402cd748308a71ceb8eaecfbdb9bc7a4d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PRO",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

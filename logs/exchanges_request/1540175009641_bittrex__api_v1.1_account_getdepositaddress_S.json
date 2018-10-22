@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XDN&nonce=1540175009474&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b514fc6c3d7c12b7bf9a49d88b76b3d3b3a32c01a5408e89f47ecf4e479da1df3456b8aa05693897c000c2d7a23249ed968f12077aa81de1e97e7e378fec5fd0"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XDN",
+            "Address": "dc05cf4aa94e4621904e54658d94e5ca24627abf883f40ffa0c1d6dd24c585be"
+        }
+    }
+}

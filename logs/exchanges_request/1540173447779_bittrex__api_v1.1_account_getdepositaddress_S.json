@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BLITZ&nonce=1540173447614&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "70deee15fdcfd9dc79b10e72bb575e3d489a8b124167dcece30b055652d848e806b5ba040ed983010346f82e72619c020aca6ae864dce188a4cd9852e7aa91b6"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XLM&nonce=1540175462964&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ecdae4b580de6e49ed9ebbf16dd333b4d837597f773f66efeff7ac475680e9dab4096d4e6f896790d752ffe6d05b55a15b0938352de46e7da7ce4dc58bd582a1"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XLM",
+            "Address": "d74066e537c44cc3808"
+        }
+    }
+}

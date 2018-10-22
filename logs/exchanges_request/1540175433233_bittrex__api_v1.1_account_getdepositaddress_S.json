@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XMY&nonce=1540175433070&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "38160c8f20c68dc8a2e02ec5a2523fd80865e74e1e47ddbb1937ca98724ffb76764b0a430ad97589777bb44256e7c0b1b815684104da924e897ed8fbfb5f6a76"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XMY",
+            "Address": "MWdwwaTNdS6RcvSmVMfzKbgR4iHD27iN1M"
+        }
+    }
+}

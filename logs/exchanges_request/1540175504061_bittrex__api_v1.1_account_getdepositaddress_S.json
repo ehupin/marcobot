@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BTG&nonce=1540175503913&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "370dc59410ca1911bbb4d04b7ad8bd7b909187fd27f32439f4d034ec97262b1eb5d46d0c02d70754a1d13d1a4fc9e33a159bba48618d27aa29da215a6204bbe5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BTG",
+            "Address": "GULLsdTCWLJ2oBj7NfFWnoNsnQ1umEkAJF"
+        }
+    }
+}

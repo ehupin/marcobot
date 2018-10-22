@@ -151,6 +151,10 @@ const checkExchangeFunctionsArguments = {
     }
 };
 
+function isAsync(fn) {
+    return fn.constructor.name === 'AsyncFunction';
+}
+
 /*
 Return a proxified version of given exchange.
 Extra functions are also added (e.g. _makeRequest).
@@ -170,11 +174,20 @@ function _proxifyExchange(exchange) {
         if (Object.keys(checkExchangeFunctionsArguments).includes(key)) {
             const ffunction = proxifiedExchange[key];
             const functionName = key;
-            proxifiedExchange[functionName] = async function(...args) {
-                checkExchangeFunctionsArguments[functionName](...args);
-                const wrappedFunction = ffunction.bind(proxifiedExchange);
-                return await wrappedFunction(...args);
-            };
+
+            if (isAsync(ffunction)) {
+                proxifiedExchange[functionName] = async function(...args) {
+                    checkExchangeFunctionsArguments[functionName](...args);
+                    const wrappedFunction = ffunction.bind(proxifiedExchange);
+                    return await wrappedFunction(...args);
+                };
+            } else {
+                proxifiedExchange[functionName] = function(...args) {
+                    checkExchangeFunctionsArguments[functionName](...args);
+                    const wrappedFunction = ffunction.bind(proxifiedExchange);
+                    return wrappedFunction(...args);
+                };
+            }
         }
     });
 
@@ -189,7 +202,7 @@ async function _makeRequest(exchange, path, requestConfig) {
 
     // try to run the request
     try {
-        const response = await axios(requestConfig);
+        response = await axios(requestConfig);
 
         // catch generic axios error
         if (!response.data) {
@@ -306,4 +319,128 @@ async function testExchanges() {
 
     return;
 }
-testExchanges();
+
+async function binanceTests() {
+    const binance = getExchange('binance');
+    const currencies = await binance.getCurrencies();
+    const total = Object.keys(currencies).length;
+    let currencIndex = 0;
+    let csvFile = '';
+
+    for (let currency of Object.keys(currencies)) {
+        currencIndex += 1;
+        const address = await binance.getDepositAddress(currency.toLowerCase());
+        let row = `${currency},${address.address},${address.tag}`;
+        console.log(`>>>>>${currencIndex}/${total} ${row}`);
+        csvFile += row + '\n';
+    }
+    fs.writeFileSync('binance_addresses.csv', csvFile);
+
+    // result = await binance._request('get', '/api/v3/allOrders', true, {
+    //     symbol: 'GOBTC'
+    // });
+    // console.log(result);
+
+    // result = await binance._request('get', '/api/v3/order', true, {
+    //     origClientOrderId: 'sMDLOLiHiMUdLjVAlfR9K3',
+    //     symbol: 'GOBTC'
+    // });
+    // console.log(result);
+
+    // result = await binance.getCurrencies();
+    // for (const currency of Object.values(result)) {
+    //     console.log(currency);
+    // }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function bittrextests() {
+    const bittrex = getExchange('bittrex');
+    let result;
+    let csvFile = '';
+    result = await bittrex._request('get', '/api/v1.1/public/getcurrencies');
+
+    const totalCurrencies = result.length;
+    let currentCurrencyIndex = 0;
+
+    for (const currency of result) {
+        currentCurrencyIndex += 1;
+        // console.log('##########################');
+        const currencyName = currency.Currency;
+        const baseAddress = currency.BaseAddress;
+
+        let address;
+        let currencyIsOffline = false;
+        let attemptRequest = true;
+        const maxAttempt = 50;
+        let attempt = 0;
+
+        while (attemptRequest) {
+            if (attempt >= maxAttempt) {
+                break;
+            }
+
+            try {
+                const result = await bittrex._request(
+                    'get',
+                    '/api/v1.1/account/getdepositaddress',
+                    true,
+                    {
+                        currency: currencyName
+                    }
+                );
+                address = result.Address;
+                attemptRequest = false;
+            } catch (e) {
+                if (e.message.match(/ADDRESS_GENERATING/)) {
+                    logger.debug(
+                        `Bittrex exchange: generating address for ${currencyName}`
+                    );
+                    await sleep(500);
+                    attempt += 1;
+                } else if (e.message.match(/CURRENCY_OFFLINE/)) {
+                    logger.debug(
+                        `Bittrex exchange: cannot get address for ${currencyName} CURRENCY_OFFLINE`
+                    );
+                    currencyIsOffline = true;
+                    attemptRequest = false;
+                } else if (e.message.match(/INVALID_CURRENCY_TYPE/)) {
+                    logger.debug(
+                        `Bittrex exchange: cannot get address for ${currencyName} INVALID_CURRENCY_TYPE`
+                    );
+                    currencyIsOffline = true;
+                    attemptRequest = false;
+                } else if (e.message.match(/RESTRICTED_CURRENCY/)) {
+                    logger.debug(
+                        `Bittrex exchange: cannot get address for ${currencyName} RESTRICTED_CURRENCY`
+                    );
+                    currencyIsOffline = true;
+                    attemptRequest = false;
+                } else {
+                    throw e;
+                }
+            }
+        }
+        let row;
+        if (currencyIsOffline) {
+            row = `${currencyName},${baseAddress},offline`;
+        } else if (!address) {
+            row = `${currencyName},${baseAddress},cannot generate`;
+        } else {
+            row = `${currencyName},${baseAddress},${address}`;
+        }
+        console.log(
+            `>>>>>>> ${currentCurrencyIndex}/${totalCurrencies}  ${row}`
+        );
+        csvFile += row + '\n';
+        await sleep(200);
+    }
+    fs.writeFileSync('bittrexCurrencies_matthieu.csv', csvFile);
+
+    // console.log(result);
+}
+
+binanceTests();

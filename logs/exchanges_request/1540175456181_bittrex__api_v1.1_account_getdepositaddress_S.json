@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CLAM&nonce=1540175456017&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "8489445088648401d419e354020bdae976fac5e7de71f416dcc94c525057c8e24c51f3993e1f2cb600212a13d7d8ce27065fdd69e754876993a7ffc157f1aa5a"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CLAM",
+            "Address": "xLAsNyvnXi1YhvytszCL8A2YPqjMgBJHDf"
+        }
+    }
+}

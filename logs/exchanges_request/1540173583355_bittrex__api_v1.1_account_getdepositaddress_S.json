@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MEME&nonce=1540173583191&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4d0290e7004711a4a7cd8d9c292aeac23f3ab45f943d29549b6bee652c519718369d0d937ce9ea21ad99183db33e8c3bc555fc26abaf0f53e6c8bd189eea45dd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MEME",
+            "Address": "PHBeGpWvngSoNXEqf4b3zpvs7fPfGsigm3"
+        }
+    }
+}

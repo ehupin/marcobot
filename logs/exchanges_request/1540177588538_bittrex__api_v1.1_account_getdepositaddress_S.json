@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BAY&nonce=1540177588395&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "4b33b1c41ce15dd67fc20d7fdd93c2c0a5be24a89fe0eaaa9215de84d5910d5ceefab316b8e58a9019b2a47ff502b57d8165465356030a38921969e07b94ccf9"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BAY",
+            "Address": "BFLjqQunkbEPqgFmEw6Xd3Lb86LZmd9DWs"
+        }
+    }
+}

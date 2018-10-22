@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VIA&nonce=1540177566856&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "106140dd322d3e42a1dca6e08846e58e8c29496e44401dbc34a63e371c654ee4f0b7879cdaadf875bdc70b0152bf235c4f98acbc806d94843b1db96f06793e1f"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

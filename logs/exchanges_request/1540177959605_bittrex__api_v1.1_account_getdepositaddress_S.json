@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CBC&nonce=1540177959449&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "d0c2c29f0727f7adf1b47962a218f0f953f0891a96a658ebf713da54935be08ccbf0def98c25a186bcb14ddc7bbd6c433dbb86202ebf498cdb78039a29e056f5"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CBC",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

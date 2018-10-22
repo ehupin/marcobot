@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PKB&nonce=1540175458194&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2fc024504238ad887e34d922d4c98d71d904cf2316af95265b8448ab2ae43c906e0c6aaf32df8cea5b35043b3b6586035db1e1c03676151c33168dd90afd01e9"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PKB",
+            "Address": "PFhvNVdHvQJnYxuxVAZzW1KCGfDTcE1VoT"
+        }
+    }
+}

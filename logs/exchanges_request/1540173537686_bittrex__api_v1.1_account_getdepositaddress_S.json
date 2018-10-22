@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ETH&nonce=1540173537532&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "d9d56a168bdd6bf042cfa3d4f008a77d1882123c381e473d5fc4ab973aada0cf244e78c6a47db543e8170bc0789aeacfbed83395041cde7af84200f2d266d100"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ETH",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

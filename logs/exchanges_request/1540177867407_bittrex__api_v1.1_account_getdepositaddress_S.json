@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=APX&nonce=1540177867245&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "8efc1b89392b6225fab12450ce5434584aae18e03d7dbf0af93c9bbb864fd0b7df8a2ea2caeffefb8263b50378944cb9c8358484346f0f9c5227d9f7671e0151"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

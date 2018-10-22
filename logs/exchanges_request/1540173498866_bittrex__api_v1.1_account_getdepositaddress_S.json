@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TRUST&nonce=1540173498699&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fe2a186f5c2d1da129094695aa51315f359f6603d4cb28622e1df826a1ff841d7c271c81c837130e8c610154826ebd361b03f405c73a6c90a208fb7870701a2d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TRUST",
+            "Address": "TB6TzEAQzz9WBpkp3kxU7Bb9j8EsNL3ict"
+        }
+    }
+}

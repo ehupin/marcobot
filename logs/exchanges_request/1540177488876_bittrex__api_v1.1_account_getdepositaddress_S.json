@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BLK&nonce=1540177488717&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "35732a649f79a3c76ffa6d56583c7bb98453bbf44f1c4dc0aad296a9b1329590895162a64b76b4bf6823bad7324169cff8a1e9f09661b49d5d7c4b835ebf1ae0"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

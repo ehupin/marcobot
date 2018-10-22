@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LOOM&nonce=1540175143039&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f1f67e807f15668b3220aec2fdb94843c98f143fde4e1ef6ef5014856918801618835fe3e4d08e8cf0149f0b69b4b13a30656bad7113a6a02c40f54789d85c77"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

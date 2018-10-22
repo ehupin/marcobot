@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DNT&nonce=1540177894940&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "45b69e2b3d46794e3d65d2480facaf7d1898822a4975da8f0465a9fb26402d43230da8fcbededfd285a8c7136071efa78c84aeec2576fde4013f3208665d640f"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

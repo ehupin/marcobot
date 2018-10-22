@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=UP&nonce=1540177947612&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "2a1e21789d6bb47aa8074a3b6ad1236a5b9fd6f2df5082e6cf5c83810cf84b6f8028e796875d7e750c49bc1f8728cb46e38e3066c93a4477c574d72cf7d02b48"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "UP",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MYST&nonce=1540175032546&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f4682fdd564b39165d3120e372ef9a40df386591e3ce06f18e3eaf3b781ee22837b35fbd0314ca8361296e16fc79d3baf991fbee32f066c5426a2983b9a2f6cd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MYST",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

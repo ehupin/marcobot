@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=AGRS&nonce=1540173559130&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "268b0355d2c8b98b1c69abad2bcc2b8d35a274f5d7d214451e10f334e6759404276e746c5c7d622d7f34040ba81fb0b60db64b3e26fa5f066b3f9d3f4b6797e0"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "AGRS",
+            "Address": "16Qx958jUPa5qzN7HzgwaX2Se8K2VmLFV1"
+        }
+    }
+}

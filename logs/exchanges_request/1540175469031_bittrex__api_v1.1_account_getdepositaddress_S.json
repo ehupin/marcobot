@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LSK&nonce=1540175468870&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "f4a8fb20b1e6d6a1cd62b29543937206baf4eb18b949f8dee0b60c9640af6fc1177a1678df5d87ebc342add8aa2722996159121f1ec76d9d389a1fc690223def"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "LSK",
+            "Address": "8067347509808160821L"
+        }
+    }
+}

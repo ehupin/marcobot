@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-SC&type=sell&nonce=1540139710808&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "af1fee1f16ba295df976435a3f3e74021a7615c734f644c49075450da0aacda205272b7b2afb906177f57f9190f3a9efab4922e7d7528da9b81940d5a958771b"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ENRG&nonce=1540177549977&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "da4eb7eae7dc403354711538a1c5e2a0390c4b8c2fe07be69dfc2b8964900b6db3252fb4e88366e23de32b0869803d7794ee94bc13d662724040b3b42ce406a2"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ENRG",
+            "Address": "eFRxJMah7tTLcbpjhZK3rm33vDNT5yN8Xo"
+        }
+    }
+}

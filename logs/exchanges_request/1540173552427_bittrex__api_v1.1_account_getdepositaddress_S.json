@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=AMP&nonce=1540173552269&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "e19e0859237a09a1e77a5f543e2ee83c1be7b3e7e146c09bd5aeb2027d0d727c730e69e926d0966f73fc9bc9040c5c1874baab27483c9be71245a0325de69e01"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

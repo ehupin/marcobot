@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=OMNI&nonce=1540177646745&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "c60e04eb5a2bc4edc748e0fa9eacf383849022898b000acfb3d1dc407445731ab7b36579420c65c60f33b8091c5cf40dd5073dcdc18176a3fb34949a308b02d2"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

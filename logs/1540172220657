@@ -1,0 +1,14 @@
+2018-10-21 21:37:04 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
+2018-10-21 21:37:04 debug: Bittrex exchange: cannot get address for EMC2
+2018-10-21 21:37:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:05 debug: Bittrex exchange: generating address for NLG
+2018-10-21 21:37:05 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:05 debug: Bittrex exchange: generating address for NLG
+2018-10-21 21:37:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:06 debug: Bittrex exchange: generating address for NLG
+2018-10-21 21:37:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:06 debug: Bittrex exchange: generating address for NLG
+2018-10-21 21:37:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:06 debug: Bittrex exchange: generating address for NLG
+2018-10-21 21:37:06 error: Bittrex api call has failed: request has failed (api error): ADDRESS_GENERATING
+2018-10-21 21:37:06 debug: Bittrex exchange: generating address for NLG

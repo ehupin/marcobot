@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SPR&nonce=1540173502612&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "177716d1238f2799fc9fbcf41659c6c14c1c519064cbc5435b8a791e9131abae3a461bb797eb39dc18c4da6f64bcbf7b28d5807d92a999ea853b36d5e5773b98"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

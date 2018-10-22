@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ZRX&nonce=1540175100643&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5cd39ec72598c0f6c6a9f8aaf8df07d16f37b7c6be0a5522469c665851409330db86aea487f7fdb7aec01253f7de30fbb59ac70b766264fec661b5ea07e718cf"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ZRX",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=FLO&nonce=1540175015215&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4ad14bf05adc6466b41108dfae593fdc79754ca5b4e9b9d4f742f1f9337c8de588d56da6c8bf67e1691471a89be0a2e3878ec0c85ac1fc5cd20d6b2f552147d1"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "CURRENCY_OFFLINE",
+        "result": null
+    }
+}

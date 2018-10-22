@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=QRL&nonce=1540175032069&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "98e0b0f0c8996e026ec0a691a932f18705b44cc93bdb7c0f84e6ada4f911ebeef3b6358d7fa8936b8bc57a0dbeb52c4b218d908a9ced6a29317cbcea9b3c72f7"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "QRL",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

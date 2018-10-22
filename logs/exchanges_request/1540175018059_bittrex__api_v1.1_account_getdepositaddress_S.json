@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TX&nonce=1540175017893&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "dfcb8576cca548d3a094692b8cba9a33734682acf22e17138f315d75f23d0e816a743d94a03223734e6a3ddec35fa2d2e41a57cf2181ed5a4aa9df927ebef1eb"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TX",
+            "Address": "TgbRWKAMP6VMz7Rz5eXHRH84kM78HdSYMT"
+        }
+    }
+}

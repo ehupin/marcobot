@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GEO&nonce=1540177604056&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "9c25d0e9582334d9f449556ea8bb8fa30db4a1e4246b5329ec59f93a0b0ffaa92214dae3fc524adb728dcf6b77b1a17f8d855a2eef8413f9d12b3953e4600f7b"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

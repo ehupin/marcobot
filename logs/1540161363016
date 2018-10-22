@@ -1,0 +1,2 @@
+2018-10-21 18:36:03 error: Bittrex api call has failed: Request failed with status code 400
+	Axios related error: {"code":-1100,"msg":"Illegal characters found in parameter 'symbol'; legal range is '^[A-Z0-9_]{1,20}$'."}

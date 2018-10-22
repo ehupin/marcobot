@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=XMR&nonce=1540175439346&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "998083821ac758bc939f93e005c5a991ad22804ecc38e05e247e3d11563112096c119f44d6e011498004b276932da25e0cd50790304533ab76fcc72fa5604c1c"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "XMR",
+            "Address": "fef7cb7c31264c9bba2981e5642c2b32d21f823759564f4f861122faab58af36"
+        }
+    }
+}

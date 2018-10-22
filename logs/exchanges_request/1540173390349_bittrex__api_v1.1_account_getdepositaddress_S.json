@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VRC&nonce=1540173390181&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "10e68b86122f9173b041a98442bba00a02c717c422d913a2b41ba0d2fe835caa1b55579c4a670b63bfafb9f0e9cae5c7c9da753c4aa99e2fab786cb214b9d73f"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "VRC",
+            "Address": "VBJYCCUP9F9FKGgdRPXAHRYqS4NcZm4Emm"
+        }
+    }
+}

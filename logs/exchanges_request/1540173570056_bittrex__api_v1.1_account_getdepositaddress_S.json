@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RADS&nonce=1540173569889&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4fdba781f8a06c7d3ea14531bf502e0aa94f6d6f02cd511f34ecff07f588362a1b230160899251dde9c26193f2d6768dfb49ea77311b8cb893eb1c198bc80021"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

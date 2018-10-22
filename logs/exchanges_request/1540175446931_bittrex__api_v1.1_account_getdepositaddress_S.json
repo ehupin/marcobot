@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BITS&nonce=1540175446774&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "bb2436e43d3d6d7932ec059d798efe79f7cc9ed9b799765e57789c679505d307669a1d8121f1b427907a947d47303cf7e465a97738bfa0b3008fb6871e828916"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BITS",
+            "Address": "5381b9446c5d40e69de406230d3e8666780ae8754a344ce98a581f87a3d5cf63"
+        }
+    }
+}

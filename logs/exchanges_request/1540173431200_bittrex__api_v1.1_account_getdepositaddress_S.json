@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PXI&nonce=1540173431036&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7893ccb986f6f22d801d5ebde88200eb67716816a1d75116fa712c254ca94e2f2f552869af8fecfaad0fcd6e346ebc7a3660baa31389ccda7466d36ae25553cd"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "PXI",
+            "Address": "PGuFvhq7PwDo5KaFHixALoTxGBdnqeR8uh"
+        }
+    }
+}

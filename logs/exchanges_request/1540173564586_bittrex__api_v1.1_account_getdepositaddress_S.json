@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=FCT&nonce=1540173564403&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "377b1b85ea5f21f6a9f3435c7ec20354679d36ca5be72b05cd5fe81a07dff398c36e4b8a678e5cfbf5bb35ec9a33825a4a52234517c1135ae27f6100495b064e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "FCT",
+            "Address": "FA3ZRqcDvrDwiuRLsaCAxUW5HJvjdjeK2i5oLDpL1YFAEbjstuTe"
+        }
+    }
+}

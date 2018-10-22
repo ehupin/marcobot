@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=VTR&nonce=1540175450065&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a65c156ff4a1d171d24044c76d7902d672e04f079f680873987004d9309c16c039e73dbec95265fedf8325a38056cc7073043d9632b3b660a0d686c975fa20e3"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "VTR",
+            "Address": "xr15JMgKvvwLweGYLWBFV8LrjjPa6JxT9n9tLXMXPxDWUcxDhzLKZGxKisQ1Xdu8ccr1G1CfZ9rqeznLLv8DfTwrNhkg3QoFp86rTm"
+        }
+    }
+}

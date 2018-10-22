@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MAID&nonce=1540173565270&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b41edd6d5833ab32c39b0ff6a1d61696c598300fa8c3e140db9e875152f4b43daa850e1dae6a32c67270cd5734e96726db913257b04cd45e7dbe93587f5fc8c0"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RBY&nonce=1540173375993&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "79663ba39b9074872527a50b349ad2c849e821003f26f8caddf0f591794f10d5a06fd78380a52cc7327bf35f59d94ad1802d69a95befc832888dc62d8db9f444"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "RBY",
+            "Address": "RYSDBGx5SyHiLRKFaRrk9wCvFrVXVNz1qV"
+        }
+    }
+}

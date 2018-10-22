@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GNO&nonce=1540175030293&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5ba7098e712baa48bb1a8accf66fde86bdc983cea17e7250094f44757c944f840ddef2457d1b3681349c0721b7e96a60082c09ddf56ec92bb9b1873d9e72ee7a"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GNO",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

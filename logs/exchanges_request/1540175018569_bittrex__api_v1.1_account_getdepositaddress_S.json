@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=INFX&nonce=1540175018392&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fc0c09dd33e7eeb18afed9ec0f8026ecb42523c89e09f30801a13d090e3a890a1c079fa751f2fe30b468b9417c4220963abe3e212aa61cdce4bfd51f05f1248e"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "INFX",
+            "Address": "iFDJJsMLcZ558ZM9TZwYV8AdCmqcnA9Yez"
+        }
+    }
+}

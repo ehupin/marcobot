@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=LUN&nonce=1540173776357&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "d31a06c92a1289fc70f9ca2c26e46fe6cb73ad011eff0e666669f53d5eec79759d51951bfa54e746f292083d3dd4afa375d5bc4dbacff2c3b2335bab83102c6d"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "LUN",
+            "Address": ""
+        }
+    }
+}

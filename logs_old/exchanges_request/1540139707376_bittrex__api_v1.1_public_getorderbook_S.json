@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-ENG&type=sell&nonce=1540139707188&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "73e3461005a167b862479aedd0223457e86b6ebdff465e1efe3601e73fc229362c390d19357ae465e494ca09a8ed9ab932c4247afb3a19977a33f621f040133b"
+        }
+    }
+}

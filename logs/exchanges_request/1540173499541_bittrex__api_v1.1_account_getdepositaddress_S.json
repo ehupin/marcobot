@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=PINK&nonce=1540173499377&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "51847715337132a784eeee3dff9c45248ed53c4b605f77c2307ab08a235ad5f2d58b74984a1b4e376f077954e6cc5a88ad0417f85d3572b7a7caca2e1dccc4e7"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "CURRENCY_OFFLINE",
+        "result": null
+    }
+}

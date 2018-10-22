@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ZEN&nonce=1540173796579&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "9af1336a3cf54cb8346506ca69d2b35efc50bf0ac1f16c9ffad8789a48d9ef3f72d7bce9854773b5359f321e5e5d3616137a058a3819d884e16ed544f80609e4"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

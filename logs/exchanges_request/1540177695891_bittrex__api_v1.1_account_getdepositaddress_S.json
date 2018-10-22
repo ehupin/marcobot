@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DGD&nonce=1540177695710&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "fdb092a81febfebbb470a1be0cc7e89695586ba563c62f3fbd16bbef0d0c385447422f5708b6b87c371600fd86db6ab9f0c6b3d09572032a76560221288b52f2"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

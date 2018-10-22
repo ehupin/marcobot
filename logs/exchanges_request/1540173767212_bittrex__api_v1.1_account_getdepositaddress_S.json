@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=INCNT&nonce=1540173767042&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "527f1e52e4383d39e17e08e721c1006218723683abdc86325abdafcdaeae29e270194c5abf061c4763137fda8adc76f0f81bc00237f11427f68d0f6a73e45204"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "INCNT",
+            "Address": "3P7eePC3szTtAHf5vpCxqsZpauRGxHq6eig"
+        }
+    }
+}

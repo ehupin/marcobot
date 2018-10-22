@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getcurrencies?nonce=1540149983318&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "76cc700d5e9ec7acb037d6ea1e5f1d1dc651ee350b6c28eee7beb9027f63c38dfd7e20ba62e159dea3b44ecccb93fc5bd26e98794a6c6241a136a3b4dd64f2cc"
+        }
+    }
+}

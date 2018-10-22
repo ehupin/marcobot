@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SYNX&nonce=1540173601569&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "c36c4803cbd03e254c35f60b70c171a6fb6369a864cb80e517f0cf405c184bc2625fcaf75d29704baf88124e6019192d2bd5333ada4e5edee1fe9af0a7eaecab"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SYNX",
+            "Address": "SYB4KL429VS4zPotvP3b4PSXWcvL5P5JUA"
+        }
+    }
+}

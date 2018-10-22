@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BRX&nonce=1540177702623&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "a347babd41f215341974303b4d10a96ab5d2f0c9562fc2348d778a7a2f34b2fc9228d4d32d2a37463fd9bf10d13f435df9956b13bb79e071f50dd2df2f6caba8"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BRX",
+            "Address": "bxU3kZV54uqVdzUPm93DNEp4t5vpDjnVziq"
+        }
+    }
+}

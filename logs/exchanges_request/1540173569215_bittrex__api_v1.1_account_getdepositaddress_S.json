@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=SLS&nonce=1540173569049&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "5e83e7f0182fa7474abd11c80a13ac5b093dce9e73942efaeb4d4652ba22ce26981c21da4d80a73d682b75f5d3a939383717c0150ebf393103b7150fe7bf95fb"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "SLS",
+            "Address": "SjtxFXDuKknMsttVdhtDRwwj7cCDvCshXB"
+        }
+    }
+}

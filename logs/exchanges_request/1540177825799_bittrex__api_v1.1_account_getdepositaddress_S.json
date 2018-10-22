@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MLN&nonce=1540177825637&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "a9e7b906bafd57db3a97ee5ba281be631307c43a933e7be26b08ade74d74dee5d0981ae0bc8ed193c83c6018fe8ee1092f6533b7b7880b9ff8d12e92beba3698"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "MLN",
+            "Address": "0x91a4c920b322cf7a4f62c7723d60e3b761a68ebc"
+        }
+    }
+}

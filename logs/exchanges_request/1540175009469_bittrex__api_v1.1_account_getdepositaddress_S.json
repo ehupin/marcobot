@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=KORE&nonce=1540175009315&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ae5e48323fa520f693212ecc483bf70164ecedfa0608afcf0a37c0742bf397ea4262a245713018ef83187e26adb9b3bdd9eaa8b718f9aafbf48d5baaa5e88ff6"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "KORE",
+            "Address": "KVY7j5w8WT5BAdFYn22wXk3LZzdaBBQNA2"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=IGNIS&nonce=1540173844274&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "36276ba81c7847e27eb085497f2e97001f34306bb31022e56e0220b869fbba00d1f5503f8481e5f4ff6bb9c5753c5eb6842fa6934b3236c465366bf16c70c2d6"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

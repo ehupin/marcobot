@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=WAVES&nonce=1540175470327&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "474503f5dc22c7c1874e67d2058d5bcfe05a05369ea0e126369ca469bc4a35374a5a3ebc458cd12e77bb9d3bbf1b1d38d5adf38a8096ddabc9fbe31f88a255ec"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "WAVES",
+            "Address": "3PBBY6FxPf359AGLVtk584htpVDemTje9Qf"
+        }
+    }
+}

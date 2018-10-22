@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=OMG&nonce=1540177891129&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "a75d6578ad6a09d77fc630f76f3133d8be884cf1d8911e7b3568dff02d7f8d3d2782ee4e439b0f3bd9c19f01350bbe93fc8c207ef27120073c781e74d84bceee"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "OMG",
+            "Address": ""
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=TIX&nonce=1540175502123&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "fc2628cf22e6574437a335b1ac6455a4994fb4132047d8c5a4780e891f2ab26a0172dd3c5f0e885e523912f59c4dcd339c1bc202d00aa774440fed64b8376f50"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "TIX",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

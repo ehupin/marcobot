@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=AEON&nonce=1540177629493&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "96d384411a37bfe087977e49237fb69abeaa841fd7a8300cd25d0256933ba407fa684b06ea229c91a134ed1fe38bb26759d5aede94c0b430b1918edfaeec1ef0"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

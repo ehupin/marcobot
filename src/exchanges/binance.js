@@ -10,6 +10,10 @@ const exchange = {
     tradingFees: 0.001
 };
 
+exchange._cleanMarketName = function(marketName) {
+    return marketName.replace('/', '').toUpperCase();
+};
+
 exchange._getMarketsPrices = async function() {
     const result = await this._request('get', '/api/v1/ticker/24hr');
     const markets = {};
@@ -140,8 +144,7 @@ exchange.getDepositAddress = async function(currencyName) {
     );
     return {
         address: result.address,
-        tag: result.addressTag,
-        url: result.url
+        tag: result.addressTag
     };
 };
 exchange.applyWithdrawFees = async function(currencyName, amount) {
@@ -165,12 +168,13 @@ exchange.applyTradingFees = async function(amount) {
 };
 exchange.orderIsCompleted = async function(marketName, orderId) {
     //TODO: deal with invalid parameters (e.g. id not found)
-    marketName = marketName.replace('/', '').toUpperCase();
+    marketName = this._cleanMarketName(marketName);
     const result = await this._request('get', '/api/v3/order', true, {
         symbol: marketName,
-        orderId,
+        origClientOrderId: orderId,
         timestamp: Date.now()
     });
+    //TODO: raise exception or manage situation if order cannot have been completed (order status on https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md)
     return result.status === 'FILLED';
 };
 exchange.withdrawIsCompleted = async function(withdrawId) {
@@ -231,19 +235,22 @@ exchange.placeOrder = async function(marketName, amount, type) {
 
     // setup base request data
     const data = {
-        symbol: marketName.replace('/', '').toUpperCase(),
+        symbol: this._cleanMarketName(marketName),
         side: type.toUpperCase(),
         type: 'MARKET',
         newOrderRespType: 'FULL',
         recvWindow: 10000
     };
 
+    // because binance do not take fees from orderAmount, orderAmount should be
+    // decreased until binance consider there is enough amount left on wallet for the fees
+    //TODO: this is more supposition thant somnething confirmed by online ressource
     let orderAmount;
     let result;
     for (
         orderAmount = amount;
         orderAmount > amount * 0.95;
-        orderAmount -= step * 10
+        orderAmount -= step * 10 //TODO: does this step is too large?
     ) {
         try {
             // adjust order amount to match trading rules
@@ -269,22 +276,17 @@ exchange.placeOrder = async function(marketName, amount, type) {
             throw e;
         }
 
-        const returnedOrder = {
-            id: result.orderId,
-            time: result.transactionTime
-        };
-        return result;
+        // const returnedOrder = {
+        //     id: result.clientOrderId
+        // };
+        return result.clientOrderId;
     }
 };
-exchange.makeWithdrawal = async function(
-    currencyName,
-    amount,
-    address,
-    addressTag //TODO: how tags are managed by binance?
-) {
+exchange.makeWithdrawal = async function(currencyName, amount, address) {
     const data = {
         asset: currencyName,
-        address,
+        address: address.address,
+        addressTag: address.addressTag,
         amount,
         recvWindow: 10000,
         timestamp: Date.now()

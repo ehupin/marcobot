@@ -109,6 +109,7 @@ export async function getArbitrageOpportunities(db, exchangeName, currency) {
             
         sort ratio desc
         return distinct {
+                        srcCurrency: srcCurrency.name,
                         srcExchange: srcExchange.name,
                         srcMarket: srcMarket.label,
                         srcPriceType,
@@ -137,14 +138,14 @@ async function updateMarkets(db, exchange) {
     const exchangeMarkets = await exchange.getMarkets();
     for (const marketName of Object.keys(exchangeMarkets)) {
         const marketLabel = `${exchange.name} - ${marketName}`;
-        await setMarketData(db, marketLabel, exchangeMarkets[marketName]);
+        setMarketData(db, marketLabel, exchangeMarkets[marketName]);
     }
 }
 
 async function updateCurrencies(db, exchange) {
     const exchangeCurrencies = await exchange.getCurrencies();
     for (const currencyName of Object.keys(exchangeCurrencies)) {
-        await setCurrencyFees(
+        setCurrencyFees(
             db,
             exchange.name,
             currencyName,

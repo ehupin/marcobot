@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GLD&nonce=1540172038781&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "ab29fdd7a5349614f5e992e5aa6508802201616bec61548ed9c53b8b6fca21540020eb161f22de1f2bcf590975fc5e90ba4e781ff264e45fed4b8a77b28caf39"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

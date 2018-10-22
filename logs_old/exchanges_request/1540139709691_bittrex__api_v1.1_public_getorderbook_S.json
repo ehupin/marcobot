@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-DNT&type=sell&nonce=1540139709520&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "38bc16f7422cb60bc91084b0242c85f1ec0d64643ab8151e078fa4109f6238c71edd2a089b233c425a3b803104e9b9942416ddbe4fb026f0b33861de31bb07ef"
+        }
+    }
+}

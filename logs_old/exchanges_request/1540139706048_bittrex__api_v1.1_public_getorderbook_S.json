@@ -1,0 +1,9 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-WINGS&type=sell&nonce=1540139705856&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "4e3fd4d7e2296c7e771e0800af6c53fb7769c4b4bb3ca3b96d506f66b82cc1bf4fb417ce3b2a4998237197b24d429f8c764787e5ba368fb8da878aa89d1fdfb9"
+        }
+    }
+}

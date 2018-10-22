@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=UKG&nonce=1540175504633&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "cbcc61ddc98888c6a5b81002256dc5ba9e9b77e414f450edebce96adbcc4b8e7582c1ec3233bfd785667924095906c607ba252b53b69a3d0944fbcec7a273fc1"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "UKG",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

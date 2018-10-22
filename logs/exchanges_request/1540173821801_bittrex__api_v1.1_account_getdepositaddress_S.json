@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NMR&nonce=1540173821645&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "0a26ee4abf9d94efb435ce72696b25c722d90951ee26051063d47a019759c05c920de73a56cb517d6f9d9e8fcd786f9cf53eb801e0782200f2b44bfa7d661a57"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "NMR",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

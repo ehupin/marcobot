@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BTC&nonce=1540171570545&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "a409ad89c9b0abcdfab1c6e24224b7d4b94f9605ce1b0af0c9291b0c4793251e92f44d3e4842acf7f77574efc5dce14da151f0b89e719a915d7e6fa2473df859"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BTC",
+            "Address": "148NCF4RqFSYWf3R16S9vHUqcZbP15bfnw"
+        }
+    }
+}

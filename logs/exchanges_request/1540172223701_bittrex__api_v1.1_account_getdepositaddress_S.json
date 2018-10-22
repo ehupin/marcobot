@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DASH&nonce=1540172223544&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "d1efc245c1b790f7026a28777dc1757b9ecd1cea34bff66421af6993e74b7215636870555bffa06ae22d7ec77b8c172ddcc8eb664b06b83b03f288a69e0086a7"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "DASH",
+            "Address": "XnR5owAHzKww8agFPE89U4vYW3CUrG4Srx"
+        }
+    }
+}

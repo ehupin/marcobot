@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=GRS&nonce=1540172138968&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "190120e194ebe3cbe5f949e3e32266a81ec5becf06498f9d9e1be1656146e46b4378b921a1114d03ea5920da062955df0e3870d97e0e9810cdc57ea0f6d77c30"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "GRS",
+            "Address": "3MNGBMJS79cnAT9TFrmvoW7GPa8B58cy5z"
+        }
+    }
+}

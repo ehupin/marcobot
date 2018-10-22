@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=HYDRO&nonce=1540175147183&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "2bde528d20d36b026a185cb53f82b76b619e08b58be9c5de3e1c844766bb9bb4193633cba8458c6fb77ff9b64688e0fea3cf8b00e6c34a648274091fe4241998"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "HYDRO",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

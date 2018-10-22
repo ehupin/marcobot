@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=DTB&nonce=1540173765529&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "7710c88add15689719ca8a33a5d689913a7d37481bfeefd5fd6ffb24a1638f07a1d5787c3aebb9ad41f0bd1960faa80eab960ea0625e1dc06b05c73293b6b92e"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

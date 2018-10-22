@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CANN&nonce=1540177571305&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "8650e364b6f874c2e88dabe90f2e8d99c6eb703ef05593716a7e8c76d2dbbb928f053e9fbab9fd623ca6a825010054c3b03255e76d31ff202524f6ff2be68495"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

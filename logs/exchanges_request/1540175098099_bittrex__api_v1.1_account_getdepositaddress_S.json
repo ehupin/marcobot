@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=BCH&nonce=1540175097954&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "cef2622787e2eed77b23b3d446cc35416e6680994c88109313676a8f62e060f49f4678dba1d5927e2492e02dfb2f91fde76c7743bdd40b44da2f1ad5ecf54de1"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "BCH",
+            "Address": "12x2kzvqaFcEk6U5A2Qg5uaWPVEbYnxi8j"
+        }
+    }
+}

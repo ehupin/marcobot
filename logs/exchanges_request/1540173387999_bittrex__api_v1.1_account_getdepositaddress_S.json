@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=ERC&nonce=1540173387824&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "0606309ede5cd996403718a300a453f0183892af40ac6b7631abfef6c4c8479b0fb08acb9eb27871e0f87848c3ccfe658b3dbb74a03039d72ad5ae25de1cab27"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "ERC",
+            "Address": "ESkMP7Q7Hsmgz3wW6TNhf1BDTUJ8G3He9D"
+        }
+    }
+}

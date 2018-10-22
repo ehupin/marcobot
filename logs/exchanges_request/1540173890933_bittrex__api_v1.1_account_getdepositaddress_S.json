@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=NGC&nonce=1540173890742&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "b7dac2dd361c7f6fd383b72ac5134d7d2c62a4cf70b64e33e5a756485104b243a86f214b9df8890f511be9bac1de68382fd404fa3fbdad72e957bd7233f343ed"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

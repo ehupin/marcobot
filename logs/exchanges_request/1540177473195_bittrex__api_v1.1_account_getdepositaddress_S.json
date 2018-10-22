@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=RDD&nonce=1540177473036&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "ec5024b0fecb94859eb40de2b9c732ead515c2832a4a6584ad413615fedd836028432c67745396c64c6dea4379cac5b886c2bf4125be512e7bc4f9a44d3577ee"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}

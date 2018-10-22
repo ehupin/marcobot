@@ -1,0 +1,17 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=CVC&nonce=1540175499210&apikey=1e09a971c4da482a87742a98689de5b9",
+        "headers": {
+            "apisign": "82bbf4978f265610c195de4b61aa7cf9ca413cd993f9836f3710d09a6f9573a5183601bea16d82b955f0c6080e9354bdc16c59b9caf87526532d9720459bab35"
+        }
+    },
+    "response": {
+        "success": true,
+        "message": "",
+        "result": {
+            "Currency": "CVC",
+            "Address": "0xc4da63a0aad3c3c8c3eb1072662e981404558e83"
+        }
+    }
+}

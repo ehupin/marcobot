@@ -1,0 +1,14 @@
+{
+    "requestConfig": {
+        "method": "get",
+        "url": "https://bittrex.com/api/v1.1/account/getdepositaddress?currency=MONA&nonce=1540177545186&apikey=57539e0a770a4594a55bd954d7bbe57c",
+        "headers": {
+            "apisign": "699695a0dae8a2a8105f19446c4f63e1fe542c2bce0ae0184ce2548cc73ab4013a2d2728e707743e5e81524baa4e9153c33365317c95501339cc6967a524fee9"
+        }
+    },
+    "response": {
+        "success": false,
+        "message": "ADDRESS_GENERATING",
+        "result": null
+    }
+}
