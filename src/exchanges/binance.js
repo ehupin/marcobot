@@ -105,7 +105,6 @@ exchange.getMarkets = async function() {
     }
     return labeledMarkets;
 };
-
 exchange.getOrderBook = async function(marketName, type) {
     // build market symbol and process request
     const symbol = marketName.replace('/', '').toUpperCase();
@@ -124,7 +123,6 @@ exchange.getOrderBook = async function(marketName, type) {
     }
     return orders;
 };
-
 exchange.getWalletAmount = async function(currencyName) {
     const result = await this._request('get', '/api/v3/account', true);
     for (const asset of result.balances) {
@@ -165,6 +163,25 @@ exchange.applyWithdrawFees = async function(currencyName, amount) {
 };
 exchange.applyTradingFees = async function(amount) {
     return amount * (1 - exchange.tradingFees);
+};
+exchange.walletIsEnabled = async function(currencyName) {
+    const result = await this._request(
+        'get',
+        '/wapi/v3/assetDetail.html',
+        true
+    );
+    if (!Object.keys(result.assetDetail).includes(currencyName.toUpperCase())) {
+        throw Error(
+            `Binance exchange: cannot get wallet informaiton for ${currencyName}`
+        );
+    }
+
+    const walletStatus = result.assetDetail[currencyName.toUpperCase()];
+    if (!walletStatus.depositStatus || !walletStatus.withdrawStatus) {
+        return false;
+    }
+
+    return true;
 };
 exchange.orderIsCompleted = async function(marketName, orderId) {
     //TODO: deal with invalid parameters (e.g. id not found)

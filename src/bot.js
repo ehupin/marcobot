@@ -6,7 +6,7 @@ import { getExchange } from './exchanges';
 import { logger } from './loggers';
 
 async function runBot() {
-    logger.error(`######## Start bot ########`);
+    logger.info(`######## Start bot ########`);
     try {
         // build initial config
         const config = {
@@ -72,31 +72,20 @@ async function play(config) {
         return;
     }
 
-    // update best arbitrages ratio using orderbooks datas
-    // only the top X arbitrages are considered as best arbitrages, and thus updated
-    // this is based on config.bestArbitragesThreshold and is here to prevent too long process time
     logger.info(`Arbitrages found! (${processTime}s)`);
-    logger.info('Selecting best arbitrage ...');
-    const updatedArbitrages = {};
-    const bestArbitrages = arbitrages.slice(0, config.bestArbitragesThreshold);
-    for (const arbitrage of bestArbitrages) {
-        const updatedArbitrage = await getArbitrageUpdatedRatio(
-            arbitrage,
-            config.walletAmount
-        );
-        updatedArbitrages[
-            updatedArbitrage.estimations.ratio
-        ] = updatedArbitrage;
-    }
 
-    //TODO: test if withdrawal is possible, if dst exchange have addres, it withdrawal is allowed.
-    //TODO: > should this be handled by getArbitrageUpdatedRatio which could exclude impossible withdraw/deposit operations
+    logger.info(
+        'Exclude arbitrages with disabled wallets, and update ratio using order book ...'
+    );
+    const adjustedArbitrages = bestArbitrages.map(updateArbitrageRatio);
+    const bestRatio = adjustedArbitrages.reduce(
+        (min, arbitrage) => (arbitrage.ratio < min ? arbitrage.ratio : min),
+        adjustedArbitrages[0].ratio
+    );
+    const bestArbitrage = adjustedArbitrages.filter(
+        arbitrage => arbitrage.ratio === bestRatio
+    )[0];
 
-    // identify best arbitrage
-    let bestRatio = Object.keys(updatedArbitrages)
-        .sort()
-        .reverse()[0];
-    const bestArbitrage = updatedArbitrages[bestRatio];
     logger.info(
         `Best arbitrage found:\n${JSON.stringify(bestArbitrage, null, 4)}`
     );
@@ -186,15 +175,22 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function getArbitrageUpdatedRatio(arbitrage, amount) {
+async function updateArbitrageRatio(arbitrage) {
     const srcExchange = getExchange(arbitrage.srcExchange);
     const dstExchange = getExchange(arbitrage.dstExchange);
+
+    if (
+        !srcExchange.walletIsEnabled(arbitrage.srcCurrency) ||
+        !dstExchange.walletIsEnabled(arbitrage.tmpCurrency)
+    ) {
+        throw Error(`One or more wallet is disabled on this arbitrage`);
+    }
 
     const srcTradeOutput = await getTradingOutput(
         srcExchange,
         arbitrage,
         'src',
-        amount
+        1 //value used as amount is 1 to make calculus of ratio easier
     );
     const srcWithdrawOutput = await srcExchange.applyWithdrawFees(
         arbitrage.tmpCurrency,
@@ -207,14 +203,8 @@ async function getArbitrageUpdatedRatio(arbitrage, amount) {
         srcWithdrawOutput
     );
 
-    const ratio = dstTradeOutput / amount;
-    const estimations = {
-        srcTradeOutput,
-        srcWithdrawOutput,
-        dstTradeOutput,
-        ratio
-    };
-    return Object.assign(arbitrage, { estimations });
+    const ratio = dstTradeOutput; // because input value was 1
+    return Object.assign(arbitrage, { ratio });
 }
 async function getTradingOutput(exchange, arbitrage, step, amount) {
     let srcAmount = Number(amount);

@@ -322,19 +322,20 @@ async function testExchanges() {
 
 async function binanceTests() {
     const binance = getExchange('binance');
-    const currencies = await binance.getCurrencies();
-    const total = Object.keys(currencies).length;
-    let currencIndex = 0;
-    let csvFile = '';
-
-    for (let currency of Object.keys(currencies)) {
-        currencIndex += 1;
-        const address = await binance.getDepositAddress(currency.toLowerCase());
-        let row = `${currency},${address.address},${address.tag}`;
-        console.log(`>>>>>${currencIndex}/${total} ${row}`);
-        csvFile += row + '\n';
-    }
-    fs.writeFileSync('binance_addresses.csv', csvFile);
+    const result = await binance.walletIsEnabled('eon');
+    console.log(result);
+    // // dump deposit addresses in csv
+    // const total = Object.keys(currencies).length;
+    // let currencIndex = 0;
+    // let csvFile = '';
+    // for (let currency of Object.keys(currencies)) {
+    //     currencIndex += 1;
+    //     const address = await binance.getDepositAddress(currency.toLowerCase());
+    //     let row = `${currency},${address.address},${address.tag}`;
+    //     console.log(`>>>>>${currencIndex}/${total} ${row}`);
+    //     csvFile += row + '\n';
+    // }
+    // fs.writeFileSync('binance_addresses.csv', csvFile);
 
     // result = await binance._request('get', '/api/v3/allOrders', true, {
     //     symbol: 'GOBTC'
@@ -357,10 +358,11 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function bittrextests() {
+async function dumpBittrexDepositAddressesToCsv() {
     const bittrex = getExchange('bittrex');
     let result;
     let csvFile = '';
+
     result = await bittrex._request('get', '/api/v1.1/public/getcurrencies');
 
     const totalCurrencies = result.length;
@@ -443,4 +445,33 @@ async function bittrextests() {
     // console.log(result);
 }
 
-binanceTests();
+async function bittrexTest() {
+    const bittrex = getExchange('bittrex');
+    const result = await bittrex.walletIsEnabled('emc2');
+    console.log(result);
+
+    return;
+
+    // const bittrex = getExchange('bittrex');
+    // let result;
+    // let csvFile = '';
+    // result = await bittrex._request('get', '/api/v1.1/public/getcurrencies');
+    // // result = await bittrex._request(
+    // //     'get',
+    // //     '/api/v2.0/pub/currencies/GetWalletHealth'
+    // // );
+    // for (let currency of result) {
+    //     // currency = currency.Currency;
+
+    //     if (!currency.IsActive || currency.IsRestricted) {
+    //         const line = `${currency.Currency},${currency.IsActive},${
+    //             currency.IsRestricted
+    //         }`;
+    //         console.log(line);
+    //         csvFile += line + `\n`;
+    //     }
+    // }
+    // // fs.writeFileSync('bittrexCurrencies_statuses.csv', csvFile);
+}
+
+bittrexTest();

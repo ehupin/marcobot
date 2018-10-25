@@ -7,7 +7,28 @@ const qs = require('qs');
 
 const exchange = {
     name: 'bittrex',
-    tradingFees: 0.0025
+    tradingFees: 0.0025,
+    currenciesWithTags: [
+        'NXT',
+        'XMR',
+        'XDN',
+        'BURST',
+        'BITS',
+        'XRP',
+        'XEM',
+        'AEON',
+        'XLM',
+        'STEEM',
+        'SBD',
+        'ARDR',
+        'GOLOS',
+        'GBG',
+        'DCT',
+        'XEL',
+        'IGNIS',
+        'TUBE',
+        'XHV'
+    ]
 };
 
 exchange._catchRequestResponseErrors = function(response) {
@@ -15,7 +36,6 @@ exchange._catchRequestResponseErrors = function(response) {
         throw Error(response.data.message);
     }
 };
-
 exchange._cleanMarketName = function(marketName) {
     const [baseCurrency, quoteCurrency] = marketName.split('/');
     return `${quoteCurrency}-${baseCurrency}`.toUpperCase();
@@ -62,15 +82,13 @@ exchange._request = async function(method, path, signed = false, args = {}) {
 
     return requestResult.result;
 };
-
 exchange.getCurrencies = async function() {
     // proceed request
     const result = await this._request('get', '/api/v1.1/public/getcurrencies');
 
-    const rawCurrencies = result;
     const currencies = {};
     // TODO: What is the withdraw min on bittrex ??
-    for (const currency of rawCurrencies) {
+    for (const currency of result) {
         currencies[currency.Currency.toLowerCase()] = {
             withdrawEnabled: currency.IsActive,
             withdrawMin: currency.TxFee * 3,
@@ -123,7 +141,6 @@ exchange.getMarkets = async function() {
     });
     return markets;
 };
-
 exchange.getOrderBook = async function(marketName, type) {
     marketName = this._cleanMarketName(marketName);
     type = type == 'bid' ? 'buy' : type;
@@ -148,7 +165,6 @@ exchange.getOrderBook = async function(marketName, type) {
     }
     return orders;
 };
-
 exchange.getWalletAmount = async function(currencyName) {
     const result = await this._request(
         'get',
@@ -162,12 +178,27 @@ exchange.getWalletAmount = async function(currencyName) {
     return result.Available;
 };
 exchange.getDepositAddress = async function(currencyName) {
-    let attemptRequest = true;
-    while (attemptRequest) {
+    let retry = true;
+    const maxTries = 50;
+    let currentTry = 0;
+    let result;
+
+    // run multiple attempt to get addres, in case of errors
+    // due to address generation on bittrex server, that require some
+    // time, thus more than one request
+    // (first request init the generation, next one are trying
+    // until the address has been generated)
+    while (retry) {
+        // throw error if max attempt reached
+        if (currentTry >= maxTries) {
+            const message = `Bittrex exchange: cannot generated address for ${currencyName} (${maxTries} tries)`;
+            logger.debug(message);
+            throw Error(message);
+        }
+
         try {
-            console.log('popopo');
-            return;
-            const result = await this._request(
+            currentTry += 1;
+            result = await this._request(
                 'get',
                 '/api/v1.1/account/getdepositaddress',
                 true,
@@ -175,21 +206,32 @@ exchange.getDepositAddress = async function(currencyName) {
                     currency: currencyName
                 }
             );
-            attemptRequest = false;
+            retry = false;
         } catch (e) {
-            console.log(e);
-            console.log('>>>', e.message);
-            if (e.message === 'ADDRESS_GENERATING') {
+            // if error is due to address generation, wait then retry
+            if (e.message.match(/ADDRESS_GENERATING/)) {
                 logger.debug(
                     `Bittrex exchange: generating address for ${currencyName}`
                 );
+
+                // wait 0.5s before next attempt
+                await sleep(500);
+            }
+            //
+            else if (
+                e.message.match(
+                    /CURRENCY_OFFLINE|INVALID_CURRENCY_TYPE|RESTRICTED_CURRENCY/
+                )
+            ) {
+                const message = `Bittrex exchange: cannot get address for ${currencyName} CURRENCY_OFFLINE`;
+                logger.debug(message);
+                throw Error(message);
             } else {
                 throw e;
             }
         }
     }
 
-    // throw result;
     const returnedAddress = result.Address;
     if (!returnedAddress) {
         throw Error(
@@ -200,7 +242,7 @@ exchange.getDepositAddress = async function(currencyName) {
     // if currency rely on tag address, get base address first
     let baseAddress;
     //TODO: check if other currencies require base address
-    if (['xrp', 'xlm', 'lsk'].includes(currencyName)) {
+    if (this.currenciesWithTags.includes(currencyName)) {
         const result = await this._request(
             'get',
             '/api/v1.1/public/getcurrencies'
@@ -242,6 +284,24 @@ exchange.applyWithdrawFees = async function(currencyName, amount) {
 };
 exchange.applyTradingFees = async function(amount) {
     return amount * (1 - exchange.tradingFees);
+};
+exchange.walletIsEnabled = async function(currencyName) {
+    const result = await this._request('get', '/api/v1.1/public/getcurrencies');
+    const wallet = result.filter(
+        wallet => wallet.Currency === currencyName.toUpperCase()
+    );
+
+    if (wallet.length === 0) {
+        throw Error(
+            `Bittrex exchange: cannot get wallet informaiton for ${currencyName}`
+        );
+    }
+
+    if (!wallet[0].IsActive || wallet[0].IsRestricted) {
+        return false;
+    }
+
+    return true;
 };
 exchange.orderIsCompleted = async function(marketName, orderId) {
     const result = await this._request(
