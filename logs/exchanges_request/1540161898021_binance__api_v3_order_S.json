@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/api/v3/order?orderId=sMDLOLiHiMUdLjVAlfR9K3&timestamp=1540161897472&recvWindow=20000&signature=2960de0f0097a762c931ab69ef116432bb10645b0cbc8df4142069826952392e",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

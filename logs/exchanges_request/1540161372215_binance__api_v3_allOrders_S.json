@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/api/v3/allOrders?symbol=GO&timestamp=1540161371336&recvWindow=20000&signature=382ab57b63bed7cc12c5e2b496b164ed228a9c27d978d5bc1671538b2b6990f7",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

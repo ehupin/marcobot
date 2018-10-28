@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { logger } from './loggers';
 import axios from 'axios';
+import { connectDb, updateDb } from './database';
 
 /*
 Return existing exchanges by reading the content of src/exchanges and loading the js files in it.
@@ -321,9 +322,22 @@ async function testExchanges() {
 }
 
 async function binanceTests() {
+    const db = connectDb();
+
+    await updateDb(db);
+
     const binance = getExchange('binance');
-    const result = await binance.walletIsEnabled('eon');
-    console.log(result);
+    let result;
+
+    result = await binance.getCurrencies();
+    console.log('<<', result.neo);
+
+    // result = await binance.walletIsEnabled('neo');
+    // console.log(result);
+
+    result = await binance.applyWithdrawFees('neo', 10);
+    console.log(result.neo);
+
     // // dump deposit addresses in csv
     // const total = Object.keys(currencies).length;
     // let currencIndex = 0;
@@ -474,4 +488,4 @@ async function bittrexTest() {
     // // fs.writeFileSync('bittrexCurrencies_statuses.csv', csvFile);
 }
 
-bittrexTest();
+// binanceTests();

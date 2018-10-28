@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/api/v3/allOrders?symbol=btc&timestamp=1540161106821&recvWindow=20000&signature=b989d1be91d547eb53e5492b4eda846ee312726dc582b49c5a368df558950a59",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

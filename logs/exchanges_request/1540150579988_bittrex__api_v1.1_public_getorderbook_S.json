@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-ENJ&type=sell&nonce=1540150579800&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "35a6d7aa8d319b1f98f724a9563a288c75cbf961b92689302ef13550b64653d2db8717728c5bfa9db0ff92626c50770bc4f50ee568dc7f361f3d03b5c9460894"
-        }
-    }
-}

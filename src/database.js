@@ -55,14 +55,17 @@ export async function setMarketData(db, marketLabel, data) {
 }
 
 export async function setCurrencyFees(db, exchangeName, currencyName, data) {
-    const cursor = await db.query(aql`
+    const queryString = aql`
             FOR exchangeCurrencyEdge IN exchangeHasCurrency 
             FILTER document(exchangeCurrencyEdge._from).name == ${exchangeName} && document(exchangeCurrencyEdge._to).name == ${currencyName} 
             UPDATE exchangeCurrencyEdge WITH ${data} IN  ${db.edgeCollection(
         'exchangeHasCurrency'
-    )}
-            
-        `);
+    )}            
+        `;
+    // if (currencyName == 'neo') {
+    //     console.log(queryString);
+    // }
+    await db.query(queryString);
 }
 
 export async function getWithdrawFees(db, exchangeName, currencyName) {
@@ -76,54 +79,55 @@ export async function getWithdrawFees(db, exchangeName, currencyName) {
 }
 
 export async function getArbitrageOpportunities(db, exchangeName, currency) {
-    const cursor = await db.query(aql`
-        let walletCurrency = ${currency}
-        let walletExchange = ${exchangeName}
+    const queryString = aql`
+    let walletCurrency = ${currency}
+    let walletExchange = ${exchangeName}
+    
+    for srcExchange in exchanges filter srcExchange.name == walletExchange
+    for srcCurrency in outbound srcExchange._id exchangeHasCurrency filter srcCurrency.name == walletCurrency
+    for srcMarket, srcCurrencyEdge in inbound srcCurrency._id marketHasCurrency
+    for checkSrcExchange in outbound srcMarket._id marketHasExchange filter checkSrcExchange._id == srcExchange._id
+    
+    for tmpCurrency in outbound srcMarket._id marketHasCurrency filter tmpCurrency._id != srcCurrency._id
+    
+    for dstMarket in inbound tmpCurrency._id marketHasCurrency filter dstMarket._id != srcMarket._id
+    for dstCurrency, dstCurrencyEdge in outbound dstMarket._id marketHasCurrency filter dstCurrency._id == srcCurrency._id
+    for dstExchange in outbound dstMarket._id marketHasExchange
+    
+    
+    for checkSrcExchangeForTmpCurrency, e in inbound tmpCurrency._id exchangeHasCurrency filter checkSrcExchangeForTmpCurrency._id == srcExchange._id
+    
+    let withdrawalFees = e.withdrawalFees
+    let srcTradingFees = srcExchange.tradingFees
+    let dstTradingFees = dstExchange.tradingFees
+    let srcPriceType = srcCurrencyEdge.type == 'quote' ? 'bid' : 'ask'
+    let dstPriceType = dstCurrencyEdge.type == 'quote' ? 'ask' : 'bid'
+    let srcPrice = srcPriceType == 'ask' ? srcMarket.askPrice : srcMarket.bidPrice
+    let dstPrice = dstPriceType == 'ask' ? dstMarket.askPrice : dstMarket.bidPrice
+    
+    //filter srcPrice<dstPrice
+    let srcPriceAdapted = srcPriceType == 'ask' ? srcPrice : 1/srcPrice
+    let dstPriceAdapted = dstPriceType == 'ask' ? dstPrice : 1/dstPrice
+    let ratio = ( srcPriceAdapted * ( 1 - srcTradingFees ) - withdrawalFees ) * dstPriceAdapted * (1 - dstTradingFees)
         
-        for srcExchange in exchanges filter srcExchange.name == walletExchange
-        for srcCurrency in outbound srcExchange._id exchangeHasCurrency filter srcCurrency.name == walletCurrency
-        for srcMarket, srcCurrencyEdge in inbound srcCurrency._id marketHasCurrency
-        for checkSrcExchange in outbound srcMarket._id marketHasExchange filter checkSrcExchange._id == srcExchange._id
-        
-        for tmpCurrency in outbound srcMarket._id marketHasCurrency filter tmpCurrency._id != srcCurrency._id
-        
-        for dstMarket in inbound tmpCurrency._id marketHasCurrency filter dstMarket._id != srcMarket._id
-        for dstCurrency, dstCurrencyEdge in outbound dstMarket._id marketHasCurrency filter dstCurrency._id == srcCurrency._id
-        for dstExchange in outbound dstMarket._id marketHasExchange
-        
-        
-        for checkSrcExchangeForTmpCurrency, e in inbound tmpCurrency._id exchangeHasCurrency filter checkSrcExchangeForTmpCurrency._id == srcExchange._id
-        
-        let withdrawalFees = e.withdrawalFees
-        let srcTradingFees = srcExchange.tradingFees
-        let dstTradingFees = dstExchange.tradingFees
-        let srcPriceType = srcCurrencyEdge.type == 'quote' ? 'bid' : 'ask'
-        let dstPriceType = dstCurrencyEdge.type == 'quote' ? 'ask' : 'bid'
-        let srcPrice = srcPriceType == 'ask' ? srcMarket.askPrice : srcMarket.bidPrice
-        let dstPrice = dstPriceType == 'ask' ? dstMarket.askPrice : dstMarket.bidPrice
-        
-        //filter srcPrice<dstPrice
-        let srcPriceAdapted = srcPriceType == 'ask' ? srcPrice : 1/srcPrice
-        let dstPriceAdapted = dstPriceType == 'ask' ? dstPrice : 1/dstPrice
-        let ratio = ( srcPriceAdapted * ( 1 - srcTradingFees ) - withdrawalFees ) * dstPriceAdapted * (1 - dstTradingFees)
-            
-        sort ratio desc
-        return distinct {
-                        srcCurrency: srcCurrency.name,
-                        srcExchange: srcExchange.name,
-                        srcMarket: srcMarket.label,
-                        srcPriceType,
-                        srcPrice,
-                        srcTradingFees,
-                        tmpCurrency: tmpCurrency.name,
-                        withdrawalFees,
-                        dstExchange: dstExchange.name,
-                        dstMarket: dstMarket.label,
-                        dstPriceType,
-                        dstPrice,
-                        dstTradingFees,
-                        ratio}
-    `);
+    sort ratio desc
+    return distinct {
+                    srcCurrency: srcCurrency.name,
+                    srcExchange: srcExchange.name,
+                    srcMarket: srcMarket.label,
+                    srcPriceType,
+                    srcPrice,
+                    srcTradingFees,
+                    tmpCurrency: tmpCurrency.name,
+                    withdrawalFees,
+                    dstExchange: dstExchange.name,
+                    dstMarket: dstMarket.label,
+                    dstPriceType,
+                    dstPrice,
+                    dstTradingFees,
+                    ratio}
+`;
+    const cursor = await db.query(queryString);
     return cursor.all();
 }
 
@@ -144,6 +148,7 @@ async function updateMarkets(db, exchange) {
 
 async function updateCurrencies(db, exchange) {
     const exchangeCurrencies = await exchange.getCurrencies();
+    // console.log('>>', exchangeCurrencies.neo);
     for (const currencyName of Object.keys(exchangeCurrencies)) {
         setCurrencyFees(
             db,
@@ -161,11 +166,12 @@ async function updateCurrencies(db, exchange) {
 //     return a
 // }
 
-// async function tt() {
-//     const b = test()
-//     const a = 5
-//     a
-//     b
-// }
+async function tt() {
+    const db = connectDb();
+    await setCurrencyFees(db, 'binance', 'neo', {
+        withdrawEnabled: false,
+        depositEnabled: false
+    });
+}
 
-// tt()
+tt();

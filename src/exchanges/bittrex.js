@@ -90,10 +90,10 @@ exchange.getCurrencies = async function() {
     // TODO: What is the withdraw min on bittrex ??
     for (const currency of result) {
         currencies[currency.Currency.toLowerCase()] = {
-            withdrawEnabled: currency.IsActive,
+            withdrawEnabled: currency.IsActive && !currency.IsRestricted,
             withdrawMin: currency.TxFee * 3,
             withdrawFee: currency.TxFee,
-            depositEnabled: currency.IsActive
+            depositEnabled: currency.IsActive && !currency.IsRestricted
         };
     }
     return currencies;

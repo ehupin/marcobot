@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-ADX&type=sell&nonce=1540150022212&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "ab533cf2e5577fba7a315d49b415e206fed6ee44bbb338a48b0e5634922b66e93231b8e93da78e1a0ae3c71187e2749e0ed1cc04ebf2c62c2f775b5a04880003"
-        }
-    }
-}

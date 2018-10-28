@@ -1,5 +1,6 @@
 import { connectDb, getWithdrawFees } from '../database.js';
 import { keys } from '../../keys/binance.js';
+import Axios from 'axios';
 
 const crypto = require('crypto');
 const qs = require('qs');
@@ -28,11 +29,18 @@ exchange._getMarketsPrices = async function() {
     return markets;
 };
 exchange._request = async function(method, path, signed = false, args = {}) {
+    // get server time to adjust timestamp in case of computer and server time sync loss
+    const serverTime = (await Axios.get('https://api.binance.com/api/v1/time'))
+        .data.serverTime;
+    const botTime = new Date().getTime();
+    const timeDiff = Math.abs(serverTime - botTime);
+    // console.log(timeDiff);
+
     // add timestamp to args and stringify the args
     if (signed) {
         const currentTimestamp = new Date().getTime();
-        args.timestamp = currentTimestamp;
-        args.recvWindow = 20000;
+        args.timestamp = currentTimestamp - timeDiff;
+        args.recvWindow = 5000;
     }
     const dataQueryString = qs.stringify(args);
 
@@ -140,6 +148,7 @@ exchange.getDepositAddress = async function(currencyName) {
             asset: currencyName
         }
     );
+    console.log(result);
     return {
         address: result.address,
         tag: result.addressTag
@@ -148,15 +157,16 @@ exchange.getDepositAddress = async function(currencyName) {
 exchange.applyWithdrawFees = async function(currencyName, amount) {
     const db = connectDb();
     let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
+    console.log(currencyFees);
     if (!currencyFees) {
-        throw 'cannot get fees from database';
+        throw Error('cannot get fees from database');
     }
     currencyFees = currencyFees[0];
     if (amount < currencyFees.withdrawMin) {
-        throw `withdraw too low ${amount} < ${currencyFees.withdrawMin}`;
+        throw Error(`withdraw too low ${amount} < ${currencyFees.withdrawMin}`);
     }
     if (!currencyFees.withdrawEnabled) {
-        throw 'withdraw disabled';
+        throw Error(`withdraw disabled for ${currencyName}`);
     }
     const withdrawOutput = amount - currencyFees.withdrawFee;
     return withdrawOutput;

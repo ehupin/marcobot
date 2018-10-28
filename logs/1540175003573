@@ -1,7 +1,0 @@
-2018-10-21 22:23:25 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
-2018-10-21 22:23:25 debug: Bittrex exchange: cannot get address for EMC2 CURRENCY_OFFLINE
-2018-10-21 22:23:30 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
-2018-10-21 22:23:30 debug: Bittrex exchange: cannot get address for PINK CURRENCY_OFFLINE
-2018-10-21 22:23:35 error: Bittrex api call has failed: request has failed (api error): CURRENCY_OFFLINE
-2018-10-21 22:23:35 debug: Bittrex exchange: cannot get address for FLO CURRENCY_OFFLINE
-2018-10-21 22:23:53 error: Bittrex api call has failed: request has failed (api error): Call to GetDepositAddress was throttled. Try again in 60 seconds.

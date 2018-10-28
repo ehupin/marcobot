@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-BNT&type=sell&nonce=1540150584168&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "8f538c946fa0349f5ed0ae930d276e7c8f53b319730f700db56e0207b58e4644822a8703216955bb3f7982f125c89f6008824d0fab94aacf935e6d7ce750667d"
-        }
-    }
-}

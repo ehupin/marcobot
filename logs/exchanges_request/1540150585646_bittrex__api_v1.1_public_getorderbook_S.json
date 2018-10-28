@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-VIB&type=sell&nonce=1540150585473&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "b9212336e6c912530cc50616d9e9ae8acd298d9b56ca0c3f0359646a85f9f80d8d70f0eef177725d39e3669832bdefb06e6f4e1035719d755f02c4354754b6ba"
-        }
-    }
-}

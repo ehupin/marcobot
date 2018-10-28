@@ -1,2 +1,0 @@
-2018-10-21 18:30:57 error: Bittrex api call has failed: Request failed with status code 400
-	Axios related error: {"code":-1102,"msg":"Mandatory parameter 'timestamp' was not sent, was empty/null, or malformed."}
