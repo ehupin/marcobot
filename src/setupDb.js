@@ -1,6 +1,7 @@
 import fs from 'fs';
 import {
     connectDb,
+    createDatabase,
     clearDatabase,
     createDbNode,
     deleteDbNode
@@ -13,7 +14,8 @@ const deepmerge = require('deepmerge');
 async function setupDb() {
     logger.info('Start setupDb()');
 
-    const db = connectDb();
+    const db = connectDb((setDatabase = false));
+    createDatabase(db);
     logger.info('Clear database...');
     await clearDatabase(db);
 

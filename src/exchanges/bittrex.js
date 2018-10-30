@@ -1,6 +1,7 @@
 import { connectDb, getWithdrawFees } from '../database.js';
 import { keys } from '../../keys/bittrex.js';
 import { logger } from '../loggers.js';
+import { sleep } from '../utilities.js';
 
 const crypto = require('crypto');
 const qs = require('qs');
@@ -265,43 +266,6 @@ exchange.getDepositAddress = async function(currencyName) {
     }
 
     return address;
-};
-exchange.applyWithdrawFees = async function(currencyName, amount) {
-    const db = connectDb();
-    let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
-    if (!currencyFees) {
-        throw 'cannot get fees from database';
-    }
-    currencyFees = currencyFees[0];
-    if (amount < currencyFees.withdrawMin) {
-        throw `withdraw too low ${amount} < ${currencyFees.withdrawMin}`;
-    }
-    if (!currencyFees.withdrawEnabled) {
-        throw 'withdraw disabled';
-    }
-    const withdrawOutput = amount - currencyFees.withdrawFee;
-    return withdrawOutput;
-};
-exchange.applyTradingFees = async function(amount) {
-    return amount * (1 - exchange.tradingFees);
-};
-exchange.walletIsEnabled = async function(currencyName) {
-    const result = await this._request('get', '/api/v1.1/public/getcurrencies');
-    const wallet = result.filter(
-        wallet => wallet.Currency === currencyName.toUpperCase()
-    );
-
-    if (wallet.length === 0) {
-        throw Error(
-            `Bittrex exchange: cannot get wallet informaiton for ${currencyName}`
-        );
-    }
-
-    if (!wallet[0].IsActive || wallet[0].IsRestricted) {
-        return false;
-    }
-
-    return true;
 };
 exchange.orderIsCompleted = async function(marketName, orderId) {
     const result = await this._request(

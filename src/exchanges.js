@@ -1,7 +1,15 @@
 import fs from 'fs';
 import { logger } from './loggers';
 import axios from 'axios';
-import { connectDb, updateDb } from './database';
+import {
+    connectDb,
+    updateDb,
+    getWalletStatus,
+    getWithdrawFees
+} from './database';
+import { sleep } from './utilities.js';
+
+let EXCHANGES = {};
 
 /*
 Return existing exchanges by reading the content of src/exchanges and loading the js files in it.
@@ -10,15 +18,16 @@ All this process is made by getExchange, whereas getExchanges is just in charge 
 */
 export function getExchanges() {
     const exchanges = [];
-    const exchagesDir = './src/exchanges/';
-    const exchangeModuleFiles = fs.readdirSync(exchagesDir);
+    const exchangeDir = './src/exchanges/';
+    const exchangeModuleFiles = fs.readdirSync(exchangeDir);
     for (const exchangeModuleFile of exchangeModuleFiles) {
-        // console.log(fs.statSync(exchagesDir + exchangeModuleFile).isFile());
-        if (fs.statSync(exchagesDir + exchangeModuleFile).isFile()) {
+        if (fs.statSync(exchangeDir + exchangeModuleFile).isFile()) {
             const exchangeName = exchangeModuleFile.split('.')[0];
-            exchanges.push(getExchange(exchangeName));
+            const exchange = getExchange(exchangeName);
+            exchanges.push(exchange);
         }
     }
+
     return exchanges;
 }
 
@@ -27,14 +36,22 @@ Return required exchange, which is a proxy around the exchange contain in file.
 Indeed, this function first load exchange from file, then proxify it.
 */
 export function getExchange(exchangeName) {
+    // to improve performances, exchanges are stored in EXCHANGE object
+    // so when a exchange is called, first check if it has been loaded before
+    if (Object.keys(EXCHANGES).includes(exchangeName)) {
+        return EXCHANGES[exchangeName];
+    }
+
     const exchange = require(`./exchanges/${exchangeName}.js`).default;
-    return _proxifyExchange(exchange);
+    const proxifiedExchange = _proxifyExchange(exchange);
+    EXCHANGES[exchangeName] = proxifiedExchange;
+    return proxifiedExchange;
 }
 
 /*
 This object contain function dedicated to check arguments sent to exchanges functions.
 It helps to reduce the replciaiton of code for each exchange.
-Indeed, when creating new exchages, developper will not have to check received arguments.
+Indeed, when creating new exchanges, developper will not have to check received arguments.
 */
 // TODO refactor all this to make it DRY (attributes check are often the same)
 const checkExchangeFunctionsArguments = {
@@ -156,6 +173,34 @@ function isAsync(fn) {
     return fn.constructor.name === 'AsyncFunction';
 }
 
+const abstractExchange = {
+    async applyWithdrawFees(currencyName, amount) {
+        const db = connectDb();
+        //TODO: manage error if currency fees are not found
+        let currencyFees = await getWithdrawFees(db, this.name, currencyName);
+
+        if (amount < currencyFees.withdrawMin) {
+            throw Error(
+                `withdraw too low ${amount} < ${currencyFees.withdrawMin}`
+            );
+        }
+        if (!currencyFees.withdrawEnabled) {
+            throw Error('withdraw disabled');
+        }
+        const withdrawOutput = amount - currencyFees.withdrawFee;
+        return withdrawOutput;
+    },
+    async applyTradingFees(amount) {
+        return amount * (1 - this.tradingFees);
+    },
+    async walletIsEnabled(currencyName) {
+        const db = connectDb();
+        //TODO: manage error if wallet status are not found
+        let walletStatus = await getWalletStatus(db, this.name, currencyName);
+        // TODO: rename depositEnabled to depositIsEnabled
+        return walletStatus.depositEnabled && walletStatus.withdrawEnabled;
+    }
+};
 /*
 Return a proxified version of given exchange.
 Extra functions are also added (e.g. _makeRequest).
@@ -164,7 +209,8 @@ before the original exchange function is ran.
 */
 function _proxifyExchange(exchange) {
     // create proxifiedExchange from original exchange
-    let proxifiedExchange = Object.assign({}, exchange);
+    const newExchange = Object.assign({}, abstractExchange);
+    let proxifiedExchange = Object.assign(newExchange, exchange);
 
     // assign _makeRequest and re-bind _request
     proxifiedExchange._makeRequest = _makeRequest;
@@ -324,19 +370,53 @@ async function testExchanges() {
 async function binanceTests() {
     const db = connectDb();
 
-    await updateDb(db);
+    // await updateDb(db);
+    // return;
 
+    const withdrawFees = {};
+    const binance = getExchange('bittrex');
+    let result;
+    result = await binance.getCurrencies();
+    console.log(result.npxs);
+}
+
+async function compareFees() {
+    const db = connectDb();
+
+    // await updateDb(db);
+    // return;
+
+    const withdrawFees = {};
     const binance = getExchange('binance');
     let result;
-
     result = await binance.getCurrencies();
-    console.log('<<', result.neo);
+    for (const currency of Object.keys(result)) {
+        if (!Object.keys(withdrawFees).includes(currency)) {
+            withdrawFees[currency] = { binance: result[currency].withdrawFee };
+        }
+    }
 
-    // result = await binance.walletIsEnabled('neo');
+    const bittrex = getExchange('bittrex');
+    result = await bittrex.getCurrencies();
+    for (const currency of Object.keys(result)) {
+        if (Object.keys(withdrawFees).includes(currency)) {
+            withdrawFees[currency].bittrex = result[currency].withdrawFee;
+        }
+    }
+    let cleanedFees = {};
+    for (const currency of Object.keys(withdrawFees)) {
+        const fees = withdrawFees[currency];
+        if (Object.keys(fees).includes('bittrex')) {
+            cleanedFees[currency] = fees;
+        }
+    }
+    console.log(cleanedFees);
+
+    // result = await binance.walletIsEnabled('zec');
     // console.log(result);
 
-    result = await binance.applyWithdrawFees('neo', 10);
-    console.log(result.neo);
+    // result = await binance.applyWithdrawFees('neo', 10);
+    // console.log(result.neo);
 
     // // dump deposit addresses in csv
     // const total = Object.keys(currencies).length;
@@ -366,10 +446,6 @@ async function binanceTests() {
     // for (const currency of Object.values(result)) {
     //     console.log(currency);
     // }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function dumpBittrexDepositAddressesToCsv() {

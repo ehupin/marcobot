@@ -154,45 +154,44 @@ exchange.getDepositAddress = async function(currencyName) {
         tag: result.addressTag
     };
 };
-exchange.applyWithdrawFees = async function(currencyName, amount) {
-    const db = connectDb();
-    let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
-    console.log(currencyFees);
-    if (!currencyFees) {
-        throw Error('cannot get fees from database');
-    }
-    currencyFees = currencyFees[0];
-    if (amount < currencyFees.withdrawMin) {
-        throw Error(`withdraw too low ${amount} < ${currencyFees.withdrawMin}`);
-    }
-    if (!currencyFees.withdrawEnabled) {
-        throw Error(`withdraw disabled for ${currencyName}`);
-    }
-    const withdrawOutput = amount - currencyFees.withdrawFee;
-    return withdrawOutput;
-};
-exchange.applyTradingFees = async function(amount) {
-    return amount * (1 - exchange.tradingFees);
-};
-exchange.walletIsEnabled = async function(currencyName) {
-    const result = await this._request(
-        'get',
-        '/wapi/v3/assetDetail.html',
-        true
-    );
-    if (!Object.keys(result.assetDetail).includes(currencyName.toUpperCase())) {
-        throw Error(
-            `Binance exchange: cannot get wallet informaiton for ${currencyName}`
-        );
-    }
+// exchange.applyWithdrawFees = async function (currencyName, amount) {
+//     const db = connectDb();
+//     let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
+//     if (!currencyFees) {
+//         throw Error('cannot get fees from database');
+//     }
+//     currencyFees = currencyFees[0];
+//     if (amount < currencyFees.withdrawMin) {
+//         throw Error(`withdraw too low ${amount} < ${currencyFees.withdrawMin}`);
+//     }
+//     if (!currencyFees.withdrawEnabled) {
+//         throw Error(`withdraw disabled for ${currencyName}`);
+//     }
+//     const withdrawOutput = amount - currencyFees.withdrawFee;
+//     return withdrawOutput;
+// };
+// exchange.applyTradingFees = async function (amount) {
+//     return amount * (1 - exchange.tradingFees);
+// };
+// exchange.walletIsEnabled = async function (currencyName) {
+//     const result = await this._request(
+//         'get',
+//         '/wapi/v3/assetDetail.html',
+//         true
+//     );
+//     if (!Object.keys(result.assetDetail).includes(currencyName.toUpperCase())) {
+//         throw Error(
+//             `Binance exchange: cannot get wallet informaiton for ${currencyName}`
+//         );
+//     }
 
-    const walletStatus = result.assetDetail[currencyName.toUpperCase()];
-    if (!walletStatus.depositStatus || !walletStatus.withdrawStatus) {
-        return false;
-    }
+//     const walletStatus = result.assetDetail[currencyName.toUpperCase()];
+//     if (!walletStatus.depositStatus || !walletStatus.withdrawStatus) {
+//         return false;
+//     }
 
-    return true;
-};
+//     return true;
+// };
 exchange.orderIsCompleted = async function(marketName, orderId) {
     //TODO: deal with invalid parameters (e.g. id not found)
     marketName = this._cleanMarketName(marketName);
