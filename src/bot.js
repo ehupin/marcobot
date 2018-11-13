@@ -250,6 +250,7 @@ async function updateArbitrageRatio(arbitrage, amount) {
 
     //TODO: check if addresses can be generated
     // console.log(`srcAmount ${amount}`);
+    logger.debug('Proceed to src trade');
     const srcTradeOutput = await getTradingOutput(
         srcExchange,
         arbitrage,
@@ -258,11 +259,16 @@ async function updateArbitrageRatio(arbitrage, amount) {
     );
     // throw Error('po');
     // console.log(`tmpAmount ${srcTradeOutput}`);
+    logger.debug('Proceed to transfert from src to dst');
     const srcWithdrawOutput = await srcExchange.applyWithdrawFees(
         arbitrage.tmpCurrency,
         srcTradeOutput
     );
+    logger.debug(
+        `Transfered difference: ${srcTradeOutput} -> ${srcWithdrawOutput}`
+    );
     // console.log(`tmpTransferedAmount ${srcWithdrawOutput}`);
+    logger.debug('Proceed to dst trade');
     const dstTradeOutput = await getTradingOutput(
         dstExchange,
         arbitrage,
@@ -301,22 +307,27 @@ async function getTradingOutput(exchange, arbitrage, step, amount) {
     const marketCurrencies = marketName.split('/');
     const srcCurrency =
         priceType == 'bid' ? marketCurrencies[0] : marketCurrencies[1];
+    const dstCurrency =
+        priceType == 'bid' ? marketCurrencies[1] : marketCurrencies[0];
 
     logger.debug(
-        `About to trade at ${priceType} prices on ${marketName} with ${amount} ${srcCurrency}.`
+        `Aout to trade ${amount} ${srcCurrency} at ${priceType} prices on ${marketName}.`
     );
     logger.debug(
-        `Market order book:\n ${JSON.stringify(orderbook.slice(0, 5), null, 4)}`
+        `Market order book:\n ${JSON.stringify(
+            orderbook.slice(0, 10),
+            null,
+            4
+        )}`
     );
 
     let srcAmount = Number(amount);
     let dstAmount = 0;
     for (const order of orderbook) {
         logger.debug(
-            `Trading ${srcAmount} ${srcCurrency} on order with amount of ${
-                order.amount
-            }`
+            `Start trading with ${srcAmount} ${srcCurrency} and ${dstAmount} ${dstCurrency}.`
         );
+        logger.debug(`Traded order: ${order}`);
         // console.log('before:', { srcAmount, dstAmount });
         if (priceType == 'ask') {
             srcAmount -= order.price * order.amount;
@@ -325,7 +336,9 @@ async function getTradingOutput(exchange, arbitrage, step, amount) {
             srcAmount -= order.amount;
             dstAmount += order.price * order.amount;
         }
-
+        logger.debug(
+            `End trading with ${srcAmount} ${srcCurrency} and ${dstAmount} ${dstCurrency}.`
+        );
         // if (priceType === 'ask'){
         // console.log('after:', { srcAmount, dstAmount });
         if (srcAmount < 0) {
@@ -334,6 +347,9 @@ async function getTradingOutput(exchange, arbitrage, step, amount) {
             } else {
                 dstAmount += srcAmount * order.price;
             }
+            logger.debug(
+                `Adjusted final amounts: ${srcAmount} ${srcCurrency} | ${dstAmount} ${dstCurrency}.`
+            );
             // console.log('adjusted:', { dstAmount });
             break;
         }
