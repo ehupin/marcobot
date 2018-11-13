@@ -48,7 +48,7 @@ async function runBot() {
 
             // update database with current prices
             logger.info('Update prices and fees in database ...');
-            // await updateDb(config.db);
+            await updateDb(config.db);
 
             // run play round
             try {
@@ -99,9 +99,13 @@ async function getBestArbitrage(config) {
     logger.info('Update arbitrage ratio using order book ...');
     let adjustedArbitrages = [];
     for (let arbitrage of validArbitrages) {
-        adjustedArbitrages.push(
-            await updateArbitrageRatio(arbitrage, config.walletAmount)
-        );
+        try {
+            adjustedArbitrages.push(
+                await updateArbitrageRatio(arbitrage, config.walletAmount)
+            );
+        } catch (e) {
+            logger.error(`${e.name} - ${e.message} \n${e.stack}`);
+        }
     }
 
     logger.info('Search for best arbitrage ...');
