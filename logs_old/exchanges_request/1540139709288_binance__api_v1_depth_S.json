@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/api/v1/depth?symbol=DNTBTC",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

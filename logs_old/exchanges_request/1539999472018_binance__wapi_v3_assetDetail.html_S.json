@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/wapi/v3/assetDetail.html?timestamp=1539999471660&recvWindow=20000&signature=e8db18e8eb43de0b565f2c835be5059c64d1b7e2110316d3b31b3576f3892630",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-MTL&type=sell&nonce=1540139705150&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "3a11c6e1240b88a54dbbb0900620ba714c56c2a428ecedf84c8c7349547122495567a3c71d191a9303c8d419cad37c23a7dd985008a058e4310c521367e3362e"
-        }
-    }
-}

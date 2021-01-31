@@ -1,4 +1,4 @@
-import { connectDb, getWithdrawFees } from '../database.js';
+import { connectDb, getWithdrawFees } from '../database/dbHandler.js';
 import { keys } from '../../keys/binance.js';
 import Axios from 'axios';
 
@@ -14,19 +14,18 @@ const exchange = {
 exchange._cleanMarketName = function(marketName) {
     return marketName.replace('/', '').toUpperCase();
 };
-
 exchange._getMarketsPrices = async function() {
     const result = await this._request('get', '/api/v1/ticker/24hr');
-    const markets = {};
+    const marketPrices = {};
     for (const market of result) {
-        markets[market.symbol] = {
+        marketPrices[market.symbol] = {
             bidPrice: Number(market.bidPrice),
             askPrice: Number(market.askPrice),
             baseVolume: Number(market.volume),
             quoteVolume: Number(market.quoteVolume)
         };
     }
-    return markets;
+    return marketPrices;
 };
 exchange._request = async function(method, path, signed = false, args = {}) {
     // get server time to adjust timestamp in case of computer and server time sync loss
@@ -34,7 +33,6 @@ exchange._request = async function(method, path, signed = false, args = {}) {
         .data.serverTime;
     const botTime = new Date().getTime();
     const timeDiff = Math.abs(serverTime - botTime);
-    // console.log(timeDiff);
 
     // add timestamp to args and stringify the args
     if (signed) {
@@ -71,8 +69,8 @@ exchange.getCurrencies = async function() {
         '/wapi/v3/assetDetail.html',
         true
     );
-    // return 5;
-    // build currencies, and store thenm in an object using currencyName as keys
+
+    // build currencies, and store them in an object using currencyName as keys
     const rawCurrencies = result.assetDetail;
     const currencies = {};
     for (const currencyName in rawCurrencies) {
@@ -88,6 +86,7 @@ exchange.getCurrencies = async function() {
 exchange.getMarkets = async function() {
     // proceed request
     const result = await this._request('get', '/api/v1/exchangeInfo');
+
     // build market objects
     let markets = {};
     for (const remotePair of result.symbols) {
@@ -154,46 +153,27 @@ exchange.getDepositAddress = async function(currencyName) {
         tag: result.addressTag
     };
 };
-// exchange.applyWithdrawFees = async function (currencyName, amount) {
-//     const db = connectDb();
-//     let currencyFees = await getWithdrawFees(db, exchange.name, currencyName);
-//     if (!currencyFees) {
-//         throw Error('cannot get fees from database');
-//     }
-//     currencyFees = currencyFees[0];
-//     if (amount < currencyFees.withdrawMin) {
-//         throw Error(`withdraw too low ${amount} < ${currencyFees.withdrawMin}`);
-//     }
-//     if (!currencyFees.withdrawEnabled) {
-//         throw Error(`withdraw disabled for ${currencyName}`);
-//     }
-//     const withdrawOutput = amount - currencyFees.withdrawFee;
-//     return withdrawOutput;
-// };
-// exchange.applyTradingFees = async function (amount) {
-//     return amount * (1 - exchange.tradingFees);
-// };
-// exchange.walletIsEnabled = async function (currencyName) {
-//     const result = await this._request(
-//         'get',
-//         '/wapi/v3/assetDetail.html',
-//         true
-//     );
-//     if (!Object.keys(result.assetDetail).includes(currencyName.toUpperCase())) {
-//         throw Error(
-//             `Binance exchange: cannot get wallet informaiton for ${currencyName}`
-//         );
-//     }
 
-//     const walletStatus = result.assetDetail[currencyName.toUpperCase()];
-//     if (!walletStatus.depositStatus || !walletStatus.withdrawStatus) {
-//         return false;
-//     }
+exchange.walletIsEnabled = async function (currencyName) {
+    const result = await this._request(
+        'get',
+        '/wapi/v3/assetDetail.html',
+        true
+    );
+    if (!Object.keys(result.assetDetail).includes(currencyName.toUpperCase())) {
+        throw Error(
+            `Binance exchange: cannot get wallet informaiton for ${currencyName}`
+        );
+    }
 
-//     return true;
-// };
+    const walletStatus = result.assetDetail[currencyName.toUpperCase()];
+    if (!walletStatus.depositStatus || !walletStatus.withdrawStatus) {
+        return false;
+    }
+
+    return true;
+};
 exchange.orderIsCompleted = async function(marketName, orderId) {
-    //TODO: deal with invalid parameters (e.g. id not found)
     marketName = this._cleanMarketName(marketName);
     const result = await this._request('get', '/api/v3/order', true, {
         symbol: marketName,

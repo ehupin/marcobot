@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-SALT&type=sell&nonce=1540139704430&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "3d8d0b59f9b6911df94a67f0cb1a5aeff64dae335547f4d99a5cb6d1c00eefcceda6bec3b0832f9a51277a06c708f9a76154336f4c5e115bd3c584e879a3a925"
-        }
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://api.binance.com/wapi/v3/depositAddress.html?asset=btc&timestamp=1539999627220&recvWindow=20000&signature=f890c475734674c56d478d1e1755359d399c69e31d476774a874e04df597e1ee",
-        "headers": {
-            "X-MBX-APIKEY": "jzZqadxmuN9h7epT6UuxqLjjVwP667HHYa7nbku8SJ33Qdi2li3aapC2OoDmefJ7"
-        }
-    }
-}

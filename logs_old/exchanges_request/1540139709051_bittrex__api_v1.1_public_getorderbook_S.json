@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=BTC-CLOAK&type=sell&nonce=1540139708876&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "cdef83df3197b51fbd8cbaa2d3eb7c222429685d32ca63fe02553e5ce8ae4955ad953d4fa4f30da3ae131fb46d2e154b13089c6550297a6a100b743b116eb295"
-        }
-    }
-}

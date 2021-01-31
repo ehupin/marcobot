@@ -4,6 +4,8 @@
     "description": "",
     "main": "src/bot.js",
     "scripts": {
+        "start_bot": "node -r esm ./src/scripts/start_bot.js",
+        "setup_db": "node -r esm ./src/scripts/setup_db.js",
         "testv": "jest --watch --verbose",
         "test": "jest --watch",
         "fix-code": "prettier-eslint --write 'src/**/*.{js,json}' "

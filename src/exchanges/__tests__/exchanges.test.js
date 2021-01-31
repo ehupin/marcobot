@@ -1,4 +1,4 @@
-import { getWithdrawFees } from '../../database';
+import { getWithdrawFees } from '../../database/dbHandler';
 jest.mock('../../database'); // used to later mock database functions in this file
 
 const exchangeName = process.env.EXCHANGE_NAME;
