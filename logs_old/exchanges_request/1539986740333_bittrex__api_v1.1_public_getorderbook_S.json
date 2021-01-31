@@ -1,9 +1,0 @@
-{
-    "requestConfig": {
-        "method": "get",
-        "url": "https://bittrex.com/api/v1.1/public/getorderbook?market=FASS-AER&type=sell&nonce=1539986740071&apikey=1e09a971c4da482a87742a98689de5b9",
-        "headers": {
-            "apisign": "ed63d220af7fbda588ae7f08bf343a1c57bc76c28a2e94de67fa20653de4d3593bb1e60104e1b1e0dc4ca06ce014af5bb391c3774e03f868a9d174f09c783ccc"
-        }
-    }
-}

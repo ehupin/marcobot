@@ -1,5 +1,6 @@
 node_modules/
-keys/
-.c9/
+keys/*
+!keys/_template.js
+src/configs/dbConfig.js
 .idea/
 logs/

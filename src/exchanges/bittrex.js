@@ -1,7 +1,7 @@
-import { connectDb, getWithdrawFees } from '../database.js';
+import { connectDb, getWithdrawFees } from '../database/dbHandler.js';
 import { keys } from '../../keys/bittrex.js';
-import { logger } from '../loggers.js';
-import { sleep } from '../utilities.js';
+import { logger } from '../logger.js';
+import { sleep } from '../utils.js';
 
 const crypto = require('crypto');
 const qs = require('qs');
